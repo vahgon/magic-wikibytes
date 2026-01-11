@@ -1,13 +1,10 @@
 #!/bin/env python
 
-
-from dotenv import dotenv_values
 from pathlib import Path
-
-from urllib3.util import url
 
 env_path = f'{Path(__file__).resolve().parent}/.env'
 wikimedia_api_call = 'https://en.wikipedia.org/api/rest_v1/page/html/List_of_file_signatures'
+
 
 class DotenvError(Exception):
     pass
@@ -24,6 +21,7 @@ def set_header() -> dict[str, str]:
             _ = f.write(set_usr_email)
             f.close()
 
+    from dotenv import dotenv_values
     env_val = dotenv_values(env_path)
     email = env_val['EMAIL'] if env_val['EMAIL'] is not None else ''
 
@@ -32,7 +30,18 @@ def set_header() -> dict[str, str]:
     else:
         raise DotenvError(f"'EMAIL' is not set in {env_path}")
 
-from requests import Response  # noqa: E402
+from typing import TypedDict                    # noqa: E402
+from bs4 import Tag                             # noqa: E402
+class Column(TypedDict):
+    tag_name: str
+    tag: Tag
+    content: str
+
+from typing import List                         # noqa: E402
+class Row(List):
+    columns = List[Column]
+
+from requests import Response                   # noqa: E402
 def make_request():
     req = wikimedia_api_call
     header = set_header()
@@ -43,31 +52,28 @@ def make_request():
 
     format_response(res)
 
-import bs4  # noqa: E402
 def format_response(res: Response):
-    soup  = bs4.BeautifulSoup(markup=res.text, features='lxml')
-
+    from bs4 import BeautifulSoup                                      # noqa: E402
+    soup  = BeautifulSoup(markup=res.text, features='lxml')
     table = soup.select_one('table[class~=wikitable]')
+
     if table is None:
-        raise MissingContentError(f"Request to '{url}' did not return a table of class 'wikitable'")
+        raise MissingContentError(f"Request to '{wikimedia_api_call}' did not return a table of class 'wikitable'")
 
-    rows: list[bs4.Tag] = []
-    for row in table.css.select('tr'):
-        children = row.find_all()
+    rows = List[Row]
+
+    for r in table.css.select('tr'):
+        children = r.find_all()
+        row: Row.columns = []
         for child in children:
-            if child.name == 'th':
-                print(child)
-            elif child.name != 'th':
-                print(child)
+            col: Column = { 'tag_name': str(type(child)), 'tag': child, 'content': child.text }
+            row.append(col)
 
-
-        #rows.append(row)
-
-    #headers: list[bs4.Tag] = []
-    # for header in rows.index(value=, start=0, end=sys.maxsize):
-
-
-        
+            #if child.name == 'code':
+                #print(child)
+            #elif child.name != 'th':
+                #print(child)
+                #pass
 
 if __name__ == "__main__":
     res = make_request()
