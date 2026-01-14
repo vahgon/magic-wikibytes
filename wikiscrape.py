@@ -15,6 +15,12 @@ class DotenvError(Exception):
 class MissingContentError(Exception):
     pass
 
+class ElementError(Exception):
+    pass
+
+class NoTagFound(Exception):
+    pass
+
 def set_header() -> dict[str, str]:
     if not pathlib.Path(env_path).exists():
         file = env_path
