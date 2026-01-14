@@ -1,10 +1,13 @@
 #!/bin/env python
 
-from pathlib import Path
+import bs4
+import re
+import requests
+import pathlib
+import dotenv
 
-env_path = f'{Path(__file__).resolve().parent}/.env'
+env_path = f'{pathlib.Path(__file__).resolve().parent}/.env'
 wikimedia_api_call = 'https://en.wikipedia.org/api/rest_v1/page/html/List_of_file_signatures'
-
 
 class DotenvError(Exception):
     pass
@@ -13,7 +16,7 @@ class MissingContentError(Exception):
     pass
 
 def set_header() -> dict[str, str]:
-    if not Path(env_path).exists():
+    if not pathlib.Path(env_path).exists():
         file = env_path
         with open(file, 'w') as f:
 
@@ -21,8 +24,7 @@ def set_header() -> dict[str, str]:
             _ = f.write(set_usr_email)
             f.close()
 
-    from dotenv import dotenv_values
-    env_val = dotenv_values(env_path)
+    env_val = dotenv.dotenv_values(env_path)
     email = env_val['EMAIL'] if env_val['EMAIL'] is not None else ''
 
     if email != '': 
@@ -30,24 +32,12 @@ def set_header() -> dict[str, str]:
     else:
         raise DotenvError(f"'EMAIL' is not set in {env_path}")
 
-from typing import TypedDict                    # noqa: E402
-from bs4 import Tag                             # noqa: E402
-class Column(TypedDict):
-    tag_name: str
-    tag: Tag
-    content: str
 
-from typing import List                         # noqa: E402
-class Row(List):
-    columns = List[Column]
-
-from requests import Response                   # noqa: E402
 def make_request():
     req = wikimedia_api_call
     header = set_header()
 
-    from requests import get
-    res = get(url=req, headers=header)  
+    res = requests.get(url=req, headers=header)
     res.raise_for_status()
 
     format_response(res)
