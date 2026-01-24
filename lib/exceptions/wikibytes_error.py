@@ -1,0 +1,2 @@
+class WikibytesError(Exception):
+    pass
