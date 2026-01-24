@@ -2,3 +2,5 @@
 .env
 typings/
 __pycache__
+Session.vim
+.conf
