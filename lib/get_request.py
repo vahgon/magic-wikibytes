@@ -1,5 +1,6 @@
 from requests.adapters import ResponseError
 from lib.exceptions import UnexpectedFormatError
+from lib.util import HtmlJson, ReqJson
 
 try:
     import requests
@@ -45,9 +46,6 @@ def make_request() -> requests.Response:
     response = requests.Session()
     return response.send(request=request, allow_redirects=True)
 
-type HtmlJson = dict[str, str | int]
-type ReqJson = dict[str, HtmlJson]
-    
 def get_json_response(res: requests.Response | None = None) -> tuple[HtmlJson, str]:
     res = make_request()
     if not res.status_code == 200:

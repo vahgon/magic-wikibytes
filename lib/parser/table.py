@@ -1,6 +1,7 @@
 from lib.parser._wikitable_parser import parse_html
 from lib.parser._html_obj import HTML
-from lib.constants import ROOT
+from lib.util import DOCS_PATH, USER_ARGS
+import pathlib
 
 try:
     from pandas import DataFrame

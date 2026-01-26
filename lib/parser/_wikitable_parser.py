@@ -1,4 +1,5 @@
 from lib.exceptions import NoTagFoundError
+from lib.util import TableHeaders, TableRows
 import re
 
 try:

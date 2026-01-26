@@ -1,6 +1,5 @@
 from lib.exceptions import MissingEnvError
-from pathlib import Path
-from lib.constants import ROOT
+from lib.constants import ENV_PATH
 import pathlib
 
 try:
@@ -9,7 +8,6 @@ except (ImportError, ModuleNotFoundError) as e:
     e.add_note("Install dotenv -> pip install dotenv")
     raise e
 
-env_path = Path(str(ROOT) + "/.conf")
 email = ''
 
 def ask_user_input() -> str:
@@ -17,14 +15,14 @@ def ask_user_input() -> str:
 
 def create_dotenv() -> None:
     try:
-        with open(env_path, "w") as f:
+        with open(ENV_PATH, "w") as f:
             _ = f.write("EMAIL=" + ask_user_input())
     except Exception as e:
         e.add_note("Error when attempting to open env_path")
         raise
 
 def check_dotenv_file() -> None:
-    if not pathlib.Path(env_path).exists():
+    if not pathlib.Path(ENV_PATH).exists():
         try:
             create_dotenv()
         except Exception as e:
@@ -34,21 +32,21 @@ def check_dotenv_file() -> None:
 
 def check_env_val() -> None:
     global email
-    env_val = dotenv.dotenv_values(env_path)
-    check_env_email = ""
+    envVal = dotenv.dotenv_values(ENV_PATH)
+    checkEnvEmail = ""
 
     try:
-        check_env_email = env_val['EMAIL'] if env_val['EMAIL'] is not None else None
+        checkEnvEmail = envVal['EMAIL'] if envVal['EMAIL'] is not None else None
     except MissingEnvError:
-        with open(env_path, "w") as f:
+        with open(ENV_PATH, "w") as f:
             _ = f.write("EMAIL=")
 
-    email = check_env_email
+    email = checkEnvEmail
     if email is None or email == "":
         try:
-            with open(env_path, "w") as f:
-                set_usr_email = "EMAIL=" + ask_user_input()
-                _ = f.write(set_usr_email)
+            with open(ENV_PATH, "w") as f:
+                setUserEmail = "EMAIL=" + ask_user_input()
+                _ = f.write(setUserEmail)
         except Exception as e:
             raise e
 
@@ -62,4 +60,3 @@ def check_env_val() -> None:
 def get_email() -> str | None:
     check_dotenv_file()
     return email
-
