@@ -1,0 +1,17 @@
+from lib.get_request import get_json_response
+from lib.util import get_email
+
+class HTML:
+    def __init__(self) -> None:
+        self.email: str | None = get_email()
+        self.resp_json: dict[str, str | int]
+        self.html: str
+
+        [self.resp_json, self.html] = get_json_response()
+
+    def compare_revision(self) -> None:
+        ...
+    def mk_markdown_table(self) -> None:
+        ...
+    def mk_json(self) -> None:
+        ...
