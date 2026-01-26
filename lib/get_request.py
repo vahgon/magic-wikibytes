@@ -7,7 +7,7 @@ except (ImportError, ModuleNotFoundError) as e:
     e.add_note("requests module missing -> 'pip install requests'")
     raise
 
-wikimedia_api_call = 'https://en.wikipedia.org/w/api.php' 
+wikimediaAPICall= 'https://en.wikipedia.org/w/api.php' 
 email = ''
 
 header = {
@@ -25,18 +25,18 @@ params = {
     "contentformat": "application/json",
     "formatversion": "2"
 }
-req_info = {
-    "url": wikimedia_api_call,
+reqInfo= {
+    "url": wikimediaAPICall,
     "method": "GET",
     "headers": header,
     "params": params
 }
 
 def format_request(req: requests.Request) -> requests.Request:
-    req.url = req_info['url']
-    req.method = req_info['method']
-    req.headers = req_info['headers']
-    req.params = req_info['params']
+    req.url = reqInfo['url']
+    req.method = reqInfo['method']
+    req.headers = reqInfo['headers']
+    req.params = reqInfo['params']
     return req
 
 def make_request() -> requests.Response:
@@ -55,15 +55,12 @@ def get_json_response(res: requests.Response | None = None) -> tuple[HtmlJson, s
         e.add_note(f"Did not receive status code ${res.status_code}")
         raise e
 
-    raw_data = res.json()
-    res_json: ReqJson | None = raw_data if isinstance(raw_data, dict) is not False else None
-
-    if res_json is None:
+    rawData = res.json()
+    resJson: ReqJson | None = rawData if isinstance(rawData, dict) is not False else None
+    if resJson is None:
         e = UnexpectedFormatError()
         e.add_note("When converting type of response data to json, result was not dict")
         raise e
 
-    html: str = str(res_json['parse']['text'])
-
-    return (res_json['parse'], html)
-
+    html: str = str(resJson['parse']['text'])
+    return (resJson['parse'], html)

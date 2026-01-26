@@ -11,7 +11,7 @@ except (ImportError, ModuleNotFoundError) as e:
 class Table(HTML):
     def __init__(self) -> None:
         super().__init__()
-        self.raw_file_sigs: list[dict[str, str | None]] = list()
+        self.rawFileSigs: list[dict[str, str | None]] = list()
         self.df: DataFrame = DataFrame()
 
     def _create_json(self) -> None:
@@ -22,6 +22,6 @@ class Table(HTML):
         _ = self.df.to_markdown()
 
     def make_table(self) -> None:
-        self.raw_file_sigs = parse_html(self.html)
-        self.df = DataFrame(self.raw_file_sigs)
+        self.rawFileSigs= parse_html(self.html)
+        self.df = DataFrame(self.rawFileSigs)
         self._create_json()

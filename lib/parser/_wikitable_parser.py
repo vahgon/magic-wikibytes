@@ -7,33 +7,33 @@ except (ImportError, ModuleNotFoundError) as e:
     e.add_note("bs4 not found. Install with -> pip install bs4")
     raise e
 
-table_headers: list[str] = list()
-table_rows: list[dict[str, str | None]] = list()
+tableHeaders: TableHeaders = list()
+tableRows: TableRows = list()
 
 def is_empty(col: str | None) -> str | None:
     return None if col == '' else col
 
 def set_headers(h_row: bs4.Tag) -> None:
-    global table_headers
-    table_headers = [x.get_text() for x in h_row.children]
+    global tableHeaders 
+    tableHeaders = [x.get_text() for x in h_row.children]
 
 def set_normal_row(row: bs4.Tag) -> None:
-    global table_rows
-    if not table_headers:
+    global tableRows 
+    if not tableHeaders:
         set_headers(row.extract())
         return
     
     # substitutes in text citation (e.g. [23]) for empty string
-    fsig_info = {key: is_empty(re.sub(r'( ?\[[0-9]*\])', '', val.text)) for key, val in zip(table_headers, row.find_all('td'))}
-    table_rows.append(fsig_info)
+    fileSigInfo = {key: is_empty(re.sub(r'( ?\[[0-9]*\])', '', val.text)) for key, val in zip(tableHeaders, row.find_all('td'))}
+    tableRows.append(fileSigInfo)
     row.decompose()
 
 def set_abnormal_row(row: bs4.Tag) -> None:
     for col in row.find_all('td'):
         col.decompose()
 
-def format_parsed_table(table_body: bs4.Tag) -> None:
-    for row in table_body.find_all('tr'):
+def format_parsed_table(tableBody: bs4.Tag) -> None:
+    for row in tableBody.find_all('tr'):
         if len(row) == 5:
             set_normal_row(row)
         else:
@@ -51,4 +51,4 @@ def parse_html(html: str) -> list[dict[str, str | None]]:
         raise e
 
     format_parsed_table(tbody)
-    return table_rows
+    return tableRows
