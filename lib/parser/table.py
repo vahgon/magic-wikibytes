@@ -80,4 +80,6 @@ class Table(HTML):
     def make_table(self) -> None:
         self.rawFileSigs= parse_html(self.html)
         self.df = DataFrame(self.rawFileSigs)
+        self.df.fillna('',inplace=True)
+
         self._print_or_create()
