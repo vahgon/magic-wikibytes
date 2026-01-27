@@ -1,3 +1,4 @@
-from lib.exceptions.missing_env_error import MissingEnvError
+from lib.exceptions.missing_envar_error import MissingEnvVarError
 from lib.exceptions.no_tag_error import NoTagFoundError
 from lib.exceptions.unexpected_format_error import UnexpectedFormatError
+from lib.exceptions.missing_envval_error import MissingEnvValError
