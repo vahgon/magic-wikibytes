@@ -1,4 +1,3 @@
-import pathlib
 from lib.parser._wikitable_parser import parse_html
 from lib.parser._html_obj import HTML
 from lib.util import DOCS_PATH, USER_ARGS
@@ -35,7 +34,7 @@ class Table(HTML):
             self._set_output(self.format)
 
         else:
-            self.output = Path(f'{DOCS_PATH}/signatures.json')
+            self.output = Path(f'{DOCS_PATH}/signatures.*')
             self.verboseStr = f'No flags set for output or format - defaulted to {self.output}'
             self._set_output(None)
 
@@ -54,7 +53,14 @@ class Table(HTML):
             case '.md' | 'md':
                 toPrint = self._create_md()
             case None:
+                self.output = Path(f'{DOCS_PATH}/signatures.json')
                 toPrint = self._create_json()
+
+                self.output = Path(f'{DOCS_PATH}/signatures.csv')
+                toPrint = self._create_csv()
+
+                self.output = Path(f'{DOCS_PATH}/signatures.md')
+                toPrint = self._create_md()
             case _:
                 e = Exception()
                 raise e
@@ -69,7 +75,7 @@ class Table(HTML):
         return self.df.to_csv(path_or_buf=self.output)
 
     def _create_md(self) -> str | None:
-        return self.df.to_markdown(path_or_buf=self.output)
+        return self.df.to_markdown(self.output)
 
     def make_table(self) -> None:
         self.rawFileSigs= parse_html(self.html)
