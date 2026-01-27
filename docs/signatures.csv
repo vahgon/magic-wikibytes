@@ -15,8 +15,7 @@ wk5","Lotus 1-2-3 spreadsheet (v4, v5) file"
 10,4D 3C B2 A1 (little-endian),M<²¡,0,pcap,Libpcap File Format (nanosecond-resolution)
 11,0A 0D 0D 0A,␊␍␍␊,0,pcapng,PCAP Next Generation Dump File Format
 12,ED AB EE DB,í«îÛ,0,rpm,RedHat Package Manager (RPM) package
-13,"53 51 4C 69 74 65 20 66
- 6F 72 6D 61 74 20 33 00",SQLite format 3␀,0,"sqlitedb
+13,53 51 4C 69 74 65 20 666F 72 6D 61 74 20 33 00,SQLite format 3␀,0,"sqlitedb
 sqlite
 db",SQLite Database
 14,53 50 30 31,SP01,0,bin,Amazon Kindle Update Package
@@ -28,11 +27,7 @@ YTR","IBM Storyboard bitmap file
 Windows Program Information File
 Mac Stuffit Self-Extracting Archive
 IRIS OCR data file"
-17,"00 00 00 00 00 00 00 00
- 00 00 00 00 00 00 00 00
- 00 00 00 00 00 00 00 00","␀␀␀␀␀␀␀␀
- ␀␀␀␀␀␀␀␀
- ␀␀␀␀␀␀␀␀",11,PDB,PalmPilot Database/Document File
+17,00 00 00 00 00 00 00 0000 00 00 00 00 00 00 0000 00 00 00 00 00 00 00,␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀,11,PDB,PalmPilot Database/Document File
 18,BE BA FE CA,¾ºþÊ,0,DBA,Palm Desktop Calendar Archive
 19,00 01 42 44,␀␁BD,0,DBA,Palm Desktop To Do Archive
 20,00 01 44 54,␀␁DT,0,TDA,Palm Desktop Calendar Archive
@@ -50,8 +45,7 @@ tar.z",compressed file (often tar zip) using Lempel-Ziv-Welch algorithm
 tar.z",Compressed file (often tar zip) using LZH algorithm
 30,2D 6C 68 30 2D,-lh0-,2,lzh,Lempel Ziv Huffman archive file Method 0 (No compression)
 31,2D 6C 68 35 2D,-lh5-,2,lzh,Lempel Ziv Huffman archive file Method 5 (8 KiB sliding window)
-32,"42 41 43 4B 4D 49 4B 45
- 44 49 53 4B",BACKMIKEDISK,0,bac,AmiBack Amiga Backup data file
+32,42 41 43 4B 4D 49 4B 4544 49 53 4B,BACKMIKEDISK,0,bac,AmiBack Amiga Backup data file
 33,49 4E 44 58,INDX,0,idx,AmiBack Amiga Backup index file
 34,62 70 6C 69 73 74,bplist,0,plist,Binary Property List file
 35,42 5A 68,BZh,0,bz2,Compressed file using Bzip2 algorithm
@@ -61,8 +55,7 @@ GIF89a",0,gif,Image file encoded in the Graphics Interchange Format (GIF)
 37,49 49 2A 00 (little-endian),II*␀,0,"tif
 tiff",Tagged Image File Format (TIFF)
 38,49 49 2B 00 (little-endian),II+␀,0,tiftiff,BigTIFF
-39,"49 49 2A 00 10 00 00 00
- 43 52",II*␀␐␀␀␀CR,0,cr2,"Canon RAW Format Version 2
+39,49 49 2A 00 10 00 00 0043 52,II*␀␐␀␀␀CR,0,cr2,"Canon RAW Format Version 2
 Canon's RAW format is based on TIFF."
 40,80 2A 5F D7,€*_×,0,cin,Kodak Cineon image
 41,"52 4E 43 01
@@ -88,61 +81,49 @@ jpc
 jpx
 mj2",JPEG 2000 format
 49,71 6F 69 66,qoif,0,qoi,QOI - The “Quite OK Image Format”
-50,"46 4F 52 4D ?? ?? ?? ??
- 49 4C 42 4D",FORM????ILBM,"0
+50,46 4F 52 4D ?? ?? ?? ??49 4C 42 4D,FORM????ILBM,"0
 any","ilbm
 lbm
 ibm
 iff",IFF Interleaved Bitmap Image
-51,"46 4F 52 4D ?? ?? ?? ??
- 38 53 56 58",FORM????8SVX,"0
+51,46 4F 52 4D ?? ?? ?? ??38 53 56 58,FORM????8SVX,"0
 any","8svx
 8sv
 svx
 snd
 iff",IFF 8-Bit Sampled Voice
-52,"46 4F 52 4D ?? ?? ?? ??
- 41 43 42 4D",FORM????ACBM,"0
+52,46 4F 52 4D ?? ?? ?? ??41 43 42 4D,FORM????ACBM,"0
 any","acbm
 iff",Amiga Contiguous Bitmap
-53,"46 4F 52 4D ?? ?? ?? ??
- 41 4E 42 4D",FORM????ANBM,"0
+53,46 4F 52 4D ?? ?? ?? ??41 4E 42 4D,FORM????ANBM,"0
 any","anbm
 iff",IFF Animated Bitmap
-54,"46 4F 52 4D ?? ?? ?? ??
- 41 4E 49 4D",FORM????ANIM,"0
+54,46 4F 52 4D ?? ?? ?? ??41 4E 49 4D,FORM????ANIM,"0
 any","anim
 iff",IFF CEL Animation
-55,"46 4F 52 4D ?? ?? ?? ??
- 46 41 58 58",FORM????FAXX,"0
+55,46 4F 52 4D ?? ?? ?? ??46 41 58 58,FORM????FAXX,"0
 any","faxx
 fax
 iff",IFF Facsimile Image
-56,"46 4F 52 4D ?? ?? ?? ??
- 46 54 58 54",FORM????FTXT,"0
+56,46 4F 52 4D ?? ?? ?? ??46 54 58 54,FORM????FTXT,"0
 any","ftxt
 iff",IFF Formatted Text
-57,"46 4F 52 4D ?? ?? ?? ??
- 53 4D 55 53",FORM????SMUS,"0
+57,46 4F 52 4D ?? ?? ?? ??53 4D 55 53,FORM????SMUS,"0
 any","smus
 smu
 mus
 iff",IFF Simple Musical Score
-58,"46 4F 52 4D ?? ?? ?? ??
- 43 4D 55 53",FORM????CMUS,"0
+58,46 4F 52 4D ?? ?? ?? ??43 4D 55 53,FORM????CMUS,"0
 any","cmus
 mus
 iff",IFF Musical Score
-59,"46 4F 52 4D ?? ?? ?? ??
- 59 55 56 4E",FORM????YUVN,"0
+59,46 4F 52 4D ?? ?? ?? ??59 55 56 4E,FORM????YUVN,"0
 any","yuvn
 yuv
 iff",IFF YUV Image
-60,"46 4F 52 4D ?? ?? ?? ??
- 46 41 4E 54",FORM????FANT,"0
+60,46 4F 52 4D ?? ?? ?? ??46 41 4E 54,FORM????FANT,"0
 any",iff,Amiga Fantavision Movie
-61,"46 4F 52 4D ?? ?? ?? ??
- 41 49 46 46",FORM????AIFF,"0
+61,46 4F 52 4D ?? ?? ?? ??41 49 46 46,FORM????AIFF,"0
 any","aiff
 aif
 aifc
@@ -234,12 +215,10 @@ others",SCSU byte order mark for text
 epsf",Encapsulated PostScript file version 3.0
 93,25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30,%!PS-Adobe-3.1 ESPF-3.0,0,"eps
 epsf",Encapsulated PostScript file version 3.1
-94,"49 54 53 46 03 00 00 00
- 60 00 00 00",ITSF␃␀␀␀`␀␀␀,0,chm,MS Windows HtmlHelp Data
+94,49 54 53 46 03 00 00 0060 00 00 00,ITSF␃␀␀␀`␀␀␀,0,chm,MS Windows HtmlHelp Data
 95,3F 5F,?_,0,hlp,Windows 3.x/95/98 Help file
 96,25 50 44 46 2D,%PDF-,0,pdf,PDF document
-97,"30 26 B2 75 8E 66 CF 11
- A6 D9 00 AA 00 62 CE 6C",0&²uŽfÏ␑¦Ù␀ª␀bÎl,0,"asf
+97,30 26 B2 75 8E 66 CF 11A6 D9 00 AA 00 62 CE 6C,0&²uŽfÏ␑¦Ù␀ª␀bÎl,0,"asf
 wma
 wmv",Advanced Systems Format
 98,24 53 44 49 30 30 30 31,$SDI0001,0,,"System Deployment Image, a disk image format used by Microsoft"
@@ -247,10 +226,8 @@ wmv",Advanced Systems Format
 oga
 ogv","Ogg, an open source media container format"
 100,38 42 50 53,8BPS,0,psd,"Photoshop Document file, Adobe Photoshop's native file format"
-101,"52 49 46 46 ?? ?? ?? ??
- 57 41 56 45",RIFF????WAVE,0,wav,Waveform Audio File Format
-102,"52 49 46 46 ?? ?? ?? ??
- 41 56 49 20",RIFF????AVI␠,0,avi,Audio Video Interleave video format
+101,52 49 46 46 ?? ?? ?? ??57 41 56 45,RIFF????WAVE,0,wav,Waveform Audio File Format
+102,52 49 46 46 ?? ?? ?? ??41 56 49 20,RIFF????AVI␠,0,avi,Audio Video Interleave video format
 103,"FF FB
 FF F3
 FF F2","ÿû
@@ -270,13 +247,7 @@ dib","BMP file, a bitmap format used mostly in the Windows world"
 112,A0 33 44 A0 A0,3D,0x61819,d81,Commodore 64 1581 disk image (D81 format)
 113,43 36 34 20 74 61 70 65 20 69 6D 61 67 65 20 66 69 6C 65,C64 tape image file,0,t64,Commodore 64 tape image
 114,43 36 34 20 43 41 52 54 52 49 44 47 45 20 20 20,C64 CARTRIDGE␠␠␠,0,crt,Commodore 64 cartridge image
-115,"53 49 4D 50 4C 45 20 20
- 3D 20 20 20 20 20 20 20
- 20 20 20 20 20 20 20 20
- 20 20 20 20 20 54","SIMPLE␠␠
- =␠␠␠␠␠␠␠
- ␠␠␠␠␠␠␠␠
- ␠␠␠␠␠T",0,fits,Flexible Image Transport System (FITS)
+115,53 49 4D 50 4C 45 20 203D 20 20 20 20 20 20 2020 20 20 20 20 20 20 2020 20 20 20 20 54,SIMPLE␠␠=␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠T,0,fits,Flexible Image Transport System (FITS)
 116,66 4C 61 43,fLaC,0,flac,Free Lossless Audio Codec
 117,4D 54 68 64,MThd,0,"mid
 midi",MIDI sound file
@@ -290,16 +261,8 @@ msg","Compound File Binary Format, a container format defined by Microsoft COM. 
 121,23 20 44 69 73 6B 20 44 65 73 63 72 69 70 74 6F,# Disk Descripto,0,vmdk,VMware 4 Virtual Disk description file (split disk)
 122,43 72 32 34,Cr24,0,crx,Google Chrome extension or packaged app
 123,41 47 44 33,AGD3,0,fh8,FreeHand 8 document
-124,"05 07 00 00 42 4F 42 4F
- 05 07 00 00 00 00 00 00
- 00 00 00 00 00 01","␅␇␀␀BOBO
- ␅␇␀␀␀␀␀␀
- ␀␀␀␀␀␁",0,cwk,AppleWorks 5 document
-125,"06 07 E1 00 42 4F 42 4F
- 06 07 E1 00 00 00 00 00
- 00 00 00 00 00 01","␆␇á␀BOBO
- ␆␇á␀␀␀␀␀
- ␀␀␀␀␀␁",0,cwk,AppleWorks 6 document
+124,05 07 00 00 42 4F 42 4F05 07 00 00 00 00 00 0000 00 00 00 00 01,␅␇␀␀BOBO␅␇␀␀␀␀␀␀␀␀␀␀␀␁,0,cwk,AppleWorks 5 document
+125,06 07 E1 00 42 4F 42 4F06 07 E1 00 00 00 00 0000 00 00 00 00 01,␆␇á␀BOBO␆␇á␀␀␀␀␀␀␀␀␀␀␁,0,cwk,AppleWorks 6 document
 126,45 52 02 00 00 00,ER␂␀␀␀,0,toast,Roxio Toast disc image file
 127,6B 6F 6C 79,koly,end–512,dmg,Apple Disk Image file
 128,78 61 72 21,xar!,0,xar,eXtensible ARchive format
@@ -318,8 +281,7 @@ PA30",0,,Windows Update Binary Delta Compression file
 137,1F 8B,␟‹,0,"gz
 tar.gz",GZIP compressed file
 138,FD 37 7A 58 5A 00,ý7zXZ␀,0,"xz
-tar.xz","XZ compression utility
- using LZMA2 compression"
+tar.xz",XZ compression utilityusing LZMA2 compression
 139,04 22 4D 18,"␄""M␘",0,lz4,"LZ4 Frame Format
 Remark: LZ4 block format does not offer any magic bytes."
 140,4D 53 43 46,MSCF,0,cab,Microsoft Cabinet file
@@ -359,8 +321,7 @@ after BOM",xml (UTF-8 or other 8-bit encodings),eXtensible Markup Language
 161,43 57 53,CWS,0,swf,Adobe Flash .swf
 162,21 3C 61 72 63 68 3E 0A,!<arch>␊,0,deb,linux deb file
 163,C0 3B 39 98,À;9˜,0,,Linux EXT3/EXT4 jbd2 filesystem Journal
-164,"52 49 46 46 ?? ?? ?? ??
- 57 45 42 50",RIFF????WEBP,0,webp,"Google WebP image file, where ?? ?? ?? ?? is the file size. More information on WebP File Header"
+164,52 49 46 46 ?? ?? ?? ??57 45 42 50,RIFF????WEBP,0,webp,"Google WebP image file, where ?? ?? ?? ?? is the file size. More information on WebP File Header"
 165,27 05 19 56,'␅␙V,0,,U-Boot / uImage. Das U-Boot Universal Boot Loader.
 166,7B 5C 72 74 66 31,{\rtf1,0,rtf,Rich Text Format
 167,54 41 50 45,TAPE,0,,Microsoft Tape Format
@@ -405,17 +366,12 @@ pmt",PhotoCap Template
 184,45 4D 55 33,EMU3,0,"ez3
 iso",Emulator III synth samples
 185,1B 4C 75 61,␛Lua,0,luac,Lua bytecode
-186,"62 6F 6F 6B 00 00 00 00
- 6D 61 72 6B 00 00 00 00",book␀␀␀␀mark␀␀␀␀,0,alias,macOS file Alias (Symbolic link)
+186,62 6F 6F 6B 00 00 00 006D 61 72 6B 00 00 00 00,book␀␀␀␀mark␀␀␀␀,0,alias,macOS file Alias (Symbolic link)
 187,62 6F 6F 6B,book,0,,macOS bookmark format
-188,"5B 5A 6F 6E 65 54 72 61
- 6E 73 66 65 72 5D",[ZoneTransfer],0,Identifier,Microsoft Zone Identifier for URL Security Zones
-189,"52 65 63 65 69 76 65 64
- 3A",Received:,0,eml,Email Message var5[citation needed]
-190,"20 02 01 62 A0 1E AB 07
- 02 00 00 00",␠␂␁b⍽␞«␇␂␀␀␀,0,tde,Tableau Datasource
-191,"37 48 03 02 00 00 00 00
- 58 35 30 39 4B 45 59",7H␃␂␀␀␀␀X509KEY,0,kdb,KDB file
+188,5B 5A 6F 6E 65 54 72 616E 73 66 65 72 5D,[ZoneTransfer],0,Identifier,Microsoft Zone Identifier for URL Security Zones
+189,52 65 63 65 69 76 65 643A,Received:,0,eml,Email Message var5[citation needed]
+190,20 02 01 62 A0 1E AB 0702 00 00 00,␠␂␁b⍽␞«␇␂␀␀␀,0,tde,Tableau Datasource
+191,37 48 03 02 00 00 00 0058 35 30 39 4B 45 59,7H␃␂␀␀␀␀X509KEY,0,kdb,KDB file
 192,85 ?? ?? 03,…??␃,0,pgp,PGP file
 193,28 B5 2F FD,(µ/ý,0,zst,Zstandard compress
 194,52 53 56 4B 44 41 54 41,RSVKDATA,0,rs,QuickZip rs compressed archive
@@ -436,33 +392,22 @@ iso",Emulator III synth samples
 209,50 36 0A,P6␊,0,ppm,Portable Pixmap binary
 210,D7 CD C6 9A,×ÍÆš,0,wmf,Windows Metafile
 211,67 69 6D 70 20 78 63 66,gimp xcf,0,xcf,XCF (file format)
-212,"2F 2A 20 58 50 4D 20 2A
- 2F",/* XPM */,0,xpm,X PixMap
+212,2F 2A 20 58 50 4D 20 2A2F,/* XPM */,0,xpm,X PixMap
 213,41 46 46,AFF,0,aff,Advanced Forensics Format
 214,45 56 46 32,EVF2,0,Ex01,EnCase EWF version 2 format
 215,45 56 46,EVF,0,e01,EnCase EWF version 1 format
 216,51 46 49,QFI,0,qcow,qcow file format
-217,"52 49 46 46 ?? ?? ?? ??
- 41 43 4F 4E",RIFF????ACON,0,ani,Animated cursor
-218,"52 49 46 46 ?? ?? ?? ??
- 43 44 44 41",RIFF????CDDA,0,cda,.cda file
-219,"52 49 46 46 ?? ?? ?? ??
- 51 4C 43 4D",RIFF????QLCM,0,qcp,Qualcomm PureVoice file format
-220,"52 49 46 58 ?? ?? ?? ??
- 46 47 44 4D (big-endian)",RIFX????FGDM,0,dcr,Adobe Shockwave
-221,"52 49 46 58 ?? ?? ?? ??
- 4D 56 39 33 (big-endian)",RIFX????MV93,0,"dir
+217,52 49 46 46 ?? ?? ?? ??41 43 4F 4E,RIFF????ACON,0,ani,Animated cursor
+218,52 49 46 46 ?? ?? ?? ??43 44 44 41,RIFF????CDDA,0,cda,.cda file
+219,52 49 46 46 ?? ?? ?? ??51 4C 43 4D,RIFF????QLCM,0,qcp,Qualcomm PureVoice file format
+220,52 49 46 58 ?? ?? ?? ??46 47 44 4D (big-endian),RIFX????FGDM,0,dcr,Adobe Shockwave
+221,52 49 46 58 ?? ?? ?? ??4D 56 39 33 (big-endian),RIFX????MV93,0,"dir
 dxr
 drx",Macromedia Director file format
 222,46 4C 56,FLV,0,flv,Flash Video file
-223,"3C 3C 3C 20 4F 72 61 63
- 6C 65 20 56 4D 20 56 69
- 72 74 75 61 6C 42 6F 78
- 20 44 69 73 6B 20 49 6D
- 61 67 65 20 3E 3E 3E","<<< Orac
+223,3C 3C 3C 20 4F 72 61 636C 65 20 56 4D 20 56 6972 74 75 61 6C 42 6F 7820 44 69 73 6B 20 49 6D61 67 65 20 3E 3E 3E,"<<< Orac
 le VM Vi
-rtualBox
- Disk Im
+rtualBoxDisk Im
 age >>>",0,vdi,VirtualBox Virtual Hard Disk file format
 224,63 6F 6E 65 63 74 69 78,conectix,0,vhd,Windows Virtual PC Virtual Hard Disk file format
 225,76 68 64 78 66 69 6C 65,vhdxfile,0,vhdx,Windows Virtual PC Windows 8 Virtual Hard Disk file format
@@ -486,8 +431,7 @@ tte
 dfont",TrueType font
 240,4F 54 54 4F,OTTO,0,otf,OpenType font
 241,23 25 4D 6F 64 75 6C 65,#%Module,0,,Modulefile for Environment Modules
-242,"4D 53 57 49 4D 00 00 00
- D0 00 00 00 00",MSWIM␀␀␀Ð␀␀␀␀,0,"wim
+242,4D 53 57 49 4D 00 00 00D0 00 00 00 00,MSWIM␀␀␀Ð␀␀␀␀,0,"wim
 swm
 esd",Windows Imaging Format file
 243,21 2D 31 53 4C 4F 42 1F,!-1SLOB␟,0,slob,"Slob (sorted list of Object storages) is a read-only, compressed data store with dictionary-like interface"
