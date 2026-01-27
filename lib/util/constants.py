@@ -1,9 +1,11 @@
-from lib.util._args import UserArgument
+from argparse import Namespace
+from lib.util._args import parse_args
 from pathlib import Path
 from enum import Enum
 import re
 
-USER_ARGS: UserArgument = UserArgument()
+USER_ARGS: Namespace = parse_args()
+
 type HtmlJson = dict[str, str | int]
 type ReqJson = dict[str, HtmlJson]
 type TableHeaders = list[str]
