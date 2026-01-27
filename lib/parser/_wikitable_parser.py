@@ -25,7 +25,7 @@ def set_normal_row(row: bs4.Tag) -> None:
         return
     
     # substitutes in text citation (e.g. [23]) for empty string
-    fileSigInfo = {key: is_empty(re.sub(r'( ?\[[0-9]*\])', '', val.text)) for key, val in zip(tableHeaders, row.find_all('td'))}
+    fileSigInfo = {key: is_empty(re.sub(r'( ?\[[0-9]*\])|[\r\n] ', '', val.text)) for key, val in zip(tableHeaders, row.find_all('td'))}
     tableRows.append(fileSigInfo)
     row.decompose()
 
