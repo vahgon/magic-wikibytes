@@ -75,7 +75,7 @@ class Table(HTML):
         return self.df.to_csv(path_or_buf=self.output)
 
     def _create_md(self) -> str | None:
-        return self.df.to_markdown(self.output)
+        return self.df.to_markdown(self.output, tablefmt='github')
 
     def make_table(self) -> None:
         self.rawFileSigs= parse_html(self.html)
