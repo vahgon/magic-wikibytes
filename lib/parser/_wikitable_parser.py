@@ -41,11 +41,14 @@ def format_parsed_table(tableBody: bs4.Tag) -> None:
             set_abnormal_row(row)
 
 def parse_html(html: str) -> list[dict[str, str | None]]:
-    table = bs4.BeautifulSoup(markup=html.replace('\n', ''), 
-                              parse_only=bs4.filter.SoupStrainer('table', { 'class': 'wikitable sortable' }), 
-                              features='lxml') 
-    tbody = table.find('tbody', recursive=True)
+    table = bs4.BeautifulSoup(markup=html.replace('\n', ''),
+                              parse_only=bs4.filter.SoupStrainer('table', { 'class': 'wikitable sortable' }),
+                              features='lxml')
 
+    for br in table.find_all('br'):
+        _ = br.replace_with('\n')
+
+    tbody = table.find('tbody', recursive=True)
     if not isinstance(tbody, bs4.Tag):
         e = NoTagFoundError()
         e.add_note("No tbody tag found in HTML.")
