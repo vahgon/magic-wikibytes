@@ -1,9 +1,9 @@
 from lib.get_request import get_json_response
-from lib.util import get_email
+from lib.util import EMAIL
 
 class HTML:
     def __init__(self) -> None:
-        self.email: str | None = get_email()
+        self.email: str = EMAIL
         self.resJson: dict[str, str | int]
         self.html: str
 
