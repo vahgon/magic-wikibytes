@@ -1,58 +1,51 @@
-from lib.exceptions import NoTagFoundError
-from lib.util import TableHeaders, TableRows
+from lib.exceptions import NoTagFoundError, WikitableFormatError
+from collections import defaultdict
 import re
 
 try:
-    import bs4
+    from bs4 import Tag, BeautifulSoup, ResultSet
+    from bs4.filter import SoupStrainer
 except (ImportError, ModuleNotFoundError) as e:
     e.add_note("bs4 not found. Install with -> pip install bs4")
     raise e
 
-tableHeaders: TableHeaders = list()
-tableRows: TableRows = list()
+newTable: defaultdict[int, ResultSet[Tag]] = defaultdict(lambda: ResultSet(source=None, result=[Tag(name='') for _ in range(5)]))
+def _format_wikitable(wikitable: Tag) -> None:
+    rows = [row.find_all(['td', 'th']) for row in wikitable.select('tr')]
+    headers = [re.sub(pattern=r'\n', repl='', string=x.extract().get_text()) for x in rows.pop(0)[:]]
 
-def is_empty(col: str | None) -> str | None:
-    return None if col == '' else col
+    global newTable
+    for rowIdx, row in enumerate(rows):
+        for colIdx, col in enumerate(row):
+            if 'rowspan' in col.attrs:
+                for i in range(int(col.attrs['rowspan'][0])):
+                    newTable[rowIdx + i][colIdx] = col
+                del col.attrs['rowspan']
+                continue
+            if len(row) != 5:
+                for i in range(len(newTable[rowIdx])):
+                    if newTable[rowIdx][i].name == '':
+                        newTable[rowIdx][i] = col
+                        break
+                continue
+            newTable[rowIdx][colIdx] = col
+    for e in newTable:
+        for i in newTable[e]:
+            print(i.get_text())
+        
+        input()
+        print()
 
-def set_headers(h_row: bs4.Tag) -> None:
-    global tableHeaders 
-    tableHeaders = [x.get_text() for x in h_row.children]
+def parse_html(html: str) -> None:
+    parser = SoupStrainer(name='table', attrs={ 'class': 'wikitable sortable' })
+    wikitable = BeautifulSoup(markup=html, parse_only=parser, features='lxml').select_one('tbody')
 
-def set_normal_row(row: bs4.Tag) -> None:
-    global tableRows 
-    if not tableHeaders:
-        set_headers(row.extract())
-        return
-    
-    # substitutes in text citation (e.g. [23]) for empty string
-    fileSigInfo = {key: is_empty(re.sub(r'( ?\[[0-9]*\])|[\r\n] ', '', val.text)) for key, val in zip(tableHeaders, row.find_all('td'))}
-    tableRows.append(fileSigInfo)
-    row.decompose()
-
-def set_abnormal_row(row: bs4.Tag) -> None:
-    for col in row.find_all('td'):
-        col.decompose()
-
-def format_parsed_table(tableBody: bs4.Tag) -> None:
-    for row in tableBody.find_all('tr'):
-        if len(row) == 5:
-            set_normal_row(row)
-        else:
-            set_abnormal_row(row)
-
-def parse_html(html: str) -> list[dict[str, str | None]]:
-    table = bs4.BeautifulSoup(markup=html.replace('\n', ''),
-                              parse_only=bs4.filter.SoupStrainer('table', { 'class': 'wikitable sortable' }),
-                              features='lxml')
-
-    for br in table.find_all('br'):
-        _ = br.replace_with('\n')
-
-    tbody = table.find('tbody', recursive=True)
-    if not isinstance(tbody, bs4.Tag):
+    if not (isinstance(wikitable, Tag)):
         e = NoTagFoundError()
-        e.add_note("No tbody tag found in HTML.")
+        e.add_note("Error formatting wikitable - no <tbody> tag was found.")
         raise e
 
-    format_parsed_table(tbody)
-    return tableRows
+    _ = _format_wikitable(wikitable)
+
+def pretty_html(html: str) -> str:
+    ...
