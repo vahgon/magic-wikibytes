@@ -33,21 +33,21 @@ reqInfo= {
     "params": params
 }
 
-def format_request(req: requests.Request) -> requests.Request:
+def _format_request(req: requests.Request) -> requests.Request:
     req.url = reqInfo['url']
     req.method = reqInfo['method']
     req.headers = reqInfo['headers']
     req.params = reqInfo['params']
     return req
 
-def make_request() -> requests.Response:
-    req = format_request(requests.Request())
+def _make_request() -> requests.Response:
+    req = _format_request(requests.Request())
     request = req.prepare()
     response = requests.Session()
     return response.send(request=request, allow_redirects=True)
 
-def get_json_response(res: requests.Response | None = None) -> tuple[HtmlJson, str]:
-    res = make_request()
+def get_response(res: requests.Response | None = None) -> tuple[HtmlJson, str, int]:
+    res = _make_request()
     if not res.status_code == 200:
         e = ResponseError()
         e.add_note(f"Did not receive status code ${res.status_code}")
@@ -61,4 +61,6 @@ def get_json_response(res: requests.Response | None = None) -> tuple[HtmlJson, s
         raise e
 
     html: str = str(resJson['parse']['text'])
-    return (resJson['parse'], html)
+    revisionId: int = int(resJson['parse']['revid'])
+
+    return (resJson['parse'], html, revisionId)
