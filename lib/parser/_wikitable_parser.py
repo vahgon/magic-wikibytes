@@ -16,6 +16,7 @@ parser: SoupStrainer = SoupStrainer(name='table', attrs={ 'class': 'wikitable so
 
 parsedTable: defaultdict[int, ResultSet[Tag]] = defaultdict(lambda: ResultSet(source=None, result=[Tag(name='') for _ in range(5)]))
 listTable: list[dict[str, FileData]] = list()
+headers: list[str] = list()
 
 def _format_iso(isoText: str) -> str:
     ...
@@ -81,6 +82,7 @@ def _format_tag_children(col: Tag) -> None:
 
 def _parse_wikitable(wikitable: Tag) -> None:
     global parsedTable
+    global headers
     rows = [row.find_all(['td', 'th']) for row in wikitable.select('tr')]
     headers = [re.sub(pattern=r'\n', repl='', string=x.extract().get_text()) for x in rows.pop(0)[:]]
 
