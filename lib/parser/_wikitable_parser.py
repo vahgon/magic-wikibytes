@@ -26,8 +26,11 @@ def _format_table_opts() -> None:
 
 def _format_hex(hexText: str) -> str:
     qGroup: re.Match[str] | None = None
+    hexText = hexText.replace(' ', '').replace('\xa0', '')
+
     for byteGroup in range(len(re.findall(pattern=r'(\?{2})+', string=hexText))):
         qGroup = re.search(pattern=r'(?:\?{2})+', string=hexText)
+
     if qGroup:
         qByteAmount = qGroup.group(0).count('??')
         hexText = str(hexText[:qGroup.start()] + hexText[qGroup.end():])
