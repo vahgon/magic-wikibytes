@@ -46,17 +46,23 @@ def _mk_file_dict() -> None:
         for idx, col in enumerate(parsedTable[row]):
             match idx:
                 case ColType.HEX:
-                    hex: list[str | bytes] = list()
-                    for codeTag in col.find_all('code'):
-                        hex.append(_format_hex(codeTag.extract().get_text().replace(' ', '').replace('\xa0', '')))
-                        # if hex != "":
-                        #     hex += '\n'+_format_hex(codeTag.extract().get_text().replace(' ', '').replace('\xa0', ''))
-                        # else:
-                        #     hex = _format_hex(codeTag.extract().get_text().replace(' ', '').replace('\xa0', ''))
+                    hexTags = col.find_all('code')
+                    if len(hexTags) > 1:
+                        fileSig[col.name] = [_format_hex(codeTag.extract().get_text()) for codeTag in hexTags]
+                    elif len(hexTags) == 1:
+                        fileSig[col.name] = _format_hex(hexTags[0].extract().get_text())
+                    else:
+                        fileSig[headers[ColType.HEX]] = _format_hex(col.extract().get_text())
 
-                    fileSig[col.name] = hex
                 case ColType.ISO:
-                    fileSig[col.name] = col.get_text()
+                    isoTags = col.find_all('code')
+                    if len(isoTags) > 1:
+                        fileSig[col.name] = [codeTag.extract().get_text() for codeTag in isoTags]
+                    elif len(isoTags) == 1:
+                        fileSig[col.name] = isoTags[0].extract().get_text()
+                    else:
+                        fileSig[headers[ColType.ISO]] = col.extract().get_text()
+
                 case ColType.OFF:
                     fileSig[col.name] = col.get_text()
                 case ColType.EXT:
