@@ -1,16 +1,14 @@
 #!/bin/env python
 
 from lib.parser import Table
-import logging
+from lib.util import log
 
 def main() -> None:
     wiki_table: Table = Table()
     wiki_table.make_table()
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.ERROR)
-
     try:
         main()
     except Exception as e:
-        logging.exception(e)
+        log.exception(e)
