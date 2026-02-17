@@ -1,6 +1,6 @@
 from lib.parser._wikitable_parser import parse_html, pretty_html
 from lib.util import DOCS_PATH, USER_ARGS, FileData
-from lib.parser._html_obj import HTML
+from lib.parser.obj._html_obj import HTML
 from pathlib import Path
 import logging
 
