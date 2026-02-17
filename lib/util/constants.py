@@ -16,6 +16,8 @@ class ColType(IntEnum):
     EXT = 3
     DES = 4
 
+HEADERNAMES = ['Hex Signature', 'ISO 8859-1', 'Offset', 'Extension', 'Description']
+
 ROOT: Path = Path(__file__).parent
 DOCS_PATH: Path = Path(f'{Path(__file__).parent.parent.parent}/docs')
 ENV_PATH: Path = Path(f'{ROOT}/.conf')
