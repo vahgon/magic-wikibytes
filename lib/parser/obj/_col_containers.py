@@ -1,10 +1,9 @@
-from lib.util.constants import HEADERNAMES
+from lib.util.constants import HEADERNAMES, FileData
 from typing import final
 from bs4 import Tag, ResultSet
 import bs4
 import re
 
-type textdata = (str | list[str])
 type codetags = (ResultSet[Tag] | Tag)
 
 def _format_hexstring(hexString: str) -> str:
@@ -26,9 +25,9 @@ class HexInstance:
 class coldata:
     def __init__(self, tag: Tag, idx: int) -> None:
         self.tag: Tag = tag
-        self.string: textdata = tag.get_text()
+        self.string: FileData = tag.get_text()
+        self.name: str = HEADERNAMES[self.__idx]
         self.__idx: int = idx
-        self.__name: str = HEADERNAMES[self.__idx]
         self._fix_coltag_children()
 
     def __call__(self, tag: Tag, idx: int):
@@ -89,7 +88,7 @@ class iso(coldata):
     def __init__(self, tag: Tag, idx: int) -> None:
         super().__init__(tag, idx)
         self.__codeTags: ResultSet[Tag] | Tag = super()._get_codeTags('code')
-        self.string: textdata = self._set_iso()
+        self.string: FileData = self._set_iso()
 
     def _set_iso(self) -> (list[str] | str):
         if isinstance(self.__codeTags, Tag):
