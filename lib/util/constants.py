@@ -7,7 +7,7 @@ USER_ARGS: Namespace = parse_args()
 
 type HtmlJson = dict[str, str | int]
 type ReqJson = dict[str, HtmlJson]
-type FileData = list[str | bytes] | str | int | bytes
+type FileData = list[str | bytes] | list[str] | str | int | bytes
 
 class ColType(IntEnum):
     HEX = 0
