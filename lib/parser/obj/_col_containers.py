@@ -1,8 +1,6 @@
 from lib.util.constants import HEADERNAMES, FileData
 from typing import final
 from bs4 import Tag, ResultSet
-import bs4
-import re
 
 type codetags = (ResultSet[Tag] | Tag)
 
