@@ -3,9 +3,15 @@ from lib.util import EMAIL
 
 class HTML:
     def __init__(self) -> None:
-        self.html: str
-        self.revId: int
-        self.email: str = EMAIL
-        self.resJson: dict[str, str | int]
+        self._email:       str = EMAIL
+        self._revision_id: int
+        self._res_json:    (dict[str, str | int])
+        self.html:         str
 
-        [self.resJson, self.html, self.revId] = get_response()
+        [self._res_json, self.html, self._revision_id] = get_response()
+
+    def check_rev_id(self) -> None:
+        '''
+        Checks whether the last execution of this script had a response with a differing revision
+        id than the current execution. If so, parse the response. If not, don't.
+        '''

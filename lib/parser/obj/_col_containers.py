@@ -3,21 +3,18 @@ from typing import final, override
 
 from bs4 import ResultSet, Tag
 
-from lib.parser.obj._format_obj import Filebyte, Latin1
-from lib.exceptions import WikitableFormatError
-from lib.util.constants import ColType
+from lib.exceptions import NoTagFoundError
+from lib.parser.obj._format_obj import checkbytes
+from lib.util.constants import HEADERNAMES, ColType
 
 type Codetags = ResultSet[Tag] | Tag
 type Textdata = list[str] | str
 
-repl_children = Tag.unwrap
-destroy       = Tag.decompose
-
 class FileSignatureTag:
     def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
         self.__name:    str
-        self.tag:       Tag             = col.extract()
         self.row:       ResultSet[Tag]  = row
+        self.tag:       Tag             = col.extract()
         self.text:      Textdata        = self.tag.get_text()
 
     @override
@@ -103,8 +100,9 @@ class ISOData(FileSignatureTag):
 
 @final
 class Offset(FileSignatureTag):
-    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
-        super().__init__(col, row)
+    '''
+    Subclass does nothing as of now.
+    '''
 
 @final
 class FileSignatureExtension(FileSignatureTag):
