@@ -1,7 +1,6 @@
 from argparse import Namespace
 from enum import IntEnum
 from pathlib import Path
-from typing import Self
 
 from lib.util._args import parse_args
 
@@ -21,6 +20,7 @@ class ColType(IntEnum):
 
 BADTAGS = ['cite', 'sup', 'span', 'br']
 FIXTAGS = ['a', 'p']
+JNK_CHARS = ['\xa0', ' ']
 
 HEADERNAMES = ['Hex Signature', 'ISO 8859-1', 'Offset', 'Extension', 'Description']
 
