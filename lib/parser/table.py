@@ -1,8 +1,9 @@
-from lib.parser._wikitable_parser import parse_html, pretty_html
-from lib.util import DOCS_PATH, USER_ARGS, FileData
-from lib.parser.obj._html_obj import HTML
-from pathlib import Path
 import logging
+from pathlib import Path
+
+from lib.parser._wikitable_parser import Parser
+from lib.parser.obj._html_obj import HTML
+from lib.util import DOCS_PATH, USER_ARGS, FileData
 
 try:
     from pandas import DataFrame
@@ -13,11 +14,11 @@ except (ImportError, ModuleNotFoundError) as e:
 class Table(HTML):
     def __init__(self) -> None:
         super().__init__()
-        self.fileOutput: Path | None = USER_ARGS.output
-        self.fileFormat: str | None = USER_ARGS.format
-        self.fileToDocs: bool | None = USER_ARGS.docs
-
-        self.rawFileSigs: list[dict[str, FileData]]
+        self.fileOutput: (Path | None)  = USER_ARGS.output
+        self.fileFormat: (str | None)   = USER_ARGS.format
+        self.fileToDocs: (bool | None)  = USER_ARGS.docs
+        self.parser: Parser = Parser(self.html)
+        self.rawFileSigs: list[dict[str, FileData]] = self.parser.todict()
         self.df: DataFrame = DataFrame()
 
     def _determine_io(self) -> None:
@@ -34,7 +35,7 @@ class Table(HTML):
             self._set_output(None)
         else:
             logging.info("No file format or output path provided, Printing raw response data.")
-            print(pretty_html(self.html))
+            print(self.parser.prettify())
 
     def _set_output(self, out: Path | str | None) -> None:
         suffix: str | None = out.suffix if isinstance(out, Path) else out 
@@ -70,7 +71,5 @@ class Table(HTML):
         return self.df.replace(r'\n', '<br>', regex=True).to_markdown(buf=self.fileOutput, tablefmt='github')
 
     def make_table(self) -> None:
-        self.rawFileSigs = parse_html(self.html)
         self.df.fillna('', inplace=True)
-
         self._determine_io()

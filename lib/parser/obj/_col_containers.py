@@ -1,112 +1,141 @@
-from lib.util.constants import HEADERNAMES, FileData
-from typing import final
-from bs4 import Tag, ResultSet
+import re
+from typing import final, override
 
-type codetags = (ResultSet[Tag] | Tag)
+from bs4 import ResultSet, Tag
 
-def _format_hexstring(hexString: str) -> str:
-    return hexString.replace(' ', '').replace('\xa0', '')
+from lib.parser.obj._format_obj import Filebyte, Latin1
+from lib.exceptions import WikitableFormatError
+from lib.util.constants import ColType
 
-class HexInstance:
-    def __init__(self, hexString: str) -> None:
-        self.text: str = _format_hexstring(hexString) if (hexString.count(' ') != 0 or hexString.count('\xa0') != 0) else hexString
-        self.byteList: list[str] = [self.text[i:i+2] for i in range(0, len(self.text), 2)]
-        self.wildcardbytes: bool = True if self.byteList.count('??') else False
-        self._format_hex()
+type Codetags = ResultSet[Tag] | Tag
+type Textdata = list[str] | str
 
-    def _format_hex(self) ->  None:
-        for i in self.byteList:
-            if i != '??':
-                byte = bytes.fromhex(i)
-                decoded = byte.decode('latin-1')
+repl_children = Tag.unwrap
+destroy       = Tag.decompose
 
-class coldata:
-    def __init__(self, tag: Tag, idx: int) -> None:
-        self.tag: Tag = tag
-        self.string: FileData = tag.get_text()
-        self.name: str = HEADERNAMES[self.__idx]
-        self.__idx: int = idx
-        self._fix_coltag_children()
+class FileSignatureTag:
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        self.__name:    str
+        self.tag:       Tag             = col.extract()
+        self.row:       ResultSet[Tag]  = row
+        self.text:      Textdata        = self.tag.get_text()
 
-    def __call__(self, tag: Tag, idx: int):
-        self.__init__(tag, idx)
+    @override
+    def __str__(self) -> str:
+        return self.text if isinstance(self.text, str) else '\n'.join(self.text)
 
-    def _expected_tag(self, tagName: str) -> bool:
-        return True if self.tag.find(tagName) else False
+    @property
+    def name(self) -> str:
+        return self.__name
 
-    def _get_codeTags(self, tagName: str) -> (ResultSet[Tag] | Tag):
-        if not self._expected_tag(tagName):
-            # log this
-            return self.tag
-
-        codeTags = self.tag.find_all(tagName)
-        return codeTags[0] if len(codeTags) == 1 else codeTags
-    
-    def _fix_coltag_children(self) -> None:
-        BADTAGS = ['cite', 'sup', 'span']
-        FIXTAGS = ['a', 'p']
-
-        for tag in BADTAGS:
-            for foundTag in self.tag.find_all(tag):
-                foundTag.decompose()
-
-        for tag in FIXTAGS:
-            for foundTag in self.tag.find_all(tag):
-                _ = foundTag.replaceWithChildren()
-
-        for codeTag in self.tag.find_all('code'):
-            for br in codeTag.find_all('br'):
-                _ = br.extract()
-
-    def _remove_br(self) -> None:
-        for brTag in self.tag.find_all('br'):
-            brTag.decompose()
+    @name.setter
+    def name(self, name: str) -> None:
+        self.__name = name
 
 @final
-class hexadecimal(coldata):
-    def __init__(self, tag: Tag, idx: int) -> None:
-        super().__init__(tag, idx)
-        self.__hexString: str
-        self.__qData: str | None
-        self.__codeTags: ResultSet[Tag] | Tag = super()._get_codeTags('code')
+class ByteData(FileSignatureTag):
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        super().__init__(col, row)
 
-        self.string = self._set_hex()
-    
-    def _set_hex(self) -> str | list[str]:
-        if isinstance(self.__codeTags, Tag):
-            return HexInstance(self.__codeTags.get_text()).text
+        self._original_hex: (list[str] | str)   = []
+        self._code_tags:    ResultSet[Tag]      = self.tag.find_all('code')
+        self._iso_tags:     ResultSet[Tag]      = self.row[ColType.ISO].find_all('code')
+        self.hex:           (list[Filebyte] | Filebyte)
 
-        hexList: str | list[str] = []
-        for tag in self.__codeTags:
-            hexList.append(HexInstance(tag.get_text()).text)
-        return hexList
+        self._set_hex()
 
-@final
-class iso(coldata):
-    def __init__(self, tag: Tag, idx: int) -> None:
-        super().__init__(tag, idx)
-        self.__codeTags: ResultSet[Tag] | Tag = super()._get_codeTags('code')
-        self.string: FileData = self._set_iso()
+    def _set_hex(self) -> None:
+        for codetag in self._code_tags:
+            for br in codetag.find_all('br'):
+                _ = br.unwrap()
 
-    def _set_iso(self) -> (list[str] | str):
-        if isinstance(self.__codeTags, Tag):
-            return self.__codeTags.get_text()
-        
-        return [iso.get_text() for iso in self.__codeTags]
+        if len(self._code_tags) == 1:
+            self.text = self._code_tags[0].get_text()
+        else:
+            self.text = [hex.get_text() for hex in self._code_tags]
 
-@final
-class offset(coldata):
-    def __init__(self, tag: Tag, idx: int) -> None:
-        super().__init__(tag, idx)
+        self._balance_codetags()
 
-@final
-class extension(coldata):
-    def __init__(self, tag: Tag, idx: int) -> None:
-        super().__init__(tag, idx)
-        self._remove_br()
-        self.text: str | list[str] = self.tag.get_text(separator='\n').split('\n')
+    def _balance_codetags(self) -> None:
+        sisters = [self._code_tags, self._iso_tags]
+        sisters.sort(key=len, reverse=True)
+
+        if len(sisters[0]) != len(sisters[1]):
+            if (len(sisters[0]) - len(sisters[1]) == 1) and (sisters[1]):
+                _ = sisters[0][0].append(sisters[0].pop().extract().getText())
+            elif len(sisters[-1]) == 0:
+                pass
+            else:
+                e = WikitableFormatError()
+                e.add_note("Problem while balancing codetags for hex and iso columns")
+                raise e
+
+    @property
+    def original_hex(self) -> (list[str] | str):
+        return self._original_hex
 
 @final
-class description(coldata):
-    def __init__(self, tag: Tag, idx: int) -> None:
-        super().__init__(tag, idx)
+class ISOData(FileSignatureTag):
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        super().__init__(col, row)
+        self._code_tags:    ResultSet[Tag] = self.tag.find_all('code')
+        self._latin:        Latin1
+        self._hex_bytes:    str
+
+        self._set_iso()
+
+    def _set_iso(self) -> None:
+        if not self._code_tags:
+            # log
+            self.text = self.tag.get_text()
+        else:
+            if len(self._code_tags) == 1:
+                self.text = self._code_tags[0].get_text()
+            elif len(self._code_tags) > 1:
+                self.text = [iso.get_text() for iso in self._code_tags]
+    @property
+    def hex_bytes(self) -> str:
+        return self._hex_bytes
+
+    @hex_bytes.setter
+    def hex_bytes(self, h_str: str) -> None:
+        self._hex_bytes = h_str
+
+@final
+class Offset(FileSignatureTag):
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        super().__init__(col, row)
+
+@final
+class FileSignatureExtension(FileSignatureTag):
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        super().__init__(col, row)
+        self._extensions = [tag.get_text() for tag in self.tag]
+
+        self._set_exts()
+
+    def _set_exts(self) -> None:
+        if not self._extensions:
+            self.text = ''
+            return
+        self.text = self._extensions[0] if len(self._extensions) == 1 else self._extensions
+
+@final
+class Description(FileSignatureTag):
+    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
+        super().__init__(col, row)
+        self.text = re.sub(pattern=r'(\[\w\d*\])', repl='', string=self.tag.get_text())
+
+class ColumnFactory:
+    @staticmethod
+    def set_row(row: ResultSet[Tag]) -> list[FileSignatureTag]:
+        subclasses: list[type[FileSignatureTag]]    = FileSignatureTag.__subclasses__()
+        converted:  list[FileSignatureTag]          = []
+
+        for idx, col in enumerate(row):
+            converted.append(subclasses[idx](col, row))
+        return converted
+
+    @staticmethod
+    def col_type(colType: int, col: Tag, row: ResultSet[Tag]) -> FileSignatureTag:
+        return FileSignatureTag.__subclasses__()[colType](col, row)
