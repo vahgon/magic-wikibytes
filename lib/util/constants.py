@@ -18,8 +18,9 @@ class ColType(IntEnum):
     EXT = 3
     DES = 4
 
-BADTAGS = ['cite', 'sup', 'span', 'br']
-FIXTAGS = ['a', 'p']
+BADTAGS = ['cite', 'sup', 'br']
+FIXTAGS = ['a', 'p', 'span']
+
 JNK_CHARS = ['\xa0', ' ']
 
 HEADERNAMES = ['Hex Signature', 'ISO 8859-1', 'Offset', 'Extension', 'Description']
