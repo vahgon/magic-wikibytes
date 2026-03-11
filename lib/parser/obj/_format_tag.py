@@ -1,4 +1,5 @@
 import re
+from collections import deque
 from dataclasses import dataclass, field
 from functools import partial
 from typing import Self
@@ -77,8 +78,6 @@ class TagCleaner:
     of `Tags`.
     '''
     def __init__(self, rows: list[ResultSet[Tag]]) -> None:
-        self._rows:      list[ResultSet[Tag]]     = rows
-        self._ptr:       int                      = 0
         self._colmap:    dict[int, partial[None]] = {
             ColType.HEX: partial(self._hex_col),
             ColType.ISO: partial(self._iso_col),
@@ -86,7 +85,9 @@ class TagCleaner:
             ColType.EXT: partial(self._ext_col),
             ColType.DES: partial(self._des_col),
         }
-        self.tags: list[_TagContainer] = []
+        self._rows: deque[ResultSet[Tag]] = deque(rows)
+        self._ptr:  int                   = 0
+        self.tags:  list[_TagContainer] = []
 
     def clean(self) -> list[ResultSet[Tag]]:
         '''
@@ -96,7 +97,7 @@ class TagCleaner:
         :return: list of row[columns]
         '''
         while self._rows:
-            self._fill_tag_container(self._rows.pop(0), _TagContainer())
+            self._fill_tag_container(self._rows.popleft(), _TagContainer())
 
         for row in self.tags:
             for idx, col in enumerate(row):
@@ -119,8 +120,8 @@ class TagCleaner:
         #   - Add the next _ cols to the current instance with rowspans
         #   - Create an entire new _TagContainer instance
         while row.rowspan > 1:
-            next_row = self._rows.pop(0)
-            if USER_ARGS.rowspan_newrow:
+            next_row = self._rows.popleft()
+            if USER_ARGS.rowspan_newrow:  # Change this
                 spanned_row = _TagContainer()
 
                 for span_col in row.rowspan_cols:
