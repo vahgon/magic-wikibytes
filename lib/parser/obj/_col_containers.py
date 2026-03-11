@@ -60,6 +60,7 @@ class Offset(FileSignatureTag):
 class FileSignatureExtension(FileSignatureTag):
     def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
         super().__init__(col, row)
+        self.text = [t.get_text() for t in self.tag.children] if len(self.tag) > 1 else self.text
 
 @final
 class Description(FileSignatureTag): ...
