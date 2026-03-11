@@ -1,3 +1,4 @@
+import re
 from dataclasses import dataclass, field
 from functools import partial
 from typing import Self
@@ -33,7 +34,10 @@ class _TagContainer:
         self.row_list[idx] = tag
 
         if tag.has_attr('rowspan'):
-            self._set_rowspan(int(str(tag['rowspan'])), tag, idx)
+            self.has_rowspan = True
+            self.rowspan = int(str(tag['rowspan']))
+            self.rowspan_cols.append(_RowspanTag(tag, idx))
+
             del tag.attrs['rowspan']
 
     def __iter__(self) -> Self:
@@ -64,9 +68,6 @@ class _TagContainer:
         self._contains_rowspans = x
 
     def _set_rowspan(self, rowspan: int, tag: Tag, idx: int) -> None:
-        if not self.has_rowspan:
-            self.has_rowspan = True
-
         self.rowspan = rowspan
         self.rowspan_cols.append(_RowspanTag(tag, idx))
 
@@ -140,11 +141,18 @@ class TagCleaner:
     def _balance_hexiso_codetags(self, container: _TagContainer) -> None:
         code_tags = [(ColType.HEX, container[ColType.HEX].find_all('code')),
                      (ColType.ISO, container[ColType.ISO].find_all('code'))]
+        code_tags.sort(key=lambda tupl: len(tupl[1]), reverse=True)
+        diff = abs(len(code_tags[0][1]) - len(code_tags[1][1]))
 
-        for tag_tuple in code_tags:
-            col_type, code_list = tag_tuple
-            if len(code_list) == 0:
-                self._wrap_tag_content_in_newtag(src_tag=container[col_type], new_name='code')
+        while diff != 0:
+            if len(code_tags[1][1]) == 0: # No code tags
+                if container[code_tags[1][0]].get_text() == '':  # No NavigableString(s) in <td>
+                    self._add_child_to_tag(src_tag=container[code_tags[1][0]], name='code')
+                else:  # Has unwrapped content
+                    self._wrap_tag_contents(src_tag=container[code_tags[1][0]], new_name='code')
+            else:  # Imbalanced
+                self._add_child_to_tag(src_tag=container[code_tags[1][0]], name='code')
+            diff -= 1
 
     def _hex_col(self, col: Tag) -> None:
         for code_tag in col.find_all('code'):
@@ -160,9 +168,25 @@ class TagCleaner:
     def _ext_col(self, col: Tag) -> None: 
         self._clean_children(col)
 
-    def _ext_col(self, col: Tag) -> None: self._clean_children(col)
+        # todo - the user should be able to choose if parenthesis should be in ext col
+        if True:
+            if col.get_text().count('('):
+                cleaned = re.sub(pattern=r'\s?\(.*?\)',
+                                 repl='',
+                                 string=col.get_text(separator='\n'),
+                                 flags=re.DOTALL).splitlines()
 
-    def _des_col(self, col: Tag) -> None: self._clean_children(col)
+                col.clear(decompose=True)
+                for idx in range(len(cleaned)):
+                    col.insert(idx, cleaned[idx])
+
+    def _des_col(self, col: Tag) -> None:
+        self._clean_children(col)
+
+    @staticmethod
+    def _add_child_to_tag(src_tag: Tag, name: str) -> None:
+        child = Tag(name=name)
+        src_tag.append(child)
 
     @staticmethod
     def _wrap_tag_contents(src_tag: Tag, new_name: str) -> None:
