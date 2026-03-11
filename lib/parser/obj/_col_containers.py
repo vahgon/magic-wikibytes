@@ -77,13 +77,17 @@ class ColumnFactory:
         :param row: `ResultSet`[`Tag`] holding each columns value
         :return: `list`[`FileSignatureTag`] - class holding each columns information.
          '''
-        subclasses: list[type[FileSignatureTag]]    = FileSignatureTag.__subclasses__()
-        converted:  list[FileSignatureTag]          = []
+        subclasses: list[type[FileSignatureTag]] = FileSignatureTag.__subclasses__()
+        cols: list[FileSignatureTag]             = []
 
         for idx, col in enumerate(row):
-            converted.append(subclasses[idx](col, row))
-            converted[idx].name = HEADERNAMES[idx]
+            cols.append(subclasses[idx](col, row))
+            cols[idx].name = HEADERNAMES[idx]
 
-        check = checkbytes(converted[ColType.HEX].text, converted[ColType.ISO].text)
+        bal_bytes = checkbytes(cols[ColType.HEX].text, cols[ColType.ISO].text)
 
-        return converted
+        if isinstance(cols[ColType.HEX].text, str) and isinstance(cols[ColType.ISO].text, str):
+            cols[ColType.HEX].text = bal_bytes.hex
+            cols[ColType.ISO].text = bal_bytes.iso
+
+        return cols
