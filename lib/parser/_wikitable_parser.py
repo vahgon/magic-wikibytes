@@ -1,7 +1,7 @@
 import re
 from typing import Self
 
-from lib.exceptions import NoTagFoundError
+from lib.exceptions.no_tag_error import NoTagFoundError
 from lib.parser.obj._format_tag import TagCleaner
 from lib.parser.obj._row_containers import Row
 from lib.util.constants import ParsedTableDict
@@ -15,9 +15,9 @@ except (ImportError, ModuleNotFoundError) as e:
 
 class _WikiTable:
     def __init__(self, html: str) -> None:
+        self._html:      str          = re.sub(pattern=r'\n', repl='', string=html)
+        self._strainer:  SoupStrainer = SoupStrainer(name='table', attrs= { 'class': 'wikitable sortable' })
         self._wikitable: Tag
-        self._html:      str            = re.sub(pattern=r'\n', repl='', string=html)
-        self._strainer:  SoupStrainer   = SoupStrainer(name='table', attrs= { 'class': 'wikitable sortable' })
         self.tbody_tag:  Tag
 
         self._strain_soup()

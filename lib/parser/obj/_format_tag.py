@@ -8,8 +8,7 @@ from lib.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, USER_ARGS, ColType
 
 repl_children = Tag.unwrap
 destroy       = Tag.decompose
-
-TAGS          = set(FIXTAGS) | set(BADTAGS)
+TAGS          = (set(FIXTAGS) | set(BADTAGS))
 
 @dataclass
 class _RowspanTag:
@@ -21,12 +20,11 @@ class _TagContainer:
     _contains_rowspans: bool = False
     _rowspan_amount:    int  = 0
     _idx:               int  = 0
-
     row_list: ResultSet[Tag] = field(
         default_factory=lambda: ResultSet(source=None, result=[Tag(name='') for _ in range(5)]),
         repr=False
     )
-    rowspan_cols:       list[_RowspanTag]  = field(default_factory=list[_RowspanTag])
+    rowspan_cols: list[_RowspanTag] = field(default_factory=list[_RowspanTag])
 
     def __getitem__(self, idx: int) -> Tag:
         return self.row_list[idx]
@@ -93,6 +91,8 @@ class TagCleaner:
         '''
         Cleans all `Tag` objects found in the `BeautifulSoup` wikitable received from the 
         wikimedia API
+
+        :return: list of row[columns]
         '''
         while self._rows:
             self._fill_tag_container(self._rows.pop(0), _TagContainer())
@@ -110,7 +110,7 @@ class TagCleaner:
         self.tags.append(tag_container)
         if tag_container.has_rowspan:
             self._config_rowspan_tags(tag_container)
-        
+
         self._balance_hexiso_codetags(tag_container)
 
     def _config_rowspan_tags(self, row: _TagContainer) -> None:
@@ -121,14 +121,15 @@ class TagCleaner:
             next_row = self._rows.pop(0)
             if USER_ARGS.rowspan_newrow:
                 spanned_row = _TagContainer()
+
                 for span_col in row.rowspan_cols:
                     spanned_row[span_col.idx] = span_col.tag
 
                 for idx, col in enumerate(spanned_row):
                     if col.name == '':
                         spanned_row[idx] = next_row.pop(0)
-                self.tags.append(spanned_row)
 
+                self.tags.append(spanned_row)
             else:
                 for idx, col in enumerate(row):
                     if idx not in [r_idx.idx for r_idx in row.rowspan_cols]:
@@ -150,21 +151,25 @@ class TagCleaner:
             for char in JNK_CHARS:
                 code_tag.string = code_tag.get_text().replace(char, '').lower()
 
-    def _iso_col(self, col: Tag) -> None: self._clean_children(col)
+    def _iso_col(self, col: Tag) -> None:
+        self._clean_children(col)
 
-    def _off_col(self, col: Tag) -> None: self._clean_children(col)
+    def _off_col(self, col: Tag) -> None:
+        self._clean_children(col)
+
+    def _ext_col(self, col: Tag) -> None: 
+        self._clean_children(col)
 
     def _ext_col(self, col: Tag) -> None: self._clean_children(col)
 
     def _des_col(self, col: Tag) -> None: self._clean_children(col)
 
     @staticmethod
-    def _wrap_tag_content_in_newtag(src_tag: Tag, new_name: str) -> None:
+    def _wrap_tag_contents(src_tag: Tag, new_name: str) -> None:
         new_tag = Tag(name=new_name)
         new_tag.string = src_tag.get_text()
-
         src_tag.clear()
-        src_tag.append(new_tag)  # pyright: ignore[reportUnusedCallResult]
+        src_tag.append(new_tag)
 
     @staticmethod
     def _clean_children(col: Tag) -> None:
@@ -176,6 +181,6 @@ class TagCleaner:
         '''
         for tag in col.find_all(TAGS):
             if tag.name in FIXTAGS:
-                repl_children(tag)  # pyright: ignore[reportUnusedCallResult]
+                repl_children(tag)
             elif tag.name in BADTAGS:
                 destroy(tag)

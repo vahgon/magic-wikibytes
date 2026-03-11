@@ -1,9 +1,7 @@
-import re
 from typing import final, override
 
 from bs4 import ResultSet, Tag
 
-from lib.exceptions import NoTagFoundError
 from lib.parser.obj._format_obj import checkbytes
 from lib.util.constants import HEADERNAMES, ColType
 
@@ -38,7 +36,6 @@ class ByteData(FileSignatureTag):
         super().__init__(col, row)
         self._original_hex: (list[str] | str) = []
         self._code_tags:    ResultSet[Tag]    = self.tag.find_all('code')
-
         self.text = self.set_text([hex.get_text() for hex in self._code_tags])
 
     @property
@@ -51,13 +48,12 @@ class ISOData(FileSignatureTag):
         super().__init__(col, row)
         self._original_iso: (list[str] | str) = []
         self._code_tags:    ResultSet[Tag]    = self.tag.find_all('code')
-
         self.text = self.set_text([iso.get_text() for iso in self._code_tags])
 
 @final
 class Offset(FileSignatureTag):
     '''
-    Subclass does nothing as of now.
+    todo - format offset & add to formatting done in checkbytes object
     '''
 
 @final
@@ -66,11 +62,12 @@ class FileSignatureExtension(FileSignatureTag):
         super().__init__(col, row)
 
 @final
-class Description(FileSignatureTag):
-    def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
-        super().__init__(col, row)
+class Description(FileSignatureTag): ...
 
 class ColumnFactory:
+    '''
+    Factory class used to populate `Row` objects.
+    '''
     @staticmethod
     def set_row(row: ResultSet[Tag]) -> list[FileSignatureTag]:
         '''
