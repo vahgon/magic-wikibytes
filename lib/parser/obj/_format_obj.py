@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from lib.exceptions.unexpected_format_error import UnexpectedFormatError
+from lib.util.constants import USER_ARGS
 
 ucode = str.maketrans({i: chr(0x2400 + i) for i in range(0x21)} | {0x7f: '\u2421'})
 
@@ -13,17 +14,18 @@ class BytePairing:
 
     def __post_init__(self) -> None:
         if len(self.h_bytes) == len(self.i_bytes):
-            if True: # todo - if user wants to force hex to latin conversion even if balanced
+            if USER_ARGS.force_latin:
                 self._set_latin()
             return
 
         self._set_latin()
 
     def _set_latin(self) -> None:
-        for byte in self.h_bytes:
-            # todo - if byte == '??', change to user's chosen char for wildcard bytes, n_byte+=byte
+        for idx, byte in enumerate(self.h_bytes):
             if byte == '??':
-                self._latin1.append(byte)
+                self._latin1.append(USER_ARGS.wildcard)
+                print(USER_ARGS.wildcard)
+                self.h_bytes[idx] = USER_ARGS.wildcard * 2
             else:
                 decode_byte = bytes.fromhex(byte).decode('latin-1', 'replace')
                 decode_byte = decode_byte.translate(ucode)
@@ -51,8 +53,7 @@ class checkbytes:
                     [pair[0][idx:idx+2] for idx in range(0, len(pair[0]), 2)],
                     list(pair[1])
                 )
-                # todo - user can define spacing
-                self.hex[idx] = ''.join(bytepair.h_bytes)
+                self.hex[idx] = USER_ARGS.hexspacing.join(bytepair.h_bytes)
                 self.iso[idx] = ''.join(bytepair.i_bytes)
 
         elif isinstance(self.hex, str) and isinstance(self.iso, str):
@@ -60,8 +61,7 @@ class checkbytes:
                 [self.hex[idx:idx+2] for idx in range(0, len(self.hex), 2)],
                 list(self.iso)
             )
-            # todo - user can define spacing
-            self.hex = ''.join(bytepair.h_bytes)
+            self.hex = USER_ARGS.hexspacing.join(bytepair.h_bytes)
             self.iso = ''.join(bytepair.i_bytes)
 
         else:
