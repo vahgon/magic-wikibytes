@@ -121,7 +121,7 @@ class TagCleaner:
         #   - Create an entire new _TagContainer instance
         while row.rowspan > 1:
             next_row = self._rows.popleft()
-            if USER_ARGS.rowspan_newrow:  # Change this
+            if USER_ARGS.span_newrow:
                 spanned_row = _TagContainer()
 
                 for span_col in row.rowspan_cols:
@@ -169,8 +169,7 @@ class TagCleaner:
     def _ext_col(self, col: Tag) -> None: 
         self._clean_children(col)
 
-        # todo - the user should be able to choose if parenthesis should be in ext col
-        if True:
+        if USER_ARGS.noparen:
             if col.get_text().count('('):
                 cleaned = re.sub(pattern=r'\s?\(.*?\)',
                                  repl='',
