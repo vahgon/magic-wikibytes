@@ -8,8 +8,8 @@ class UserArguments:
     email:      (str | None)
     output:     (str | None)
     format:     (str | None)
-    hexspacing: (str)
-    wildcard:   (str)
+    hexspacing: str
+    wildcard:   str
 
     no_bigend:   bool = False
     span_newrow: bool = False
