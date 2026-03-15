@@ -1,2144 +1,2637 @@
 {
-    "0":{
-        "Hex signature":"23 21",
-        "ISO 8859-1":"#!",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Script or data to be passed to the program following the shebang (#!)"
-    },
-    "1":{
-        "Hex signature":"02 00 5a 57 52 54 00 00 00 00 00 00 00 00 00 00",
-        "ISO 8859-1":"␂␀ZWRT␀␀␀␀␀␀␀␀␀␀",
-        "Offset":"0",
-        "Extension":"cwk",
-        "Description":"Claris Works word processing doc"
-    },
-    "2":{
-        "Hex signature":"00 00 02 00 06 04 06 00 08 00 00 00 00 00",
-        "ISO 8859-1":"␀␀␂␀␆␄␆␀␈␀␀␀␀␀",
-        "Offset":"0",
-        "Extension":"wk1",
-        "Description":"Lotus 1-2-3 spreadsheet (v1) file"
-    },
-    "3":{
-        "Hex signature":"00 00 1A 00 00 10 04 00 00 00 00 00",
-        "ISO 8859-1":"␀␀␚␀␀␊␄␀␀␀␀␀",
-        "Offset":"0",
-        "Extension":"wk3",
-        "Description":"Lotus 1-2-3 spreadsheet (v3) file"
-    },
-    "4":{
-        "Hex signature":"00 00 1A 00 02 10 04 00 00 00 00 00",
-        "ISO 8859-1":"␀␀␚␀␂␊␄␀␀␀␀␀",
-        "Offset":"0",
-        "Extension":"wk4\nwk5",
-        "Description":"Lotus 1-2-3 spreadsheet (v4, v5) file"
-    },
-    "5":{
-        "Hex signature":"00 00 1A 00 05 10 04",
-        "ISO 8859-1":"␀␀␚␀␅␊␄",
-        "Offset":"0",
-        "Extension":"123",
-        "Description":"Lotus 1-2-3 spreadsheet (v9) file"
-    },
-    "6":{
-        "Hex signature":"00 00 03 F3",
-        "ISO 8859-1":"␀␀␃ó",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Amiga Hunk executable file"
-    },
-    "7":{
-        "Hex signature":"00 00 49 49 58 50 52 (little-endian)\n00 00 4D 4D 58 50 52 (big-endian)",
-        "ISO 8859-1":"␀␀IIXPR\n␀␀MMXPR",
-        "Offset":"0",
-        "Extension":"qxd",
-        "Description":"Quark Express document"
-    },
-    "8":{
-        "Hex signature":"50 57 53 33",
-        "ISO 8859-1":"PWS3",
-        "Offset":"0",
-        "Extension":"psafe3",
-        "Description":"Password Gorilla Password Database"
-    },
-    "9":{
-        "Hex signature":"D4 C3 B2 A1 (little-endian)",
-        "ISO 8859-1":"ÔÃ²¡",
-        "Offset":"0",
-        "Extension":"pcap",
-        "Description":"Libpcap File Format"
-    },
-    "10":{
-        "Hex signature":"4D 3C B2 A1 (little-endian)",
-        "ISO 8859-1":"M<²¡",
-        "Offset":"0",
-        "Extension":"pcap",
-        "Description":"Libpcap File Format (nanosecond-resolution)"
-    },
-    "11":{
-        "Hex signature":"0A 0D 0D 0A",
-        "ISO 8859-1":"␊␍␍␊",
-        "Offset":"0",
-        "Extension":"pcapng",
-        "Description":"PCAP Next Generation Dump File Format"
-    },
-    "12":{
-        "Hex signature":"ED AB EE DB",
-        "ISO 8859-1":"í«îÛ",
-        "Offset":"0",
-        "Extension":"rpm",
-        "Description":"RedHat Package Manager (RPM) package"
-    },
-    "13":{
-        "Hex signature":"53 51 4C 69 74 65 20 666F 72 6D 61 74 20 33 00",
-        "ISO 8859-1":"SQLite format 3␀",
-        "Offset":"0",
-        "Extension":"sqlitedb\nsqlite\ndb",
-        "Description":"SQLite Database"
-    },
-    "14":{
-        "Hex signature":"53 50 30 31",
-        "ISO 8859-1":"SP01",
-        "Offset":"0",
-        "Extension":"bin",
-        "Description":"Amazon Kindle Update Package"
-    },
-    "15":{
-        "Hex signature":"49 57 41 44",
-        "ISO 8859-1":"IWAD",
-        "Offset":"0",
-        "Extension":"wad",
-        "Description":"internal WAD (main resource file of Doom)"
-    },
-    "16":{
-        "Hex signature":"00",
-        "ISO 8859-1":"␀",
-        "Offset":"0",
-        "Extension":"PIC\nPIF\nSEA\nYTR",
-        "Description":"IBM Storyboard bitmap file\nWindows Program Information File\nMac Stuffit Self-Extracting Archive\nIRIS OCR data file"
-    },
-    "17":{
-        "Hex signature":"00 00 00 00 00 00 00 0000 00 00 00 00 00 00 0000 00 00 00 00 00 00 00",
-        "ISO 8859-1":"␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀",
-        "Offset":"11",
-        "Extension":"PDB",
-        "Description":"PalmPilot Database\/Document File"
-    },
-    "18":{
-        "Hex signature":"BE BA FE CA",
-        "ISO 8859-1":"¾ºþÊ",
-        "Offset":"0",
-        "Extension":"DBA",
-        "Description":"Palm Desktop Calendar Archive"
-    },
-    "19":{
-        "Hex signature":"00 01 42 44",
-        "ISO 8859-1":"␀␁BD",
-        "Offset":"0",
-        "Extension":"DBA",
-        "Description":"Palm Desktop To Do Archive"
-    },
-    "20":{
-        "Hex signature":"00 01 44 54",
-        "ISO 8859-1":"␀␁DT",
-        "Offset":"0",
-        "Extension":"TDA",
-        "Description":"Palm Desktop Calendar Archive"
-    },
-    "21":{
-        "Hex signature":"54 44 46 24",
-        "ISO 8859-1":"TDF$",
-        "Offset":"0",
-        "Extension":"TDF$",
-        "Description":"Telegram Desktop File"
-    },
-    "22":{
-        "Hex signature":"54 44 45 46",
-        "ISO 8859-1":"TDEF",
-        "Offset":"0",
-        "Extension":"TDEF",
-        "Description":"Telegram Desktop Encrypted File"
-    },
-    "23":{
-        "Hex signature":"00 01 00 00",
-        "ISO 8859-1":"␀␁␀␀",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Palm Desktop Data File (Access format)"
-    },
-    "24":{
-        "Hex signature":"00 00 01 00",
-        "ISO 8859-1":"␀␀␁␀",
-        "Offset":"0",
-        "Extension":"ico",
-        "Description":"Computer icon encoded in ICO file format"
-    },
-    "25":{
-        "Hex signature":"69 63 6e 73",
-        "ISO 8859-1":"icns",
-        "Offset":"0",
-        "Extension":"icns",
-        "Description":"Apple Icon Image format"
-    },
-    "26":{
-        "Hex signature":"66 74 79 70 33 67",
-        "ISO 8859-1":"ftyp3g",
-        "Offset":"4",
-        "Extension":"3gp\n3g2",
-        "Description":"3rd Generation Partnership Project 3GPP and 3GPP2 multimedia files"
-    },
-    "27":{
-        "Hex signature":"66 74 79 70 68 65 69 6366 74 79 70 6d",
-        "ISO 8859-1":"ftypheic",
-        "Offset":"4",
-        "Extension":"heic",
-        "Description":"High Efficiency Image Container (HEIC)"
-    },
-    "28":{
-        "Hex signature":"1F 9D",
-        "ISO 8859-1":"␟□",
-        "Offset":"0",
-        "Extension":"z\ntar.z",
-        "Description":"compressed file (often tar zip) using Lempel-Ziv-Welch algorithm"
-    },
-    "29":{
-        "Hex signature":"1F A0",
-        "ISO 8859-1":"␟⍽",
-        "Offset":"0",
-        "Extension":"z\ntar.z",
-        "Description":"Compressed file (often tar zip) using LZH algorithm"
-    },
-    "30":{
-        "Hex signature":"2D 6C 68 30 2D",
-        "ISO 8859-1":"-lh0-",
-        "Offset":"2",
-        "Extension":"lzh",
-        "Description":"Lempel Ziv Huffman archive file Method 0 (No compression)"
-    },
-    "31":{
-        "Hex signature":"2D 6C 68 35 2D",
-        "ISO 8859-1":"-lh5-",
-        "Offset":"2",
-        "Extension":"lzh",
-        "Description":"Lempel Ziv Huffman archive file Method 5 (8 KiB sliding window)"
-    },
-    "32":{
-        "Hex signature":"42 41 43 4B 4D 49 4B 4544 49 53 4B",
-        "ISO 8859-1":"BACKMIKEDISK",
-        "Offset":"0",
-        "Extension":"bac",
-        "Description":"AmiBack Amiga Backup data file"
-    },
-    "33":{
-        "Hex signature":"49 4E 44 58",
-        "ISO 8859-1":"INDX",
-        "Offset":"0",
-        "Extension":"idx",
-        "Description":"AmiBack Amiga Backup index file"
-    },
-    "34":{
-        "Hex signature":"62 70 6C 69 73 74",
-        "ISO 8859-1":"bplist",
-        "Offset":"0",
-        "Extension":"plist",
-        "Description":"Binary Property List file"
-    },
-    "35":{
-        "Hex signature":"42 5A 68",
-        "ISO 8859-1":"BZh",
-        "Offset":"0",
-        "Extension":"bz2",
-        "Description":"Compressed file using Bzip2 algorithm"
-    },
-    "36":{
-        "Hex signature":"47 49 46 38 37 61\n47 49 46 38 39 61",
-        "ISO 8859-1":"GIF87a\nGIF89a",
-        "Offset":"0",
-        "Extension":"gif",
-        "Description":"Image file encoded in the Graphics Interchange Format (GIF)"
-    },
-    "37":{
-        "Hex signature":"49 49 2A 00 (little-endian)",
-        "ISO 8859-1":"II*␀",
-        "Offset":"0",
-        "Extension":"tif\ntiff",
-        "Description":"Tagged Image File Format (TIFF)"
-    },
-    "38":{
-        "Hex signature":"49 49 2B 00 (little-endian)",
-        "ISO 8859-1":"II+␀",
-        "Offset":"0",
-        "Extension":"tiftiff",
-        "Description":"BigTIFF"
-    },
-    "39":{
-        "Hex signature":"49 49 2A 00 10 00 00 0043 52",
-        "ISO 8859-1":"II*␀␐␀␀␀CR",
-        "Offset":"0",
-        "Extension":"cr2",
-        "Description":"Canon RAW Format Version 2\nCanon's RAW format is based on TIFF."
-    },
-    "40":{
-        "Hex signature":"80 2A 5F D7",
-        "ISO 8859-1":"€*_×",
-        "Offset":"0",
-        "Extension":"cin",
-        "Description":"Kodak Cineon image"
-    },
-    "41":{
-        "Hex signature":"52 4E 43 01\n52 4E 43 02",
-        "ISO 8859-1":"RNC␁\nRNC␂",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Compressed file using Rob Northen Compression (version 1 and 2) algorithm"
-    },
-    "42":{
-        "Hex signature":"4E 55 52 55 49 4D 47\n4E 55 52 55 50 41 4C",
-        "ISO 8859-1":"NURUIMG\nNURUPAL",
-        "Offset":"0",
-        "Extension":"nui\nnup",
-        "Description":"nuru ASCII\/ANSI image and palette files"
-    },
-    "43":{
-        "Hex signature":"53 44 50 58 (big-endian format)",
-        "ISO 8859-1":"SDPX",
-        "Offset":"0",
-        "Extension":"dpx",
-        "Description":"SMPTE DPX image"
-    },
-    "44":{
-        "Hex signature":"76 2F 31 01",
-        "ISO 8859-1":"v\/1␁",
-        "Offset":"0",
-        "Extension":"exr",
-        "Description":"OpenEXR image"
-    },
-    "45":{
-        "Hex signature":"42 50 47 FB",
-        "ISO 8859-1":"BPGû",
-        "Offset":"0",
-        "Extension":"bpg",
-        "Description":"Better Portable Graphics format"
-    },
-    "46":{
-        "Hex signature":"FF D8 FF DB",
-        "ISO 8859-1":"ÿØÿÛ",
-        "Offset":"0",
-        "Extension":"jpg\njpeg",
-        "Description":"JPEG raw or in the JFIF or Exif file format"
-    },
-    "47":{
-        "Hex signature":"FF D8 FF E0",
-        "ISO 8859-1":"ÿØÿà",
-        "Offset":"0",
-        "Extension":"jpg",
-        "Description":"JPEG raw or in the JFIF or Exif file format"
-    },
-    "48":{
-        "Hex signature":"00 00 00 0C 6A 50 20 20 0D 0A 87 0A",
-        "ISO 8859-1":"␀␀␀␌jP␠␠␍␊‡␊",
-        "Offset":"0",
-        "Extension":"jp2\nj2k\njpf\njpm\njpg2\nj2c\njpc\njpx\nmj2",
-        "Description":"JPEG 2000 format"
-    },
-    "49":{
-        "Hex signature":"71 6F 69 66",
-        "ISO 8859-1":"qoif",
-        "Offset":"0",
-        "Extension":"qoi",
-        "Description":"QOI - The “Quite OK Image Format”"
-    },
-    "50":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??49 4C 42 4D",
-        "ISO 8859-1":"FORM????ILBM",
-        "Offset":"0\nany",
-        "Extension":"ilbm\nlbm\nibm\niff",
-        "Description":"IFF Interleaved Bitmap Image"
-    },
-    "51":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??38 53 56 58",
-        "ISO 8859-1":"FORM????8SVX",
-        "Offset":"0\nany",
-        "Extension":"8svx\n8sv\nsvx\nsnd\niff",
-        "Description":"IFF 8-Bit Sampled Voice"
-    },
-    "52":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??41 43 42 4D",
-        "ISO 8859-1":"FORM????ACBM",
-        "Offset":"0\nany",
-        "Extension":"acbm\niff",
-        "Description":"Amiga Contiguous Bitmap"
-    },
-    "53":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??41 4E 42 4D",
-        "ISO 8859-1":"FORM????ANBM",
-        "Offset":"0\nany",
-        "Extension":"anbm\niff",
-        "Description":"IFF Animated Bitmap"
-    },
-    "54":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??41 4E 49 4D",
-        "ISO 8859-1":"FORM????ANIM",
-        "Offset":"0\nany",
-        "Extension":"anim\niff",
-        "Description":"IFF CEL Animation"
-    },
-    "55":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??46 41 58 58",
-        "ISO 8859-1":"FORM????FAXX",
-        "Offset":"0\nany",
-        "Extension":"faxx\nfax\niff",
-        "Description":"IFF Facsimile Image"
-    },
-    "56":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??46 54 58 54",
-        "ISO 8859-1":"FORM????FTXT",
-        "Offset":"0\nany",
-        "Extension":"ftxt\niff",
-        "Description":"IFF Formatted Text"
-    },
-    "57":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??53 4D 55 53",
-        "ISO 8859-1":"FORM????SMUS",
-        "Offset":"0\nany",
-        "Extension":"smus\nsmu\nmus\niff",
-        "Description":"IFF Simple Musical Score"
-    },
-    "58":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??43 4D 55 53",
-        "ISO 8859-1":"FORM????CMUS",
-        "Offset":"0\nany",
-        "Extension":"cmus\nmus\niff",
-        "Description":"IFF Musical Score"
-    },
-    "59":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??59 55 56 4E",
-        "ISO 8859-1":"FORM????YUVN",
-        "Offset":"0\nany",
-        "Extension":"yuvn\nyuv\niff",
-        "Description":"IFF YUV Image"
-    },
-    "60":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??46 41 4E 54",
-        "ISO 8859-1":"FORM????FANT",
-        "Offset":"0\nany",
-        "Extension":"iff",
-        "Description":"Amiga Fantavision Movie"
-    },
-    "61":{
-        "Hex signature":"46 4F 52 4D ?? ?? ?? ??41 49 46 46",
-        "ISO 8859-1":"FORM????AIFF",
-        "Offset":"0\nany",
-        "Extension":"aiff\naif\naifc\nsnd\niff",
-        "Description":"Audio Interchange File Format"
-    },
-    "62":{
-        "Hex signature":"4C 5A 49 50",
-        "ISO 8859-1":"LZIP",
-        "Offset":"0",
-        "Extension":"lz",
-        "Description":"lzip compressed file"
-    },
-    "63":{
-        "Hex signature":"30 37 30 37 30 31",
-        "ISO 8859-1":"070701",
-        "Offset":"0",
-        "Extension":"cpio",
-        "Description":"cpio \"new\" ASCII archive file"
-    },
-    "64":{
-        "Hex signature":"30 37 30 37 30 32",
-        "ISO 8859-1":"070702",
-        "Offset":"0",
-        "Extension":"cpio",
-        "Description":"cpio ASCII archive file with crc"
-    },
-    "65":{
-        "Hex signature":"30 37 30 37 30 37",
-        "ISO 8859-1":"070707",
-        "Offset":"0",
-        "Extension":"cpio",
-        "Description":"cpio ASCII archive file"
-    },
-    "66":{
-        "Hex signature":"4D 5A",
-        "ISO 8859-1":"MZ",
-        "Offset":"0",
-        "Extension":"exe\ndll\nmui\nsys\nscr\ncpl\nocx\nax\niec\nime\nrs\ntsp\nfon\nefi",
-        "Description":"DOS MZ executable and its descendants (including NE and PE)"
-    },
-    "67":{
-        "Hex signature":"53 4D 53 4E 46 32 30 30",
-        "ISO 8859-1":"SMSNF200",
-        "Offset":"0",
-        "Extension":"ssp",
-        "Description":"SmartSniff Packets File"
-    },
-    "68":{
-        "Hex signature":"5A 4D",
-        "ISO 8859-1":"ZM",
-        "Offset":"0",
-        "Extension":"exe",
-        "Description":"DOS ZM executable and its descendants (rare)"
-    },
-    "69":{
-        "Hex signature":"50 4B 03 04\n50 4B 05 06 (empty archive)\n50 4B 07 08 (spanned archive)",
-        "ISO 8859-1":"PK␃␄\nPK␅␆\nPK␇␈",
-        "Offset":"0",
-        "Extension":"zip\naar\napk\ndocx\nepub\nipa\njar\nkmz\nmaff\nmsix\nodp\nods\nodt\npk3\npk4\npptx\nusdz\nvsdx\nxlsx\nxpiwhl",
-        "Description":"zip file format and formats based on it, such as EPUB, JAR, ODF, OOXML"
-    },
-    "70":{
-        "Hex signature":"52 61 72 21 1A 07 00",
-        "ISO 8859-1":"Rar!␚␇␀",
-        "Offset":"0",
-        "Extension":"rar",
-        "Description":"Roshal ARchive compressed archive v1.50 onwards"
-    },
-    "71":{
-        "Hex signature":"52 61 72 21 1A 07 01 00",
-        "ISO 8859-1":"Rar!␚␇␁␀",
-        "Offset":"0",
-        "Extension":"rar",
-        "Description":"Roshal ARchive compressed archive v5.00 onwards"
-    },
-    "72":{
-        "Hex signature":"7F 45 4C 46",
-        "ISO 8859-1":"␡ELF",
-        "Offset":"0",
-        "Extension":"none, .axf, .bin, .elf, .o, .out, .prx, .puff, .ko, .mod, .so",
-        "Description":"Executable and Linkable Format"
-    },
-    "73":{
-        "Hex signature":"89 50 4E 47 0D 0A 1A 0A",
-        "ISO 8859-1":"‰PNG␍␊␚␊",
-        "Offset":"0",
-        "Extension":"png",
-        "Description":"Image encoded in the Portable Network Graphics format"
-    },
-    "74":{
-        "Hex signature":"0E 03 13 01",
-        "ISO 8859-1":"␅␃␓␁",
-        "Offset":"0",
-        "Extension":"hdf4\nh4",
-        "Description":"Data stored in version 4 of the Hierarchical Data Format."
-    },
-    "75":{
-        "Hex signature":"89 48 44 46 0D 0A 1A 0A",
-        "ISO 8859-1":"‰HDF␍␊␚␊",
-        "Offset":"0, 512, 1024, 2048, ...",
-        "Extension":"hdf5\nh5",
-        "Description":"Data stored in version 5 of the Hierarchical Data Format."
-    },
-    "76":{
-        "Hex signature":"C9",
-        "ISO 8859-1":"É",
-        "Offset":"0",
-        "Extension":"com",
-        "Description":"CP\/M 3 and higher with overlays"
-    },
-    "77":{
-        "Hex signature":"CA FE BA BE",
-        "ISO 8859-1":"Êþº¾",
-        "Offset":"0",
-        "Extension":"class",
-        "Description":"Java class file, Mach-O Fat Binary"
-    },
-    "78":{
-        "Hex signature":"EF BB BF",
-        "ISO 8859-1":"ï»¿",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"UTF-8 byte order mark, commonly seen in text files."
-    },
-    "79":{
-        "Hex signature":"FF FE",
-        "ISO 8859-1":"ÿþ",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"UTF-16LE byte order mark, commonly seen in text files."
-    },
-    "80":{
-        "Hex signature":"FE FF",
-        "ISO 8859-1":"þÿ",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"UTF-16BE byte order mark, commonly seen in text files."
-    },
-    "81":{
-        "Hex signature":"FF FE 00 00",
-        "ISO 8859-1":"ÿþ␀␀",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"UTF-32LE byte order mark for text"
-    },
-    "82":{
-        "Hex signature":"00 00 FE FF",
-        "ISO 8859-1":"␀␀þÿ",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"UTF-32BE byte order mark for text"
-    },
-    "83":{
-        "Hex signature":"2B 2F 76 38\n2B 2F 76 39\n2B 2F 76 2B\n2B 2F 76 2F",
-        "ISO 8859-1":"+\/v8\n+\/v9\n+\/v+\n+\/v\/",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"UTF-7 byte order mark for text"
-    },
-    "84":{
-        "Hex signature":"0E FE FF",
-        "ISO 8859-1":"␎þÿ",
-        "Offset":"0",
-        "Extension":"txt\nothers",
-        "Description":"SCSU byte order mark for text"
-    },
-    "85":{
-        "Hex signature":"DD 73 66 73",
-        "ISO 8859-1":"Ýsfs",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"UTF-EBCDIC byte order mark for text"
-    },
-    "86":{
-        "Hex signature":"FE ED FA CE",
-        "ISO 8859-1":"þíúÎ",
-        "Offset":"0\n0x1000",
-        "Extension":"",
-        "Description":"Mach-O binary (32-bit)"
-    },
-    "87":{
-        "Hex signature":"FE ED FA CF",
-        "ISO 8859-1":"þíúÏ",
-        "Offset":"0\n0x1000",
-        "Extension":"",
-        "Description":"Mach-O binary (64-bit)"
-    },
-    "88":{
-        "Hex signature":"FE ED FE ED",
-        "ISO 8859-1":"þíþí",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"JKS Javakey Store"
-    },
-    "89":{
-        "Hex signature":"CE FA ED FE",
-        "ISO 8859-1":"Îúíþ",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Mach-O binary (reverse byte ordering scheme, 32-bit)"
-    },
-    "90":{
-        "Hex signature":"CF FA ED FE",
-        "ISO 8859-1":"Ïúíþ",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Mach-O binary (reverse byte ordering scheme, 64-bit)"
-    },
-    "91":{
-        "Hex signature":"25 21 50 53",
-        "ISO 8859-1":"%!PS",
-        "Offset":"0",
-        "Extension":"ps",
-        "Description":"PostScript document"
-    },
-    "92":{
-        "Hex signature":"25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30",
-        "ISO 8859-1":"%!PS-Adobe-3.0 ESPF-3.0",
-        "Offset":"0",
-        "Extension":"eps\nepsf",
-        "Description":"Encapsulated PostScript file version 3.0"
-    },
-    "93":{
-        "Hex signature":"25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30",
-        "ISO 8859-1":"%!PS-Adobe-3.1 ESPF-3.0",
-        "Offset":"0",
-        "Extension":"eps\nepsf",
-        "Description":"Encapsulated PostScript file version 3.1"
-    },
-    "94":{
-        "Hex signature":"49 54 53 46 03 00 00 0060 00 00 00",
-        "ISO 8859-1":"ITSF␃␀␀␀`␀␀␀",
-        "Offset":"0",
-        "Extension":"chm",
-        "Description":"MS Windows HtmlHelp Data"
-    },
-    "95":{
-        "Hex signature":"3F 5F",
-        "ISO 8859-1":"?_",
-        "Offset":"0",
-        "Extension":"hlp",
-        "Description":"Windows 3.x\/95\/98 Help file"
-    },
-    "96":{
-        "Hex signature":"25 50 44 46 2D",
-        "ISO 8859-1":"%PDF-",
-        "Offset":"0",
-        "Extension":"pdf",
-        "Description":"PDF document"
-    },
-    "97":{
-        "Hex signature":"30 26 B2 75 8E 66 CF 11A6 D9 00 AA 00 62 CE 6C",
-        "ISO 8859-1":"0&²uŽfÏ␑¦Ù␀ª␀bÎl",
-        "Offset":"0",
-        "Extension":"asf\nwma\nwmv",
-        "Description":"Advanced Systems Format"
-    },
-    "98":{
-        "Hex signature":"24 53 44 49 30 30 30 31",
-        "ISO 8859-1":"$SDI0001",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"System Deployment Image, a disk image format used by Microsoft"
-    },
-    "99":{
-        "Hex signature":"4F 67 67 53",
-        "ISO 8859-1":"OggS",
-        "Offset":"0",
-        "Extension":"ogg\noga\nogv",
-        "Description":"Ogg, an open source media container format"
-    },
-    "100":{
-        "Hex signature":"38 42 50 53",
-        "ISO 8859-1":"8BPS",
-        "Offset":"0",
-        "Extension":"psd",
-        "Description":"Photoshop Document file, Adobe Photoshop's native file format"
-    },
-    "101":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??57 41 56 45",
-        "ISO 8859-1":"RIFF????WAVE",
-        "Offset":"0",
-        "Extension":"wav",
-        "Description":"Waveform Audio File Format"
-    },
-    "102":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??41 56 49 20",
-        "ISO 8859-1":"RIFF????AVI␠",
-        "Offset":"0",
-        "Extension":"avi",
-        "Description":"Audio Video Interleave video format"
-    },
-    "103":{
-        "Hex signature":"FF FB\nFF F3\nFF F2",
-        "ISO 8859-1":"ÿû\nÿó\nÿò",
-        "Offset":"0",
-        "Extension":"mp3",
-        "Description":"MPEG-1 Layer 3 file without an ID3 tag or with an ID3v1 tag (which is appended at the end of the file)"
-    },
-    "104":{
-        "Hex signature":"49 44 33",
-        "ISO 8859-1":"ID3",
-        "Offset":"0",
-        "Extension":"mp3",
-        "Description":"MP3 file with an ID3v2 container"
-    },
-    "105":{
-        "Hex signature":"42 4D",
-        "ISO 8859-1":"BM",
-        "Offset":"0",
-        "Extension":"bmp\ndib",
-        "Description":"BMP file, a bitmap format used mostly in the Windows world"
-    },
-    "106":{
-        "Hex signature":"43 44 30 30 31",
-        "ISO 8859-1":"CD001",
-        "Offset":"0x8001\n0x8801\n0x9001",
-        "Extension":"iso",
-        "Description":"ISO9660 CD\/DVD image file"
-    },
-    "107":{
-        "Hex signature":"43 44 30 30 31",
-        "ISO 8859-1":"CD001",
-        "Offset":"0x5EAC9",
-        "Extension":"cdi",
-        "Description":"CD-i CD image file"
-    },
-    "108":{
-        "Hex signature":"6D 61 69 6E 2E 62 73",
-        "ISO 8859-1":"main.bs",
-        "Offset":"0",
-        "Extension":"mgw",
-        "Description":"Nintendo Game & Watch image file"
-    },
-    "109":{
-        "Hex signature":"4E 45 53",
-        "ISO 8859-1":"NES",
-        "Offset":"0",
-        "Extension":"nes",
-        "Description":"Nintendo Entertainment System image file"
-    },
-    "110":{
-        "Hex signature":"A0 32 41 A0 A0 A0",
-        "ISO 8859-1":"2A",
-        "Offset":"0x165A4",
-        "Extension":"d64",
-        "Description":"Commodore 64 1541 disk image (D64 format)"
-    },
-    "111":{
-        "Hex signature":"47 53 52 2D 31 35 34 31",
-        "ISO 8859-1":"GCR-1541",
-        "Offset":"0",
-        "Extension":"g64",
-        "Description":"Commodore 64 1541 disk image (G64 format)"
-    },
-    "112":{
-        "Hex signature":"A0 33 44 A0 A0",
-        "ISO 8859-1":"3D",
-        "Offset":"0x61819",
-        "Extension":"d81",
-        "Description":"Commodore 64 1581 disk image (D81 format)"
-    },
-    "113":{
-        "Hex signature":"43 36 34 20 74 61 70 65 20 69 6D 61 67 65 20 66 69 6C 65",
-        "ISO 8859-1":"C64 tape image file",
-        "Offset":"0",
-        "Extension":"t64",
-        "Description":"Commodore 64 tape image"
-    },
-    "114":{
-        "Hex signature":"43 36 34 20 43 41 52 54 52 49 44 47 45 20 20 20",
-        "ISO 8859-1":"C64 CARTRIDGE␠␠␠",
-        "Offset":"0",
-        "Extension":"crt",
-        "Description":"Commodore 64 cartridge image"
-    },
-    "115":{
-        "Hex signature":"53 49 4D 50 4C 45 20 203D 20 20 20 20 20 20 2020 20 20 20 20 20 20 2020 20 20 20 20 54",
-        "ISO 8859-1":"SIMPLE␠␠=␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠T",
-        "Offset":"0",
-        "Extension":"fits",
-        "Description":"Flexible Image Transport System (FITS)"
-    },
-    "116":{
-        "Hex signature":"66 4C 61 43",
-        "ISO 8859-1":"fLaC",
-        "Offset":"0",
-        "Extension":"flac",
-        "Description":"Free Lossless Audio Codec"
-    },
-    "117":{
-        "Hex signature":"4D 54 68 64",
-        "ISO 8859-1":"MThd",
-        "Offset":"0",
-        "Extension":"mid\nmidi",
-        "Description":"MIDI sound file"
-    },
-    "118":{
-        "Hex signature":"D0 CF 11 E0 A1 B1 1A E1",
-        "ISO 8859-1":"ÐÏ␑à¡±␚á",
-        "Offset":"0",
-        "Extension":"doc\nxls\nppt\nmsi\nmsg",
-        "Description":"Compound File Binary Format, a container format defined by Microsoft COM. It can contain the equivalent of files and directories. It is used by Windows Installer and for documents in older versions of Microsoft Office. It can be used by other programs as well that rely on the COM and OLE API's. (0xD0CF11E0 visually resembles \"DOCFILE\".)"
-    },
-    "119":{
-        "Hex signature":"64 65 78 0A 30 33 35 00",
-        "ISO 8859-1":"dex␊035␀",
-        "Offset":"0",
-        "Extension":"dex",
-        "Description":"Dalvik Executable"
-    },
-    "120":{
-        "Hex signature":"4B 44 4D",
-        "ISO 8859-1":"KDM",
-        "Offset":"0",
-        "Extension":"vmdk",
-        "Description":"VMDK files"
-    },
-    "121":{
-        "Hex signature":"23 20 44 69 73 6B 20 44 65 73 63 72 69 70 74 6F",
-        "ISO 8859-1":"# Disk Descripto",
-        "Offset":"0",
-        "Extension":"vmdk",
-        "Description":"VMware 4 Virtual Disk description file (split disk)"
-    },
-    "122":{
-        "Hex signature":"43 72 32 34",
-        "ISO 8859-1":"Cr24",
-        "Offset":"0",
-        "Extension":"crx",
-        "Description":"Google Chrome extension or packaged app"
-    },
-    "123":{
-        "Hex signature":"41 47 44 33",
-        "ISO 8859-1":"AGD3",
-        "Offset":"0",
-        "Extension":"fh8",
-        "Description":"FreeHand 8 document"
-    },
-    "124":{
-        "Hex signature":"05 07 00 00 42 4F 42 4F05 07 00 00 00 00 00 0000 00 00 00 00 01",
-        "ISO 8859-1":"␅␇␀␀BOBO␅␇␀␀␀␀␀␀␀␀␀␀␀␁",
-        "Offset":"0",
-        "Extension":"cwk",
-        "Description":"AppleWorks 5 document"
-    },
-    "125":{
-        "Hex signature":"06 07 E1 00 42 4F 42 4F06 07 E1 00 00 00 00 0000 00 00 00 00 01",
-        "ISO 8859-1":"␆␇á␀BOBO␆␇á␀␀␀␀␀␀␀␀␀␀␁",
-        "Offset":"0",
-        "Extension":"cwk",
-        "Description":"AppleWorks 6 document"
-    },
-    "126":{
-        "Hex signature":"45 52 02 00 00 00",
-        "ISO 8859-1":"ER␂␀␀␀",
-        "Offset":"0",
-        "Extension":"toast",
-        "Description":"Roxio Toast disc image file"
-    },
-    "127":{
-        "Hex signature":"6B 6F 6C 79",
-        "ISO 8859-1":"koly",
-        "Offset":"end–512",
-        "Extension":"dmg",
-        "Description":"Apple Disk Image file"
-    },
-    "128":{
-        "Hex signature":"78 61 72 21",
-        "ISO 8859-1":"xar!",
-        "Offset":"0",
-        "Extension":"xar",
-        "Description":"eXtensible ARchive format"
-    },
-    "129":{
-        "Hex signature":"50 4D 4F 43 43 4D 4F 43",
-        "ISO 8859-1":"PMOCCMOC",
-        "Offset":"0",
-        "Extension":"dat",
-        "Description":"Windows Files And Settings Transfer Repository See also USMT 3.0 (Win XP) and USMT 4.0 (Win 7) User Guides"
-    },
-    "130":{
-        "Hex signature":"4E 45 53 1A",
-        "ISO 8859-1":"NES␚",
-        "Offset":"0",
-        "Extension":"nes",
-        "Description":"Nintendo Entertainment System ROM file"
-    },
-    "131":{
-        "Hex signature":"75 73 74 61 72 00 30 30\n75 73 74 61 72 20 20 00",
-        "ISO 8859-1":"ustar␀00\nustar␠␠␀",
-        "Offset":"257",
-        "Extension":"tar",
-        "Description":"tar archive"
-    },
-    "132":{
-        "Hex signature":"4F 41 52 ??",
-        "ISO 8859-1":"OAR?",
-        "Offset":"0",
-        "Extension":"oar",
-        "Description":"OAR file archive format, where ?? is the format version."
-    },
-    "133":{
-        "Hex signature":"74 6F 78 33",
-        "ISO 8859-1":"tox3",
-        "Offset":"0",
-        "Extension":"tox",
-        "Description":"Open source portable voxel file"
-    },
-    "134":{
-        "Hex signature":"4D 4C 56 49",
-        "ISO 8859-1":"MLVI",
-        "Offset":"0",
-        "Extension":"MLV",
-        "Description":"Magic Lantern Video file"
-    },
-    "135":{
-        "Hex signature":"44 43 4D 01 50 41 33 30\n50 41 33 30",
-        "ISO 8859-1":"DCM␁PA30\nPA30",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Windows Update Binary Delta Compression file"
-    },
-    "136":{
-        "Hex signature":"37 7A BC AF 27 1C",
-        "ISO 8859-1":"7z¼¯'␜",
-        "Offset":"0",
-        "Extension":"7z",
-        "Description":"7-Zip File Format"
-    },
-    "137":{
-        "Hex signature":"1F 8B",
-        "ISO 8859-1":"␟‹",
-        "Offset":"0",
-        "Extension":"gz\ntar.gz",
-        "Description":"GZIP compressed file"
-    },
-    "138":{
-        "Hex signature":"FD 37 7A 58 5A 00",
-        "ISO 8859-1":"ý7zXZ␀",
-        "Offset":"0",
-        "Extension":"xz\ntar.xz",
-        "Description":"XZ compression utilityusing LZMA2 compression"
-    },
-    "139":{
-        "Hex signature":"04 22 4D 18",
-        "ISO 8859-1":"␄\"M␘",
-        "Offset":"0",
-        "Extension":"lz4",
-        "Description":"LZ4 Frame Format\nRemark: LZ4 block format does not offer any magic bytes."
-    },
-    "140":{
-        "Hex signature":"4D 53 43 46",
-        "ISO 8859-1":"MSCF",
-        "Offset":"0",
-        "Extension":"cab",
-        "Description":"Microsoft Cabinet file"
-    },
-    "141":{
-        "Hex signature":"53 5A 44 44 88 F0 27 33",
-        "ISO 8859-1":"SZDDˆð'3",
-        "Offset":"0",
-        "Extension":"??_",
-        "Description":"Microsoft compressed file in Quantum format, used prior to Windows XP. File can be decompressed using Extract.exe or Expand.exe distributed with earlier versions of Windows. After compression, the last character of the original filename extension is replaced with an underscore, e.g. ‘Setup.exe’ becomes ‘Setup.ex_’."
-    },
-    "142":{
-        "Hex signature":"46 4C 49 46",
-        "ISO 8859-1":"FLIF",
-        "Offset":"0",
-        "Extension":"flif",
-        "Description":"Free Lossless Image Format"
-    },
-    "143":{
-        "Hex signature":"1A 45 DF A3",
-        "ISO 8859-1":"␚Eß£",
-        "Offset":"0",
-        "Extension":"mkv\nmka\nmks\nmk3d\nwebm",
-        "Description":"Matroska media container, including WebM"
-    },
-    "144":{
-        "Hex signature":"4D 49 4C 20",
-        "ISO 8859-1":"MIL␠",
-        "Offset":"0",
-        "Extension":"stg",
-        "Description":"\"SEAN : Session Analysis\" Training file. Also used in compatible software \"Rpw : Rowperfect for Windows\" and \"RP3W : ROWPERFECT3 for Windows\"."
-    },
-    "145":{
-        "Hex signature":"41 54 26 54 46 4F 52 4D\n ?? ?? ?? ?? 44 4A 56",
-        "ISO 8859-1":"AT&TFORM????DJV",
-        "Offset":"0",
-        "Extension":"djvu\ndjv",
-        "Description":"DjVu document\nThe following byte is either 55 (U) for single-page or 4D (M) for multi-page documents."
-    },
-    "146":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN CERTIFICATE-----",
-        "Offset":"0",
-        "Extension":"crt\npem",
-        "Description":"PEM encoded X.509 certificate"
-    },
-    "147":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN CERTIFICATE REQUEST-----",
-        "Offset":"0",
-        "Extension":"csr\npem",
-        "Description":"PEM encoded X.509 Certificate Signing Request"
-    },
-    "148":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN PRIVATE KEY-----",
-        "Offset":"0",
-        "Extension":"key\npem",
-        "Description":"PEM encoded X.509 PKCS#8 private key"
-    },
-    "149":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN DSA PRIVATE KEY-----",
-        "Offset":"0",
-        "Extension":"key\npem",
-        "Description":"PEM encoded X.509 PKCS#1 DSA private key"
-    },
-    "150":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN RSA PRIVATE KEY-----",
-        "Offset":"0",
-        "Extension":"key\npem",
-        "Description":"PEM encoded X.509 PKCS#1 RSA private key"
-    },
-    "151":{
-        "Hex signature":"50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 32 3A",
-        "ISO 8859-1":"PuTTY-User-Key-File-2:",
-        "Offset":"0",
-        "Extension":"ppk",
-        "Description":"PuTTY private key file version 2"
-    },
-    "152":{
-        "Hex signature":"50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 33 3A",
-        "ISO 8859-1":"PuTTY-User-Key-File-3:",
-        "Offset":"0",
-        "Extension":"ppk",
-        "Description":"PuTTY private key file version 3"
-    },
-    "153":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN OPENSSH PRIVATE KEY-----",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"OpenSSH private key file"
-    },
-    "154":{
-        "Hex signature":"2D 2D 2D 2D 2D 42 45 47 49 4E 20 53 53 48 32 20 4B 45 59 2D 2D 2D 2D 2D",
-        "ISO 8859-1":"-----BEGIN SSH2 PUBLIC KEY-----",
-        "Offset":"0",
-        "Extension":"pub",
-        "Description":"OpenSSH public key file"
-    },
-    "155":{
-        "Hex signature":"44 49 43 4D",
-        "ISO 8859-1":"DICM",
-        "Offset":"128",
-        "Extension":"dcm",
-        "Description":"DICOM Medical File Format"
-    },
-    "156":{
-        "Hex signature":"77 4F 46 46",
-        "ISO 8859-1":"wOFF",
-        "Offset":"0",
-        "Extension":"woff",
-        "Description":"WOFF File Format 1.0"
-    },
-    "157":{
-        "Hex signature":"77 4F 46 32",
-        "ISO 8859-1":"wOF2",
-        "Offset":"0",
-        "Extension":"woff2",
-        "Description":"WOFF File Format 2.0"
-    },
-    "158":{
-        "Hex signature":"3C 3F 78 6D 6C 20",
-        "ISO 8859-1":"<?xml␠",
-        "Offset":"0\nafter BOM",
-        "Extension":"xml (UTF-8 or other 8-bit encodings)",
-        "Description":"eXtensible Markup Language"
-    },
-    "159":{
-        "Hex signature":"00 61 73 6D",
-        "ISO 8859-1":"␀asm",
-        "Offset":"0",
-        "Extension":"wasm",
-        "Description":"WebAssembly binary format"
-    },
-    "160":{
-        "Hex signature":"CF 84 01",
-        "ISO 8859-1":"Ï„␁",
-        "Offset":"0",
-        "Extension":"lep",
-        "Description":"Lepton compressed JPEG image"
-    },
-    "161":{
-        "Hex signature":"43 57 53",
-        "ISO 8859-1":"CWS",
-        "Offset":"0",
-        "Extension":"swf",
-        "Description":"Adobe Flash .swf"
-    },
-    "162":{
-        "Hex signature":"21 3C 61 72 63 68 3E 0A",
-        "ISO 8859-1":"!<arch>␊",
-        "Offset":"0",
-        "Extension":"deb",
-        "Description":"linux deb file"
-    },
-    "163":{
-        "Hex signature":"C0 3B 39 98",
-        "ISO 8859-1":"À;9˜",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Linux EXT3\/EXT4 jbd2 filesystem Journal"
-    },
-    "164":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??57 45 42 50",
-        "ISO 8859-1":"RIFF????WEBP",
-        "Offset":"0",
-        "Extension":"webp",
-        "Description":"Google WebP image file, where ?? ?? ?? ?? is the file size. More information on WebP File Header"
-    },
-    "165":{
-        "Hex signature":"27 05 19 56",
-        "ISO 8859-1":"'␅␙V",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"U-Boot \/ uImage. Das U-Boot Universal Boot Loader."
-    },
-    "166":{
-        "Hex signature":"7B 5C 72 74 66 31",
-        "ISO 8859-1":"{\\rtf1",
-        "Offset":"0",
-        "Extension":"rtf",
-        "Description":"Rich Text Format"
-    },
-    "167":{
-        "Hex signature":"54 41 50 45",
-        "ISO 8859-1":"TAPE",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Microsoft Tape Format"
-    },
-    "168":{
-        "Hex signature":"47",
-        "ISO 8859-1":"G",
-        "Offset":"0\n0xBC\n0x178\n...\n(every 188th byte)",
-        "Extension":"ts\ntsv\ntsa\nmpg\nmpeg",
-        "Description":"MPEG Transport Stream (MPEG-2 Part 1)"
-    },
-    "169":{
-        "Hex signature":"00 00 01 BA",
-        "ISO 8859-1":"␀␀␁º",
-        "Offset":"0",
-        "Extension":"m2p\nvob\nmpg\nmpeg",
-        "Description":"MPEG Program Stream (MPEG-1 Part 1 (essentially identical) and MPEG-2 Part 1)"
-    },
-    "170":{
-        "Hex signature":"00 00 01 B3",
-        "ISO 8859-1":"␀␀␁³",
-        "Offset":"0",
-        "Extension":"mpg\nmpeg",
-        "Description":"MPEG-1 video and MPEG-2 video (MPEG-1 Part 2 and MPEG-2 Part 2)"
-    },
-    "171":{
-        "Hex signature":"66 74 79 70 69 73 6F 6D",
-        "ISO 8859-1":"ftypisom",
-        "Offset":"4",
-        "Extension":"mp4",
-        "Description":"ISO Base Media file (MPEG-4)"
-    },
-    "172":{
-        "Hex signature":"66 74 79 70 4D 53 4E 56",
-        "ISO 8859-1":"ftypMSNV",
-        "Offset":"4",
-        "Extension":"mp4",
-        "Description":"MPEG-4 video file"
-    },
-    "173":{
-        "Hex signature":"78 01",
-        "ISO 8859-1":"x␁",
-        "Offset":"0",
-        "Extension":"zlib",
-        "Description":"No Compression (no preset dictionary)"
-    },
-    "174":{
-        "Hex signature":"62 76 78 32",
-        "ISO 8859-1":"bvx2",
-        "Offset":"0",
-        "Extension":"lzfse",
-        "Description":"LZFSE - Lempel-Ziv style data compression algorithm using Finite State Entropy coding. OSS by Apple."
-    },
-    "175":{
-        "Hex signature":"4F 52 43",
-        "ISO 8859-1":"ORC",
-        "Offset":"0",
-        "Extension":"orc",
-        "Description":"Apache ORC (Optimized Row Columnar) file format"
-    },
-    "176":{
-        "Hex signature":"4F 62 6A 01",
-        "ISO 8859-1":"Obj␁",
-        "Offset":"0",
-        "Extension":"avro",
-        "Description":"Apache Avro binary file format"
-    },
-    "177":{
-        "Hex signature":"53 45 51 36",
-        "ISO 8859-1":"SEQ6",
-        "Offset":"0",
-        "Extension":"rc",
-        "Description":"RCFile columnar file format"
-    },
-    "178":{
-        "Hex signature":"3C 72 6F 62 6C 6F 78 21\t",
-        "ISO 8859-1":"<roblox!",
-        "Offset":"0",
-        "Extension":"rbxl",
-        "Description":"Roblox place file"
-    },
-    "179":{
-        "Hex signature":"65 87 78 56",
-        "ISO 8859-1":"e‡xV",
-        "Offset":"0",
-        "Extension":"p25\nobt",
-        "Description":"PhotoCap Object Templates"
-    },
-    "180":{
-        "Hex signature":"55 55 AA AA",
-        "ISO 8859-1":"UUªª",
-        "Offset":"0",
-        "Extension":"pcv",
-        "Description":"PhotoCap Vector"
-    },
-    "181":{
-        "Hex signature":"78 56 34",
-        "ISO 8859-1":"xV4",
-        "Offset":"0",
-        "Extension":"pbt\npdt\npea\npeb\npet\npgt\npict\npjt\npkt\npmt",
-        "Description":"PhotoCap Template"
-    },
-    "182":{
-        "Hex signature":"50 41 52 31",
-        "ISO 8859-1":"PAR1",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Apache Parquet columnar file format"
-    },
-    "183":{
-        "Hex signature":"45 4D 58 32",
-        "ISO 8859-1":"EMX2",
-        "Offset":"0",
-        "Extension":"ez2",
-        "Description":"Emulator Emaxsynth samples"
-    },
-    "184":{
-        "Hex signature":"45 4D 55 33",
-        "ISO 8859-1":"EMU3",
-        "Offset":"0",
-        "Extension":"ez3\niso",
-        "Description":"Emulator III synth samples"
-    },
-    "185":{
-        "Hex signature":"1B 4C 75 61",
-        "ISO 8859-1":"␛Lua",
-        "Offset":"0",
-        "Extension":"luac",
-        "Description":"Lua bytecode"
-    },
-    "186":{
-        "Hex signature":"62 6F 6F 6B 00 00 00 006D 61 72 6B 00 00 00 00",
-        "ISO 8859-1":"book␀␀␀␀mark␀␀␀␀",
-        "Offset":"0",
-        "Extension":"alias",
-        "Description":"macOS file Alias (Symbolic link)"
-    },
-    "187":{
-        "Hex signature":"62 6F 6F 6B",
-        "ISO 8859-1":"book",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"macOS bookmark format"
-    },
-    "188":{
-        "Hex signature":"5B 5A 6F 6E 65 54 72 616E 73 66 65 72 5D",
-        "ISO 8859-1":"[ZoneTransfer]",
-        "Offset":"0",
-        "Extension":"Identifier",
-        "Description":"Microsoft Zone Identifier for URL Security Zones"
-    },
-    "189":{
-        "Hex signature":"52 65 63 65 69 76 65 643A",
-        "ISO 8859-1":"Received:",
-        "Offset":"0",
-        "Extension":"eml",
-        "Description":"Email Message var5[citation needed]"
-    },
-    "190":{
-        "Hex signature":"20 02 01 62 A0 1E AB 0702 00 00 00",
-        "ISO 8859-1":"␠␂␁b⍽␞«␇␂␀␀␀",
-        "Offset":"0",
-        "Extension":"tde",
-        "Description":"Tableau Datasource"
-    },
-    "191":{
-        "Hex signature":"37 48 03 02 00 00 00 0058 35 30 39 4B 45 59",
-        "ISO 8859-1":"7H␃␂␀␀␀␀X509KEY",
-        "Offset":"0",
-        "Extension":"kdb",
-        "Description":"KDB file"
-    },
-    "192":{
-        "Hex signature":"85 ?? ?? 03",
-        "ISO 8859-1":"…??␃",
-        "Offset":"0",
-        "Extension":"pgp",
-        "Description":"PGP file"
-    },
-    "193":{
-        "Hex signature":"28 B5 2F FD",
-        "ISO 8859-1":"(µ\/ý",
-        "Offset":"0",
-        "Extension":"zst",
-        "Description":"Zstandard compress"
-    },
-    "194":{
-        "Hex signature":"52 53 56 4B 44 41 54 41",
-        "ISO 8859-1":"RSVKDATA",
-        "Offset":"0",
-        "Extension":"rs",
-        "Description":"QuickZip rs compressed archive"
-    },
-    "195":{
-        "Hex signature":"3A 29 0A",
-        "ISO 8859-1":":)␊",
-        "Offset":"0",
-        "Extension":"sml",
-        "Description":"Smile file"
-    },
-    "196":{
-        "Hex signature":"4A 6F 79 21",
-        "ISO 8859-1":"Joy!",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Preferred Executable Format"
-    },
-    "197":{
-        "Hex signature":"34 12 AA 55",
-        "ISO 8859-1":"4␒ªU",
-        "Offset":"0",
-        "Extension":"vpk",
-        "Description":"VPK file, used to store game data for some Source Engine games"
-    },
-    "198":{
-        "Hex signature":"2A 2A 41 43 45 2A 2A",
-        "ISO 8859-1":"**ACE**",
-        "Offset":"7",
-        "Extension":"ace",
-        "Description":"ACE (compressed file format)[citation needed]"
-    },
-    "199":{
-        "Hex signature":"60 EA",
-        "ISO 8859-1":"`ê",
-        "Offset":"0",
-        "Extension":"arj",
-        "Description":"ARJ"
-    },
-    "200":{
-        "Hex signature":"49 53 63 28",
-        "ISO 8859-1":"ISc(",
-        "Offset":"0",
-        "Extension":"cab",
-        "Description":"InstallShield CAB Archive File"
-    },
-    "201":{
-        "Hex signature":"4B 57 41 4A",
-        "ISO 8859-1":"KWAJ",
-        "Offset":"0",
-        "Extension":"??_",
-        "Description":"Windows 3.1x Compressed File"
-    },
-    "202":{
-        "Hex signature":"53 5A 44 44",
-        "ISO 8859-1":"SZDD",
-        "Offset":"0",
-        "Extension":"??_",
-        "Description":"Windows 9x Compressed File"
-    },
-    "203":{
-        "Hex signature":"5A 4F 4F",
-        "ISO 8859-1":"ZOO",
-        "Offset":"0",
-        "Extension":"zoo",
-        "Description":"Zoo (file format)"
-    },
-    "204":{
-        "Hex signature":"50 31 0A",
-        "ISO 8859-1":"P1␊",
-        "Offset":"0",
-        "Extension":"pbm",
-        "Description":"Portable bitmap ASCII"
-    },
-    "205":{
-        "Hex signature":"50 34 0A",
-        "ISO 8859-1":"P4␊",
-        "Offset":"0",
-        "Extension":"pbm",
-        "Description":"Portable bitmap binary"
-    },
-    "206":{
-        "Hex signature":"50 32 0A",
-        "ISO 8859-1":"P2␊",
-        "Offset":"0",
-        "Extension":"pgm",
-        "Description":"Portable Gray Map ASCII"
-    },
-    "207":{
-        "Hex signature":"50 35 0A",
-        "ISO 8859-1":"P5␊",
-        "Offset":"0",
-        "Extension":"pgm",
-        "Description":"Portable Gray Map binary"
-    },
-    "208":{
-        "Hex signature":"50 33 0A",
-        "ISO 8859-1":"P3␊",
-        "Offset":"0",
-        "Extension":"ppm",
-        "Description":"Portable Pixmap ASCII"
-    },
-    "209":{
-        "Hex signature":"50 36 0A",
-        "ISO 8859-1":"P6␊",
-        "Offset":"0",
-        "Extension":"ppm",
-        "Description":"Portable Pixmap binary"
-    },
-    "210":{
-        "Hex signature":"D7 CD C6 9A",
-        "ISO 8859-1":"×ÍÆš",
-        "Offset":"0",
-        "Extension":"wmf",
-        "Description":"Windows Metafile"
-    },
-    "211":{
-        "Hex signature":"67 69 6D 70 20 78 63 66",
-        "ISO 8859-1":"gimp xcf",
-        "Offset":"0",
-        "Extension":"xcf",
-        "Description":"XCF (file format)"
-    },
-    "212":{
-        "Hex signature":"2F 2A 20 58 50 4D 20 2A2F",
-        "ISO 8859-1":"\/* XPM *\/",
-        "Offset":"0",
-        "Extension":"xpm",
-        "Description":"X PixMap"
-    },
-    "213":{
-        "Hex signature":"41 46 46",
-        "ISO 8859-1":"AFF",
-        "Offset":"0",
-        "Extension":"aff",
-        "Description":"Advanced Forensics Format"
-    },
-    "214":{
-        "Hex signature":"45 56 46 32",
-        "ISO 8859-1":"EVF2",
-        "Offset":"0",
-        "Extension":"Ex01",
-        "Description":"EnCase EWF version 2 format"
-    },
-    "215":{
-        "Hex signature":"45 56 46",
-        "ISO 8859-1":"EVF",
-        "Offset":"0",
-        "Extension":"e01",
-        "Description":"EnCase EWF version 1 format"
-    },
-    "216":{
-        "Hex signature":"51 46 49",
-        "ISO 8859-1":"QFI",
-        "Offset":"0",
-        "Extension":"qcow",
-        "Description":"qcow file format"
-    },
-    "217":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??41 43 4F 4E",
-        "ISO 8859-1":"RIFF????ACON",
-        "Offset":"0",
-        "Extension":"ani",
-        "Description":"Animated cursor"
-    },
-    "218":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??43 44 44 41",
-        "ISO 8859-1":"RIFF????CDDA",
-        "Offset":"0",
-        "Extension":"cda",
-        "Description":".cda file"
-    },
-    "219":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ??51 4C 43 4D",
-        "ISO 8859-1":"RIFF????QLCM",
-        "Offset":"0",
-        "Extension":"qcp",
-        "Description":"Qualcomm PureVoice file format"
-    },
-    "220":{
-        "Hex signature":"52 49 46 58 ?? ?? ?? ??46 47 44 4D (big-endian)",
-        "ISO 8859-1":"RIFX????FGDM",
-        "Offset":"0",
-        "Extension":"dcr",
-        "Description":"Adobe Shockwave"
-    },
-    "221":{
-        "Hex signature":"52 49 46 58 ?? ?? ?? ??4D 56 39 33 (big-endian)",
-        "ISO 8859-1":"RIFX????MV93",
-        "Offset":"0",
-        "Extension":"dir\ndxr\ndrx",
-        "Description":"Macromedia Director file format"
-    },
-    "222":{
-        "Hex signature":"46 4C 56",
-        "ISO 8859-1":"FLV",
-        "Offset":"0",
-        "Extension":"flv",
-        "Description":"Flash Video file"
-    },
-    "223":{
-        "Hex signature":"3C 3C 3C 20 4F 72 61 636C 65 20 56 4D 20 56 6972 74 75 61 6C 42 6F 7820 44 69 73 6B 20 49 6D61 67 65 20 3E 3E 3E",
-        "ISO 8859-1":"<<< Orac\nle VM Vi\nrtualBoxDisk Im\nage >>>",
-        "Offset":"0",
-        "Extension":"vdi",
-        "Description":"VirtualBox Virtual Hard Disk file format"
-    },
-    "224":{
-        "Hex signature":"63 6F 6E 65 63 74 69 78",
-        "ISO 8859-1":"conectix",
-        "Offset":"0",
-        "Extension":"vhd",
-        "Description":"Windows Virtual PC Virtual Hard Disk file format"
-    },
-    "225":{
-        "Hex signature":"76 68 64 78 66 69 6C 65",
-        "ISO 8859-1":"vhdxfile",
-        "Offset":"0",
-        "Extension":"vhdx",
-        "Description":"Windows Virtual PC Windows 8 Virtual Hard Disk file format"
-    },
-    "226":{
-        "Hex signature":"49 73 5A 21",
-        "ISO 8859-1":"IsZ!",
-        "Offset":"0",
-        "Extension":"isz",
-        "Description":"Compressed ISO image"
-    },
-    "227":{
-        "Hex signature":"44 41 41",
-        "ISO 8859-1":"DAA",
-        "Offset":"0",
-        "Extension":"daa",
-        "Description":"Direct Access Archive PowerISO"
-    },
-    "228":{
-        "Hex signature":"4C 66 4C 65",
-        "ISO 8859-1":"LfLe",
-        "Offset":"0",
-        "Extension":"evt",
-        "Description":"Windows Event Viewer file format"
-    },
-    "229":{
-        "Hex signature":"45 6C 66 46 69 6C 65",
-        "ISO 8859-1":"ElfFile",
-        "Offset":"0",
-        "Extension":"evtx",
-        "Description":"Windows Event Viewer XML file format"
-    },
-    "230":{
-        "Hex signature":"73 64 62 66",
-        "ISO 8859-1":"sdbf",
-        "Offset":"8",
-        "Extension":"sdb",
-        "Description":"Windows customized database"
-    },
-    "231":{
-        "Hex signature":"50 4D 43 43",
-        "ISO 8859-1":"PMCC",
-        "Offset":"0",
-        "Extension":"grp",
-        "Description":"Windows 3.x Program Manager Program Group file format"
-    },
-    "232":{
-        "Hex signature":"4B 43 4D 53",
-        "ISO 8859-1":"KCMS",
-        "Offset":"0",
-        "Extension":"icm",
-        "Description":"ICC profile"
-    },
-    "233":{
-        "Hex signature":"72 65 67 66",
-        "ISO 8859-1":"regf",
-        "Offset":"0",
-        "Extension":"dat\nhiv",
-        "Description":"Windows Registry file"
-    },
-    "234":{
-        "Hex signature":"21 42 44 4E",
-        "ISO 8859-1":"!BDN",
-        "Offset":"0",
-        "Extension":"pst",
-        "Description":"Microsoft Outlook Personal Storage Table file"
-    },
-    "235":{
-        "Hex signature":"44 52 41 43 4F",
-        "ISO 8859-1":"DRACO",
-        "Offset":"0",
-        "Extension":"drc",
-        "Description":"3D model compressed with Google Draco"
-    },
-    "236":{
-        "Hex signature":"47 52 49 42",
-        "ISO 8859-1":"GRIB",
-        "Offset":"0",
-        "Extension":"grib\ngrib2",
-        "Description":"Gridded data (commonly weather observations or forecasts) in the WMO GRIB or GRIB2 format"
-    },
-    "237":{
-        "Hex signature":"42 4C 45 4E 44 45 52",
-        "ISO 8859-1":"BLENDER",
-        "Offset":"0",
-        "Extension":"blend",
-        "Description":"Blender File Format"
-    },
-    "238":{
-        "Hex signature":"00 00 00 0C 4A 58 4C 20 0D 0A 87 0A",
-        "ISO 8859-1":"␀␀␀␌JXL␠␍␊‡␊",
-        "Offset":"0",
-        "Extension":"jxl",
-        "Description":"Image encoded in the JPEG XL format"
-    },
-    "239":{
-        "Hex signature":"00 01 00 00 00",
-        "ISO 8859-1":"␀␁␀␀␀",
-        "Offset":"0",
-        "Extension":"ttf\ntte\ndfont",
-        "Description":"TrueType font"
-    },
-    "240":{
-        "Hex signature":"4F 54 54 4F",
-        "ISO 8859-1":"OTTO",
-        "Offset":"0",
-        "Extension":"otf",
-        "Description":"OpenType font"
-    },
-    "241":{
-        "Hex signature":"23 25 4D 6F 64 75 6C 65",
-        "ISO 8859-1":"#%Module",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Modulefile for Environment Modules"
-    },
-    "242":{
-        "Hex signature":"4D 53 57 49 4D 00 00 00D0 00 00 00 00",
-        "ISO 8859-1":"MSWIM␀␀␀Ð␀␀␀␀",
-        "Offset":"0",
-        "Extension":"wim\nswm\nesd",
-        "Description":"Windows Imaging Format file"
-    },
-    "243":{
-        "Hex signature":"21 2D 31 53 4C 4F 42 1F",
-        "ISO 8859-1":"!-1SLOB␟",
-        "Offset":"0",
-        "Extension":"slob",
-        "Description":"Slob (sorted list of Object storages) is a read-only, compressed data store with dictionary-like interface"
-    },
-    "244":{
-        "Hex signature":"AC ED",
-        "ISO 8859-1":"¬í",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Serialized Java Data"
-    },
-    "245":{
-        "Hex signature":"43 72 65 61 74 69 76 65 20 56 6F 69 63 65 20 46 69 6C 65 1A 1A 00",
-        "ISO 8859-1":"Creative Voice File",
-        "Offset":"0",
-        "Extension":"voc",
-        "Description":"Creative Voice file"
-    },
-    "246":{
-        "Hex signature":"2E 73 6E 64",
-        "ISO 8859-1":".snd",
-        "Offset":"0",
-        "Extension":"au\nsnd",
-        "Description":"Au audio file format"
-    },
-    "247":{
-        "Hex signature":"DB 0A CE 00",
-        "ISO 8859-1":"",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"OpenGL Iris Perfomer .PFB (Performer Fast Binary)"
-    },
-    "248":{
-        "Hex signature":"48 5a 4c 52 00 00 00 18",
-        "ISO 8859-1":"HZLR",
-        "Offset":"0",
-        "Extension":"hazelrules",
-        "Description":"Noodlesoft Hazel"
-    },
-    "249":{
-        "Hex signature":"46 4C 68 64",
-        "ISO 8859-1":"FLhd",
-        "Offset":"0",
-        "Extension":"flp",
-        "Description":"FL Studio Project File"
-    },
-    "250":{
-        "Hex signature":"31 30 4C 46",
-        "ISO 8859-1":"10LF",
-        "Offset":"0",
-        "Extension":"flm",
-        "Description":"FL Studio Mobile Project File"
-    },
-    "251":{
-        "Hex signature":"52 4b 4d 43 32 31 30",
-        "ISO 8859-1":"RKMC210",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Vormetric Encryption DPM Version 2.1 Header"
-    },
-    "252":{
-        "Hex signature":"00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65",
-        "ISO 8859-1":"␀␁␀␀MSISAM Database",
-        "Offset":"0",
-        "Extension":"mny",
-        "Description":"Microsoft Money file"
-    },
-    "253":{
-        "Hex signature":"00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42",
-        "ISO 8859-1":"␀␁␀␀Standard ACE DB",
-        "Offset":"0",
-        "Extension":"accdb",
-        "Description":"Microsoft Access 2007 Database"
-    },
-    "254":{
-        "Hex signature":"00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42",
-        "ISO 8859-1":"␀␁␀␀Standard Jet DB",
-        "Offset":"0",
-        "Extension":"mdb",
-        "Description":"Microsoft Access Database"
-    },
-    "255":{
-        "Hex signature":"01 FF 02 04 03 02",
-        "ISO 8859-1":"␁ÿ␂␄␃␂",
-        "Offset":"0",
-        "Extension":"drw",
-        "Description":"Micrografx vector graphic file"
-    },
-    "256":{
-        "Hex signature":"02 64 73 73",
-        "ISO 8859-1":"␂dss",
-        "Offset":"0",
-        "Extension":"dss",
-        "Description":"Digital Speech Standard (Olympus, Grundig, & Phillips) v2"
-    },
-    "257":{
-        "Hex signature":"03 64 73 73",
-        "ISO 8859-1":"␃dss",
-        "Offset":"0",
-        "Extension":"dss",
-        "Description":"Digital Speech Standard (Olympus, Grundig, & Phillips) v3"
-    },
-    "258":{
-        "Hex signature":"03 00 00 00 41 50 50 52",
-        "ISO 8859-1":"␃␀␀␀APPR",
-        "Offset":"0",
-        "Extension":"adx",
-        "Description":"Approach index file"
-    },
-    "259":{
-        "Hex signature":"06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D",
-        "ISO 8859-1":"␆␆íõØ␝Få½1ïçþt·␝",
-        "Offset":"0",
-        "Extension":"indd",
-        "Description":"Adobe InDesign document"
-    },
-    "260":{
-        "Hex signature":"06 0E 2B 34 02 05 01 01 0D 01 02 01 01 02",
-        "ISO 8859-1":"␆␎+4␂␅␁␁␍␁␂␁␁␂",
-        "Offset":"0-65535 (run-in)",
-        "Extension":"mxf",
-        "Description":"Material Exchange Format file"
-    },
-    "261":{
-        "Hex signature":"07 53 4B 46",
-        "ISO 8859-1":"␇SKF",
-        "Offset":"0",
-        "Extension":"skf",
-        "Description":"SkinCrafter skin file"
-    },
-    "262":{
-        "Hex signature":"07 64 74 32 64 64 74 64",
-        "ISO 8859-1":"␇dt2ddtd",
-        "Offset":"0",
-        "Extension":"dtd",
-        "Description":"DesignTools 2D Design file"
-    },
-    "263":{
-        "Hex signature":"0A 16 6F 72 67 2E 62 69 74 63 6F 69 6E 2E 70 72",
-        "ISO 8859-1":"␊␖org.bitcoin.pr",
-        "Offset":"0",
-        "Extension":"wallet",
-        "Description":"MultiBit Bitcoin wallet file"
-    },
-    "264":{
-        "Hex signature":"0D 44 4F 43",
-        "ISO 8859-1":"␍DOC",
-        "Offset":"0",
-        "Extension":"doc",
-        "Description":"DeskMate Document file"
-    },
-    "265":{
-        "Hex signature":"0E 4E 65 72 6F 49 53 4F",
-        "ISO 8859-1":"␎NeroISO",
-        "Offset":"0",
-        "Extension":"nri",
-        "Description":"Nero CD Compilation"
-    },
-    "266":{
-        "Hex signature":"0E 57 4B 53",
-        "ISO 8859-1":"␎WKS",
-        "Offset":"0",
-        "Extension":"wks",
-        "Description":"DeskMate Worksheet"
-    },
-    "267":{
-        "Hex signature":"0F 53 49 42 45 4C 49 55 53",
-        "ISO 8859-1":"␏SIBELIUS",
-        "Offset":"0",
-        "Extension":"sib",
-        "Description":"Sibelius Music - Score file"
-    },
-    "268":{
-        "Hex signature":"23 20 4D 69 63 72 6F 73 6F 66 74 20 44 65 76 65 6C 6F 70 65 72 20 53 74 75 64 69 6F",
-        "ISO 8859-1":"# Microsoft Developer Studio",
-        "Offset":"0",
-        "Extension":"dsp",
-        "Description":"Microsoft Developer Studio project file"
-    },
-    "269":{
-        "Hex signature":"23 21 41 4D 52",
-        "ISO 8859-1":"#!AMR",
-        "Offset":"0",
-        "Extension":"amr",
-        "Description":"Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec, commonly audio format with GSM cell phones."
-    },
-    "270":{
-        "Hex signature":"23 21 53 49 4C 4B 0A",
-        "ISO 8859-1":"#!SILK␊",
-        "Offset":"0",
-        "Extension":"sil",
-        "Description":"Audio compression format developed by Skype"
-    },
-    "271":{
-        "Hex signature":"23 3F 52 41 44 49 41 4E 43 45 0A",
-        "ISO 8859-1":"#?RADIANCE␊",
-        "Offset":"0",
-        "Extension":"hdr",
-        "Description":"Radiance High Dynamic Range image file"
-    },
-    "272":{
-        "Hex signature":"23 40 7E 5E",
-        "ISO 8859-1":"#@~^",
-        "Offset":"0",
-        "Extension":"vbe",
-        "Description":"VBScript Encoded script"
-    },
-    "273":{
-        "Hex signature":"0D F0 1D C0",
-        "ISO 8859-1":"␍ð�À",
-        "Offset":"0",
-        "Extension":"cdb",
-        "Description":"MikroTik WinBox Connection Database (Address Book)"
-    },
-    "274":{
-        "Hex signature":"23 45 58 54 4D 33 55",
-        "ISO 8859-1":"#EXTM3U",
-        "Offset":"0",
-        "Extension":"m3um3u8",
-        "Description":"Multimedia playlist"
-    },
-    "275":{
-        "Hex signature":"6D 64 66 00",
-        "ISO 8859-1":"mdf␀",
-        "Offset":"0",
-        "Extension":"m",
-        "Description":"M2 Archive, used by game developer M2"
-    },
-    "276":{
-        "Hex signature":"4B 50 4B 41",
-        "ISO 8859-1":"KPKA",
-        "Offset":"0",
-        "Extension":"pak",
-        "Description":"Capcom RE Engine game data archives"
-    },
-    "277":{
-        "Hex signature":"41 52 43",
-        "ISO 8859-1":"ARC",
-        "Offset":"0",
-        "Extension":"arc",
-        "Description":"Capcom MT Framework game data archives"
-    },
-    "278":{
-        "Hex signature":"41 72 43",
-        "ISO 8859-1":"ArC",
-        "Offset":"0",
-        "Extension":"arc\ncdx",
-        "Description":"FreeArc file"
-    },
-    "279":{
-        "Hex signature":"D0 4F 50 53",
-        "ISO 8859-1":"ÐOPS",
-        "Offset":"0",
-        "Extension":"pl",
-        "Description":"Interleaf PrinterLeaf \/ WorldView document format (now Broadvision QuickSilver)"
-    },
-    "280":{
-        "Hex signature":"6E 2B 31 00",
-        "ISO 8859-1":"n+1",
-        "Offset":"344",
-        "Extension":"nii",
-        "Description":"Single file NIfTI format, used extensively in biomedical imaging."
-    },
-    "281":{
-        "Hex signature":"6E 69 31 00",
-        "ISO 8859-1":"ni1",
-        "Offset":"344",
-        "Extension":"hdr",
-        "Description":"Header file of a .hdr\/.img pair in NIfTI format, used extensively in biomedical imaging."
-    },
-    "282":{
-        "Hex signature":"52 41 46 36 34",
-        "ISO 8859-1":"RAF64",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Report Builder file from Digital Metaphors"
-    },
-    "283":{
-        "Hex signature":"56 49 53 33",
-        "ISO 8859-1":"VIS3",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Resource file Visionaire 3.x Engine"
-    },
-    "284":{
-        "Hex signature":"4D 53 48 7C\n42 53 48 7C",
-        "ISO 8859-1":"MSH|\nBSH|",
-        "Offset":"0",
-        "Extension":"hl7",
-        "Description":"Health Level Seven (HL7) Standard for electronic data exchange"
-    },
-    "285":{
-        "Hex signature":"70 77 72 64 61 74 61",
-        "ISO 8859-1":"pwrdata",
-        "Offset":"0",
-        "Extension":"pwrdata",
-        "Description":"SAP Power Monitor (version 1.1.0 and higher) data file"
-    },
-    "286":{
-        "Hex signature":"1a 08",
-        "ISO 8859-1":"..",
-        "Offset":"0",
-        "Extension":"arc",
-        "Description":"ARC archive file"
-    },
-    "287":{
-        "Hex signature":"2d 2d 2d 2d 2d 42 45 47 49 4e 20 50 47 50 20 50 55 42 4c 49 43 20 4b 45 49 20 42 4c 4f 43 4b 2d 2d 2d 2d 2d",
-        "ISO 8859-1":"-----BEGIN PGP PUBLIC KEY BLOCK-----",
-        "Offset":"0",
-        "Extension":"asc",
-        "Description":"Armored PGP public key"
-    },
-    "288":{
-        "Hex signature":"3a 42 61 73 65 20",
-        "ISO 8859-1":":Base ",
-        "Offset":"0",
-        "Extension":"cnt",
-        "Description":"Windows 3.x - Windows 95 Help Contents"
-    },
-    "289":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 56 44 52 4d",
-        "ISO 8859-1":"RIFF????VDRM",
-        "Offset":"0",
-        "Extension":"vdr",
-        "Description":"VirtualDub"
-    },
-    "290":{
-        "Hex signature":"52 59 46 46 ?? ?? ?? ?? 54 52 49 44",
-        "ISO 8859-1":"RIFF????TRID",
-        "Offset":"0",
-        "Extension":"trd",
-        "Description":"TrID"
-    },
-    "291":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 73 68 77 34",
-        "ISO 8859-1":"RIFF????shw4",
-        "Offset":"0",
-        "Extension":"shw",
-        "Description":"Corel SHOW! 4.0"
-    },
-    "292":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 73 68 77 35",
-        "ISO 8859-1":"RIFF????shw5",
-        "Offset":"0",
-        "Extension":"shw",
-        "Description":"Corel SHOW! 5.0"
-    },
-    "293":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 73 68 72 35",
-        "ISO 8859-1":"RIFF????shr5",
-        "Offset":"0",
-        "Extension":"shr",
-        "Description":"Corel SHOW! 5.0 player"
-    },
-    "294":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 73 68 62 35",
-        "ISO 8859-1":"RIFF????shb5",
-        "Offset":"0",
-        "Extension":"shb",
-        "Description":"Corel SHOW! 5.0 background"
-    },
-    "295":{
-        "Hex signature":"52 49 46 46 ?? ?? ?? ?? 52 4d 4d 50",
-        "ISO 8859-1":"RIFF????RMMP",
-        "Offset":"0",
-        "Extension":"mmm",
-        "Description":"MacroMind Multimedia Movie or Microsoft Multimedia Movie"
-    },
-    "296":{
-        "Hex signature":"41 53 54 4d 2d 45 35 37",
-        "ISO 8859-1":"ASTM-E57",
-        "Offset":"0",
-        "Extension":"e57",
-        "Description":"ASTM E57 3D file format"
-    },
-    "297":{
-        "Hex signature":"aa aa aa aa",
-        "ISO 8859-1":"ªªªª",
-        "Offset":"0",
-        "Extension":"sys",
-        "Description":"Crowdstrike Channel File"
-    },
-    "298":{
-        "Hex signature":"8C 0A 00",
-        "ISO 8859-1":"Œ..",
-        "Offset":"0",
-        "Extension":"ucas",
-        "Description":"Unreal Engine Compressed Asset Storage file"
-    },
-    "299":{
-        "Hex signature":"2D 3D 3D 2D 2D 3D 3D 2D 2D 3D 3D 2D 2D 3D 3D 2D",
-        "ISO 8859-1":"-==--==--==--==-",
-        "Offset":"0",
-        "Extension":"utoc",
-        "Description":"Unreal Engine Table of Contents file"
-    },
-    "300":{
-        "Hex signature":"43 36 34 46 69 6C 65 00",
-        "ISO 8859-1":"C64File",
-        "Offset":"0",
-        "Extension":"P00 (P01, P02,...)",
-        "Description":"Commodore 64 binary file (source:*.P00 format for Power64 emulator)"
-    },
-    "301":{
-        "Hex signature":"44 55 43 4B",
-        "ISO 8859-1":"DUCK",
-        "Offset":"8",
-        "Extension":"",
-        "Description":"DuckDB database file (source:Source code)"
-    },
-    "302":{
-        "Hex signature":"4C 50 4B 53 48 48 52 48",
-        "ISO 8859-1":"LPKSHHRH",
-        "Offset":"0",
-        "Extension":"journal",
-        "Description":"journald log file"
-    },
-    "303":{
-        "Hex signature":"E0 01 00 EA",
-        "ISO 8859-1":"ê␀␁à",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"Ion (serialization format) binary encoding"
-    },
-    "304":{
-        "Hex signature":"42 53 44 49 46 46 34 30",
-        "ISO 8859-1":"BSDIFF40",
-        "Offset":"0",
-        "Extension":"",
-        "Description":"bsdiff binary patch"
-    },
-    "305":{
-        "Hex signature":"7C 61 8A B2",
-        "ISO 8859-1":"|aŠ²",
-        "Offset":"0",
-        "Extension":"hpapp\nhpprgm\nhpsettings",
-        "Description":"HP Prime graphing calculator file"
-    }
+ "0":{
+  "Hex Signature":"2321",
+  "ISO 8859-1":"#!",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Script or data to be passed to the program following the shebang (#!)"
+ },
+ "1":{
+  "Hex Signature":"02005a57525400000000000000000000",
+  "ISO 8859-1":"␂␀ZWRT␀␀␀␀␀␀␀␀␀␀",
+  "Offset":"0",
+  "Extension":"cwk",
+  "Description":"Claris Works word processing doc"
+ },
+ "2":{
+  "Hex Signature":"0000020006040600080000000000",
+  "ISO 8859-1":"␀␀␂␀␆␄␆␀␈␀␀␀␀␀",
+  "Offset":"0",
+  "Extension":"wk1",
+  "Description":"Lotus 1-2-3 spreadsheet (v1) file"
+ },
+ "3":{
+  "Hex Signature":"00001a000010040000000000",
+  "ISO 8859-1":"␀␀␚␀␀␊␄␀␀␀␀␀",
+  "Offset":"0",
+  "Extension":"wk3",
+  "Description":"Lotus 1-2-3 spreadsheet (v3) file"
+ },
+ "4":{
+  "Hex Signature":"00001a000210040000000000",
+  "ISO 8859-1":"␀␀␚␀␂␊␄␀␀␀␀␀",
+  "Offset":"0",
+  "Extension":[
+   "wk4",
+   "wk5"
+  ],
+  "Description":"Lotus 1-2-3 spreadsheet (v4, v5) file"
+ },
+ "5":{
+  "Hex Signature":"00001a00051004",
+  "ISO 8859-1":"␀␀␚␀␅␊␄",
+  "Offset":"0",
+  "Extension":"123",
+  "Description":"Lotus 1-2-3 spreadsheet (v9) file"
+ },
+ "6":{
+  "Hex Signature":"000003f3",
+  "ISO 8859-1":"␀␀␃ó",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Amiga Hunk executable file"
+ },
+ "7":{
+  "Hex Signature":[
+   "00004949585052",
+   "00004d4d585052"
+  ],
+  "ISO 8859-1":[
+   "␀␀IIXPR",
+   "␀␀MMXPR"
+  ],
+  "Offset":"0",
+  "Extension":"qxd",
+  "Description":"Quark Express document"
+ },
+ "8":{
+  "Hex Signature":"50575333",
+  "ISO 8859-1":"PWS3",
+  "Offset":"0",
+  "Extension":"psafe3",
+  "Description":"Password Gorilla Password Database"
+ },
+ "9":{
+  "Hex Signature":[
+   "d4c3b2a1",
+   "a1b2c3d4"
+  ],
+  "ISO 8859-1":[
+   "ÔÃ²¡",
+   "¡²ÃÔ"
+  ],
+  "Offset":"0",
+  "Extension":"pcap",
+  "Description":"Libpcap File Format"
+ },
+ "10":{
+  "Hex Signature":[
+   "4d3cb2a1",
+   "a1b23c4d"
+  ],
+  "ISO 8859-1":[
+   "M<²¡",
+   "¡²<M"
+  ],
+  "Offset":"0",
+  "Extension":"pcap",
+  "Description":"Libpcap File Format (nanosecond-resolution)"
+ },
+ "11":{
+  "Hex Signature":"0a0d0d0a",
+  "ISO 8859-1":"␊␍␍␊",
+  "Offset":"0",
+  "Extension":"pcapng",
+  "Description":"PCAP Next Generation Dump File Format"
+ },
+ "12":{
+  "Hex Signature":"edabeedb",
+  "ISO 8859-1":"í«îÛ",
+  "Offset":"0",
+  "Extension":"rpm",
+  "Description":"RedHat Package Manager (RPM) package"
+ },
+ "13":{
+  "Hex Signature":"53514c69746520666f726d6174203300",
+  "ISO 8859-1":"SQLite format 3␀",
+  "Offset":"0",
+  "Extension":[
+   "sqlitedb",
+   "sqlite",
+   "db"
+  ],
+  "Description":"SQLite Database"
+ },
+ "14":{
+  "Hex Signature":"53503031",
+  "ISO 8859-1":"SP01",
+  "Offset":"0",
+  "Extension":"bin",
+  "Description":"Amazon Kindle Update Package"
+ },
+ "15":{
+  "Hex Signature":"49574144",
+  "ISO 8859-1":"IWAD",
+  "Offset":"0",
+  "Extension":"wad",
+  "Description":"internal WAD (main resource file of Doom)"
+ },
+ "16":{
+  "Hex Signature":"00",
+  "ISO 8859-1":"␀",
+  "Offset":"0",
+  "Extension":[
+   "PIC",
+   "PIF",
+   "SEA",
+   "YTR"
+  ],
+  "Description":"IBM Storyboard bitmap fileWindows Program Information FileMac Stuffit Self-Extracting ArchiveIRIS OCR data file"
+ },
+ "17":{
+  "Hex Signature":"000000000000000000000000000000000000000000000000",
+  "ISO 8859-1":"␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀␀",
+  "Offset":"11",
+  "Extension":"PDB",
+  "Description":"PalmPilot Database\/Document File"
+ },
+ "18":{
+  "Hex Signature":"bebafeca",
+  "ISO 8859-1":"¾ºþÊ",
+  "Offset":"0",
+  "Extension":"DBA",
+  "Description":"Palm Desktop Calendar Archive"
+ },
+ "19":{
+  "Hex Signature":"00014244",
+  "ISO 8859-1":"␀␁BD",
+  "Offset":"0",
+  "Extension":"DBA",
+  "Description":"Palm Desktop To Do Archive"
+ },
+ "20":{
+  "Hex Signature":"00014454",
+  "ISO 8859-1":"␀␁DT",
+  "Offset":"0",
+  "Extension":"TDA",
+  "Description":"Palm Desktop Calendar Archive"
+ },
+ "21":{
+  "Hex Signature":"54444624",
+  "ISO 8859-1":"TDF$",
+  "Offset":"0",
+  "Extension":"TDF$",
+  "Description":"Telegram Desktop File"
+ },
+ "22":{
+  "Hex Signature":"54444546",
+  "ISO 8859-1":"TDEF",
+  "Offset":"0",
+  "Extension":"TDEF",
+  "Description":"Telegram Desktop Encrypted File"
+ },
+ "23":{
+  "Hex Signature":"00010000",
+  "ISO 8859-1":"␀␁␀␀",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Palm Desktop Data File (Access format)"
+ },
+ "24":{
+  "Hex Signature":"00000100",
+  "ISO 8859-1":"␀␀␁␀",
+  "Offset":"0",
+  "Extension":"ico",
+  "Description":"Computer icon encoded in ICO file format"
+ },
+ "25":{
+  "Hex Signature":"69636e73",
+  "ISO 8859-1":"icns",
+  "Offset":"0",
+  "Extension":"icns",
+  "Description":"Apple Icon Image format"
+ },
+ "26":{
+  "Hex Signature":"667479703367",
+  "ISO 8859-1":"ftyp3g",
+  "Offset":"4",
+  "Extension":[
+   "3gp",
+   "3g2"
+  ],
+  "Description":"3rd Generation Partnership Project 3GPP and 3GPP2 multimedia files"
+ },
+ "27":{
+  "Hex Signature":[
+   "6674797068656963",
+   "667479706d"
+  ],
+  "ISO 8859-1":[
+   "ftypheic",
+   "ftypm"
+  ],
+  "Offset":"4",
+  "Extension":"heic",
+  "Description":"High Efficiency Image Container (HEIC)"
+ },
+ "28":{
+  "Hex Signature":"1f9d",
+  "ISO 8859-1":"␟□",
+  "Offset":"0",
+  "Extension":[
+   "z",
+   "tar.z"
+  ],
+  "Description":"compressed file (often tar zip) using Lempel-Ziv-Welch algorithm"
+ },
+ "29":{
+  "Hex Signature":"1fa0",
+  "ISO 8859-1":"␟⍽",
+  "Offset":"0",
+  "Extension":[
+   "z",
+   "tar.z"
+  ],
+  "Description":"Compressed file (often tar zip) using LZH algorithm"
+ },
+ "30":{
+  "Hex Signature":"2d6c68302d",
+  "ISO 8859-1":"-lh0-",
+  "Offset":"2",
+  "Extension":"lzh",
+  "Description":"Lempel Ziv Huffman archive file Method 0 (No compression)"
+ },
+ "31":{
+  "Hex Signature":"2d6c68352d",
+  "ISO 8859-1":"-lh5-",
+  "Offset":"2",
+  "Extension":"lzh",
+  "Description":"Lempel Ziv Huffman archive file Method 5 (8 KiB sliding window)"
+ },
+ "32":{
+  "Hex Signature":"4241434b4d494b454449534b",
+  "ISO 8859-1":"BACKMIKEDISK",
+  "Offset":"0",
+  "Extension":"bac",
+  "Description":"AmiBack Amiga Backup data file"
+ },
+ "33":{
+  "Hex Signature":"494e4458",
+  "ISO 8859-1":"INDX",
+  "Offset":"0",
+  "Extension":"idx",
+  "Description":"AmiBack Amiga Backup index file"
+ },
+ "34":{
+  "Hex Signature":"62706c697374",
+  "ISO 8859-1":"bplist",
+  "Offset":"0",
+  "Extension":"plist",
+  "Description":"Binary Property List file"
+ },
+ "35":{
+  "Hex Signature":"425a68",
+  "ISO 8859-1":"BZh",
+  "Offset":"0",
+  "Extension":"bz2",
+  "Description":"Compressed file using Bzip2 algorithm"
+ },
+ "36":{
+  "Hex Signature":[
+   "474946383761",
+   "474946383961"
+  ],
+  "ISO 8859-1":[
+   "GIF87a",
+   "GIF89a"
+  ],
+  "Offset":"0",
+  "Extension":"gif",
+  "Description":"Image file encoded in the Graphics Interchange Format (GIF)"
+ },
+ "37":{
+  "Hex Signature":[
+   "49492a00",
+   "4d4d002a"
+  ],
+  "ISO 8859-1":[
+   "II*␀",
+   "MM␀*"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "tif",
+   "tiff"
+  ],
+  "Description":"Tagged Image File Format (TIFF)"
+ },
+ "38":{
+  "Hex Signature":[
+   "49492b00",
+   "4d4d002b"
+  ],
+  "ISO 8859-1":[
+   "II+␀",
+   "MM␀+"
+  ],
+  "Offset":"00",
+  "Extension":[
+   "tif",
+   "tiff"
+  ],
+  "Description":"BigTIFF"
+ },
+ "39":{
+  "Hex Signature":"49492a00100000004352",
+  "ISO 8859-1":"II*␀␐␀␀␀CR",
+  "Offset":"0",
+  "Extension":"cr2",
+  "Description":"Canon RAW Format Version 2Canon's RAW format is based on TIFF."
+ },
+ "40":{
+  "Hex Signature":"667479706372784352",
+  "ISO 8859-1":"ftypcrxCR",
+  "Offset":"0",
+  "Extension":"cr3",
+  "Description":""
+ },
+ "41":{
+  "Hex Signature":"802a5fd7",
+  "ISO 8859-1":"€*_×",
+  "Offset":"0",
+  "Extension":"cin",
+  "Description":"Kodak Cineon image"
+ },
+ "42":{
+  "Hex Signature":[
+   "524e4301",
+   "524e4302"
+  ],
+  "ISO 8859-1":[
+   "RNC␁",
+   "RNC␂"
+  ],
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Compressed file using Rob Northen Compression (version 1 and 2) algorithm"
+ },
+ "43":{
+  "Hex Signature":[
+   "4e555255494d47",
+   "4e55525550414c"
+  ],
+  "ISO 8859-1":[
+   "NURUIMG",
+   "NURUPAL"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "nui",
+   "nup"
+  ],
+  "Description":"nuru ASCII\/ANSI image and palette files"
+ },
+ "44":{
+  "Hex Signature":[
+   "53445058",
+   "58504453"
+  ],
+  "ISO 8859-1":[
+   "SDPX",
+   "XPDS"
+  ],
+  "Offset":"0",
+  "Extension":"dpx",
+  "Description":"SMPTE DPX image"
+ },
+ "45":{
+  "Hex Signature":"762f3101",
+  "ISO 8859-1":"v\/1␁",
+  "Offset":"0",
+  "Extension":"exr",
+  "Description":"OpenEXR image"
+ },
+ "46":{
+  "Hex Signature":"425047fb",
+  "ISO 8859-1":"BPGû",
+  "Offset":"0",
+  "Extension":"bpg",
+  "Description":"Better Portable Graphics format"
+ },
+ "47":{
+  "Hex Signature":[
+   "ffd8ffdb",
+   "ffd8ffe000104a4649460001",
+   "ffd8ffee",
+   "ffd8ffe1????457869660000"
+  ],
+  "ISO 8859-1":[
+   "ÿØÿÛ",
+   "ÿØÿà␀␐JFIF␀␁",
+   "ÿØÿî",
+   "ÿØÿá??Exif␀␀"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "jpg",
+   "jpeg"
+  ],
+  "Description":"JPEG raw or in the JFIF or Exif file format"
+ },
+ "48":{
+  "Hex Signature":"ffd8ffe0",
+  "ISO 8859-1":"ÿØÿà",
+  "Offset":"0",
+  "Extension":"jpg",
+  "Description":"JPEG raw or in the JFIF or Exif file format"
+ },
+ "49":{
+  "Hex Signature":[
+   "0000000c6a5020200d0a870a",
+   "ff4fff51"
+  ],
+  "ISO 8859-1":[
+   "␀␀␀␌jP␠␠␍␊‡␊",
+   "ÿOÿQ"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "jp2",
+   "j2k",
+   "jpf",
+   "jpm",
+   "jpg2",
+   "j2c",
+   "jpc",
+   "jpx",
+   "mj2"
+  ],
+  "Description":"JPEG 2000 format"
+ },
+ "50":{
+  "Hex Signature":"716f6966",
+  "ISO 8859-1":"qoif",
+  "Offset":"0",
+  "Extension":"qoi",
+  "Description":"QOI - The “Quite OK Image Format”"
+ },
+ "51":{
+  "Hex Signature":"464f524d????????494c424d",
+  "ISO 8859-1":"FORM????ILBM",
+  "Offset":"0any",
+  "Extension":[
+   "ilbm",
+   "lbm",
+   "ibm",
+   "iff"
+  ],
+  "Description":"IFF Interleaved Bitmap Image"
+ },
+ "52":{
+  "Hex Signature":"464f524d????????38535658",
+  "ISO 8859-1":"FORM????8SVX",
+  "Offset":"0any",
+  "Extension":[
+   "8svx",
+   "8sv",
+   "svx",
+   "snd",
+   "iff"
+  ],
+  "Description":"IFF 8-Bit Sampled Voice"
+ },
+ "53":{
+  "Hex Signature":"464f524d????????4143424d",
+  "ISO 8859-1":"FORM????ACBM",
+  "Offset":"0any",
+  "Extension":[
+   "acbm",
+   "iff"
+  ],
+  "Description":"Amiga Contiguous Bitmap"
+ },
+ "54":{
+  "Hex Signature":"464f524d????????414e424d",
+  "ISO 8859-1":"FORM????ANBM",
+  "Offset":"0any",
+  "Extension":[
+   "anbm",
+   "iff"
+  ],
+  "Description":"IFF Animated Bitmap"
+ },
+ "55":{
+  "Hex Signature":"464f524d????????414e494d",
+  "ISO 8859-1":"FORM????ANIM",
+  "Offset":"0any",
+  "Extension":[
+   "anim",
+   "iff"
+  ],
+  "Description":"IFF CEL Animation"
+ },
+ "56":{
+  "Hex Signature":"464f524d????????46415858",
+  "ISO 8859-1":"FORM????FAXX",
+  "Offset":"0any",
+  "Extension":[
+   "faxx",
+   "fax",
+   "iff"
+  ],
+  "Description":"IFF Facsimile Image"
+ },
+ "57":{
+  "Hex Signature":"464f524d????????46545854",
+  "ISO 8859-1":"FORM????FTXT",
+  "Offset":"0any",
+  "Extension":[
+   "ftxt",
+   "iff"
+  ],
+  "Description":"IFF Formatted Text"
+ },
+ "58":{
+  "Hex Signature":"464f524d????????534d5553",
+  "ISO 8859-1":"FORM????SMUS",
+  "Offset":"0any",
+  "Extension":[
+   "smus",
+   "smu",
+   "mus",
+   "iff"
+  ],
+  "Description":"IFF Simple Musical Score"
+ },
+ "59":{
+  "Hex Signature":"464f524d????????434d5553",
+  "ISO 8859-1":"FORM????CMUS",
+  "Offset":"0any",
+  "Extension":[
+   "cmus",
+   "mus",
+   "iff"
+  ],
+  "Description":"IFF Musical Score"
+ },
+ "60":{
+  "Hex Signature":"464f524d????????5955564e",
+  "ISO 8859-1":"FORM????YUVN",
+  "Offset":"0any",
+  "Extension":[
+   "yuvn",
+   "yuv",
+   "iff"
+  ],
+  "Description":"IFF YUV Image"
+ },
+ "61":{
+  "Hex Signature":"464f524d????????46414e54",
+  "ISO 8859-1":"FORM????FANT",
+  "Offset":"0any",
+  "Extension":"iff",
+  "Description":"Amiga Fantavision Movie"
+ },
+ "62":{
+  "Hex Signature":"464f524d????????41494646",
+  "ISO 8859-1":"FORM????AIFF",
+  "Offset":"0any",
+  "Extension":[
+   "aiff",
+   "aif",
+   "aifc",
+   "snd",
+   "iff"
+  ],
+  "Description":"Audio Interchange File Format"
+ },
+ "63":{
+  "Hex Signature":"4c5a4950",
+  "ISO 8859-1":"LZIP",
+  "Offset":"0",
+  "Extension":"lz",
+  "Description":"lzip compressed file"
+ },
+ "64":{
+  "Hex Signature":"303730373031",
+  "ISO 8859-1":"070701",
+  "Offset":"0",
+  "Extension":"cpio",
+  "Description":"cpio \"new\" ASCII archive file"
+ },
+ "65":{
+  "Hex Signature":"303730373032",
+  "ISO 8859-1":"070702",
+  "Offset":"0",
+  "Extension":"cpio",
+  "Description":"cpio ASCII archive file with crc"
+ },
+ "66":{
+  "Hex Signature":"303730373037",
+  "ISO 8859-1":"070707",
+  "Offset":"0",
+  "Extension":"cpio",
+  "Description":"cpio ASCII archive file"
+ },
+ "67":{
+  "Hex Signature":"4d5a",
+  "ISO 8859-1":"MZ",
+  "Offset":"0",
+  "Extension":[
+   "exe",
+   "dll",
+   "mui",
+   "sys",
+   "scr",
+   "cpl",
+   "ocx",
+   "ax",
+   "iec",
+   "ime",
+   "rs",
+   "tsp",
+   "fon",
+   "efi"
+  ],
+  "Description":"DOS MZ executable and its descendants (including NE and PE)"
+ },
+ "68":{
+  "Hex Signature":"534d534e46323030",
+  "ISO 8859-1":"SMSNF200",
+  "Offset":"0",
+  "Extension":"ssp",
+  "Description":"SmartSniff Packets File "
+ },
+ "69":{
+  "Hex Signature":"5a4d",
+  "ISO 8859-1":"ZM",
+  "Offset":"0",
+  "Extension":"exe",
+  "Description":"DOS ZM executable and its descendants (rare)"
+ },
+ "70":{
+  "Hex Signature":[
+   "504b0304",
+   "504b0506",
+   "504b0708"
+  ],
+  "ISO 8859-1":[
+   "PK␃␄",
+   "PK␅␆",
+   "PK␇␈"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "zip",
+   "aar",
+   "apk",
+   "docx",
+   "epub",
+   "ipa",
+   "jar",
+   "kmz",
+   "maff",
+   "msix",
+   "odp",
+   "ods",
+   "odt",
+   "pk3",
+   "pk4",
+   "pptx",
+   "usdz",
+   "vsdx",
+   "xlsx",
+   "xpi",
+   "whl"
+  ],
+  "Description":"zip file format and formats based on it, such as EPUB, JAR, ODF, OOXML"
+ },
+ "71":{
+  "Hex Signature":"526172211a0700",
+  "ISO 8859-1":"Rar!␚␇␀",
+  "Offset":"0",
+  "Extension":"rar",
+  "Description":"Roshal ARchive compressed archive v1.50 onwards"
+ },
+ "72":{
+  "Hex Signature":"526172211a070100",
+  "ISO 8859-1":"Rar!␚␇␁␀",
+  "Offset":"0",
+  "Extension":"rar",
+  "Description":"Roshal ARchive compressed archive v5.00 onwards"
+ },
+ "73":{
+  "Hex Signature":"7f454c46",
+  "ISO 8859-1":"␡ELF",
+  "Offset":"0",
+  "Extension":"none, .axf, .bin, .elf, .o, .out, .prx, .puff, .ko, .mod, .so",
+  "Description":"Executable and Linkable Format"
+ },
+ "74":{
+  "Hex Signature":"89504e470d0a1a0a",
+  "ISO 8859-1":"‰PNG␍␊␚␊",
+  "Offset":"0",
+  "Extension":"png",
+  "Description":"Image encoded in the Portable Network Graphics format"
+ },
+ "75":{
+  "Hex Signature":"0e031301",
+  "ISO 8859-1":"␅␃␓␁",
+  "Offset":"0",
+  "Extension":[
+   "hdf4",
+   "h4"
+  ],
+  "Description":"Data stored in version 4 of the Hierarchical Data Format."
+ },
+ "76":{
+  "Hex Signature":"894844460d0a1a0a",
+  "ISO 8859-1":"‰HDF␍␊␚␊",
+  "Offset":"0, 512, 1024, 2048, ...",
+  "Extension":[
+   "hdf5",
+   "h5"
+  ],
+  "Description":"Data stored in version 5 of the Hierarchical Data Format."
+ },
+ "77":{
+  "Hex Signature":"c9",
+  "ISO 8859-1":"É",
+  "Offset":"0",
+  "Extension":"com",
+  "Description":"CP\/M 3 and higher with overlays"
+ },
+ "78":{
+  "Hex Signature":"cafebabe",
+  "ISO 8859-1":"Êþº¾",
+  "Offset":"0",
+  "Extension":"class",
+  "Description":"Java class file, Mach-O Fat Binary"
+ },
+ "79":{
+  "Hex Signature":"efbbbf",
+  "ISO 8859-1":"ï»¿",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"UTF-8 byte order mark, commonly seen in text files."
+ },
+ "80":{
+  "Hex Signature":"fffe",
+  "ISO 8859-1":"ÿþ",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"UTF-16LE byte order mark, commonly seen in text files."
+ },
+ "81":{
+  "Hex Signature":"feff",
+  "ISO 8859-1":"þÿ",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"UTF-16BE byte order mark, commonly seen in text files."
+ },
+ "82":{
+  "Hex Signature":"fffe0000",
+  "ISO 8859-1":"ÿþ␀␀",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"UTF-32LE byte order mark for text"
+ },
+ "83":{
+  "Hex Signature":"0000feff",
+  "ISO 8859-1":"␀␀þÿ",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"UTF-32BE byte order mark for text"
+ },
+ "84":{
+  "Hex Signature":[
+   "2b2f7638",
+   "2b2f7639",
+   "2b2f762b",
+   "2b2f762f"
+  ],
+  "ISO 8859-1":[
+   "+\/v8",
+   "+\/v9",
+   "+\/v+",
+   "+\/v\/"
+  ],
+  "Offset":"0",
+  "Extension":"",
+  "Description":"UTF-7 byte order mark for text"
+ },
+ "85":{
+  "Hex Signature":"0efeff",
+  "ISO 8859-1":"␎þÿ",
+  "Offset":"0",
+  "Extension":[
+   "txt",
+   "others"
+  ],
+  "Description":"SCSU byte order mark for text"
+ },
+ "86":{
+  "Hex Signature":"dd736673",
+  "ISO 8859-1":"Ýsfs",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"UTF-EBCDIC byte order mark for text"
+ },
+ "87":{
+  "Hex Signature":"feedface",
+  "ISO 8859-1":"þíúÎ",
+  "Offset":"00x1000",
+  "Extension":"",
+  "Description":"Mach-O binary (32-bit)"
+ },
+ "88":{
+  "Hex Signature":"feedfacf",
+  "ISO 8859-1":"þíúÏ",
+  "Offset":"00x1000",
+  "Extension":"",
+  "Description":"Mach-O binary (64-bit)"
+ },
+ "89":{
+  "Hex Signature":"feedfeed",
+  "ISO 8859-1":"þíþí",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"JKS Javakey Store"
+ },
+ "90":{
+  "Hex Signature":"cefaedfe",
+  "ISO 8859-1":"Îúíþ",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Mach-O binary (reverse byte ordering scheme, 32-bit)"
+ },
+ "91":{
+  "Hex Signature":"cffaedfe",
+  "ISO 8859-1":"Ïúíþ",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Mach-O binary (reverse byte ordering scheme, 64-bit)"
+ },
+ "92":{
+  "Hex Signature":"25215053",
+  "ISO 8859-1":"%!PS",
+  "Offset":"0",
+  "Extension":"ps",
+  "Description":"PostScript document"
+ },
+ "93":{
+  "Hex Signature":"252150532d41646f62652d332e3020455053462d332e30",
+  "ISO 8859-1":"%!PS-Adobe-3.0 ESPF-3.0",
+  "Offset":"0",
+  "Extension":[
+   "eps",
+   "epsf"
+  ],
+  "Description":"Encapsulated PostScript file version 3.0"
+ },
+ "94":{
+  "Hex Signature":"252150532d41646f62652d332e3120455053462d332e30",
+  "ISO 8859-1":"%!PS-Adobe-3.1 ESPF-3.0",
+  "Offset":"0",
+  "Extension":[
+   "eps",
+   "epsf"
+  ],
+  "Description":"Encapsulated PostScript file version 3.1"
+ },
+ "95":{
+  "Hex Signature":"495453460300000060000000",
+  "ISO 8859-1":"ITSF␃␀␀␀`␀␀␀",
+  "Offset":"0",
+  "Extension":"chm",
+  "Description":"MS Windows HtmlHelp Data"
+ },
+ "96":{
+  "Hex Signature":"3f5f",
+  "ISO 8859-1":"?_",
+  "Offset":"0",
+  "Extension":"hlp",
+  "Description":"Windows 3.x\/95\/98 Help file"
+ },
+ "97":{
+  "Hex Signature":"255044462d",
+  "ISO 8859-1":"%PDF-",
+  "Offset":"0",
+  "Extension":"pdf",
+  "Description":"PDF document"
+ },
+ "98":{
+  "Hex Signature":"3026b2758e66cf11a6d900aa0062ce6c",
+  "ISO 8859-1":"0&²uŽfÏ␑¦Ù␀ª␀bÎl",
+  "Offset":"0",
+  "Extension":[
+   "asf",
+   "wma",
+   "wmv"
+  ],
+  "Description":"Advanced Systems Format"
+ },
+ "99":{
+  "Hex Signature":"2453444930303031",
+  "ISO 8859-1":"$SDI0001",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"System Deployment Image, a disk image format used by Microsoft"
+ },
+ "100":{
+  "Hex Signature":"4f676753",
+  "ISO 8859-1":"OggS",
+  "Offset":"0",
+  "Extension":[
+   "ogg",
+   "oga",
+   "ogv"
+  ],
+  "Description":"Ogg, an open source media container format"
+ },
+ "101":{
+  "Hex Signature":"38425053",
+  "ISO 8859-1":"8BPS",
+  "Offset":"0",
+  "Extension":"psd",
+  "Description":"Photoshop Document file, Adobe Photoshop's native file format"
+ },
+ "102":{
+  "Hex Signature":"52494646????????57415645",
+  "ISO 8859-1":"RIFF????WAVE",
+  "Offset":"0",
+  "Extension":"wav",
+  "Description":"Waveform Audio File Format"
+ },
+ "103":{
+  "Hex Signature":"52494646????????41564920",
+  "ISO 8859-1":"RIFF????AVI␠",
+  "Offset":"0",
+  "Extension":"avi",
+  "Description":"Audio Video Interleave video format"
+ },
+ "104":{
+  "Hex Signature":[
+   "fffb",
+   "fff3",
+   "fff2"
+  ],
+  "ISO 8859-1":[
+   "ÿû",
+   "ÿó",
+   "ÿò"
+  ],
+  "Offset":"0",
+  "Extension":"mp3",
+  "Description":"MPEG-1 Layer 3 file without an ID3 tag or with an ID3v1 tag (which is appended at the end of the file)"
+ },
+ "105":{
+  "Hex Signature":"494433",
+  "ISO 8859-1":"ID3",
+  "Offset":"0",
+  "Extension":"mp3",
+  "Description":"MP3 file with an ID3v2 container"
+ },
+ "106":{
+  "Hex Signature":"424d",
+  "ISO 8859-1":"BM",
+  "Offset":"0",
+  "Extension":[
+   "bmp",
+   "dib"
+  ],
+  "Description":"BMP file, a bitmap format used mostly in the Windows world"
+ },
+ "107":{
+  "Hex Signature":"4344303031",
+  "ISO 8859-1":"CD001",
+  "Offset":"0x80010x88010x9001",
+  "Extension":"iso",
+  "Description":"ISO9660 CD\/DVD image file"
+ },
+ "108":{
+  "Hex Signature":"4344303031",
+  "ISO 8859-1":"CD001",
+  "Offset":"0x5EAC9",
+  "Extension":"cdi",
+  "Description":"CD-i CD image file"
+ },
+ "109":{
+  "Hex Signature":"6d61696e2e6273",
+  "ISO 8859-1":"main.bs",
+  "Offset":"0",
+  "Extension":"mgw",
+  "Description":"Nintendo Game & Watch image file"
+ },
+ "110":{
+  "Hex Signature":"4e4553",
+  "ISO 8859-1":"NES",
+  "Offset":"0",
+  "Extension":"nes",
+  "Description":"Nintendo Entertainment System image file"
+ },
+ "111":{
+  "Hex Signature":"a03241a0a0a0",
+  "ISO 8859-1":" 2A   ",
+  "Offset":"0x165A4",
+  "Extension":"d64",
+  "Description":"Commodore 64 1541 disk image (D64 format)"
+ },
+ "112":{
+  "Hex Signature":"4753522d31353431",
+  "ISO 8859-1":"GCR-1541",
+  "Offset":"0",
+  "Extension":"g64",
+  "Description":"Commodore 64 1541 disk image (G64 format)"
+ },
+ "113":{
+  "Hex Signature":"a03344a0a0",
+  "ISO 8859-1":" 3D  ",
+  "Offset":"0x61819",
+  "Extension":"d81",
+  "Description":"Commodore 64 1581 disk image (D81 format)"
+ },
+ "114":{
+  "Hex Signature":"433634207461706520696d6167652066696c65",
+  "ISO 8859-1":"C64 tape image file",
+  "Offset":"0",
+  "Extension":"t64",
+  "Description":"Commodore 64 tape image"
+ },
+ "115":{
+  "Hex Signature":"43363420434152545249444745202020",
+  "ISO 8859-1":"C64 CARTRIDGE␠␠␠",
+  "Offset":"0",
+  "Extension":"crt",
+  "Description":"Commodore 64 cartridge image"
+ },
+ "116":{
+  "Hex Signature":"53494d504c4520203d202020202020202020202020202020202020202054",
+  "ISO 8859-1":"SIMPLE␠␠=␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠␠T",
+  "Offset":"0",
+  "Extension":"fits",
+  "Description":"Flexible Image Transport System (FITS)"
+ },
+ "117":{
+  "Hex Signature":"664c6143",
+  "ISO 8859-1":"fLaC",
+  "Offset":"0",
+  "Extension":"flac",
+  "Description":"Free Lossless Audio Codec"
+ },
+ "118":{
+  "Hex Signature":"4d546864",
+  "ISO 8859-1":"MThd",
+  "Offset":"0",
+  "Extension":[
+   "mid",
+   "midi"
+  ],
+  "Description":"MIDI sound file"
+ },
+ "119":{
+  "Hex Signature":"d0cf11e0a1b11ae1",
+  "ISO 8859-1":"ÐÏ␑à¡±␚á",
+  "Offset":"0",
+  "Extension":[
+   "doc",
+   "xls",
+   "ppt",
+   "msi",
+   "msg"
+  ],
+  "Description":"Compound File Binary Format, a container format defined by Microsoft COM. It can contain the equivalent of files and directories. It is used by Windows Installer and for documents in older versions of Microsoft Office. It can be used by other programs as well that rely on the COM and OLE API's. (0xD0CF11E0 visually resembles \"DOCFILE\".)"
+ },
+ "120":{
+  "Hex Signature":"6465780a30333500",
+  "ISO 8859-1":"dex␊035␀",
+  "Offset":"0",
+  "Extension":"dex",
+  "Description":"Dalvik Executable"
+ },
+ "121":{
+  "Hex Signature":"4b444d",
+  "ISO 8859-1":"KDM",
+  "Offset":"0",
+  "Extension":"vmdk",
+  "Description":"VMDK files"
+ },
+ "122":{
+  "Hex Signature":"23204469736b2044657363726970746f",
+  "ISO 8859-1":"# Disk Descripto",
+  "Offset":"0",
+  "Extension":"vmdk",
+  "Description":"VMware 4 Virtual Disk description file (split disk)"
+ },
+ "123":{
+  "Hex Signature":"43723234",
+  "ISO 8859-1":"Cr24",
+  "Offset":"0",
+  "Extension":"crx",
+  "Description":"Google Chrome extension or packaged app"
+ },
+ "124":{
+  "Hex Signature":"41474433",
+  "ISO 8859-1":"AGD3",
+  "Offset":"0",
+  "Extension":"fh8",
+  "Description":"FreeHand 8 document"
+ },
+ "125":{
+  "Hex Signature":"05070000424f424f0507000000000000000000000001",
+  "ISO 8859-1":"␅␇␀␀BOBO␅␇␀␀␀␀␀␀␀␀␀␀␀␁",
+  "Offset":"0",
+  "Extension":"cwk",
+  "Description":"AppleWorks 5 document"
+ },
+ "126":{
+  "Hex Signature":"0607e100424f424f0607e10000000000000000000001",
+  "ISO 8859-1":"␆␇á␀BOBO␆␇á␀␀␀␀␀␀␀␀␀␀␁",
+  "Offset":"0",
+  "Extension":"cwk",
+  "Description":"AppleWorks 6 document"
+ },
+ "127":{
+  "Hex Signature":[
+   "455202000000",
+   "8b455202000000"
+  ],
+  "ISO 8859-1":[
+   "ER␂␀␀␀",
+   "‹ER␂␀␀␀"
+  ],
+  "Offset":"0",
+  "Extension":"toast",
+  "Description":"Roxio Toast disc image file"
+ },
+ "128":{
+  "Hex Signature":"6b6f6c79",
+  "ISO 8859-1":"koly",
+  "Offset":"end–512",
+  "Extension":"dmg",
+  "Description":"Apple Disk Image file"
+ },
+ "129":{
+  "Hex Signature":"78617221",
+  "ISO 8859-1":"xar!",
+  "Offset":"0",
+  "Extension":"xar",
+  "Description":"eXtensible ARchive format"
+ },
+ "130":{
+  "Hex Signature":"504d4f43434d4f43",
+  "ISO 8859-1":"PMOCCMOC",
+  "Offset":"0",
+  "Extension":"dat",
+  "Description":"Windows Files And Settings Transfer Repository See also USMT 3.0 (Win XP) and USMT 4.0 (Win 7) User Guides"
+ },
+ "131":{
+  "Hex Signature":"4e45531a",
+  "ISO 8859-1":"NES␚",
+  "Offset":"0",
+  "Extension":"nes",
+  "Description":"Nintendo Entertainment System ROM file"
+ },
+ "132":{
+  "Hex Signature":[
+   "7573746172003030",
+   "7573746172202000"
+  ],
+  "ISO 8859-1":[
+   "ustar␀00",
+   "ustar␠␠␀"
+  ],
+  "Offset":"257",
+  "Extension":"tar",
+  "Description":"tar archive"
+ },
+ "133":{
+  "Hex Signature":"4f4152??",
+  "ISO 8859-1":"OAR?",
+  "Offset":"0",
+  "Extension":"oar",
+  "Description":"OAR file archive format, where ?? is the format version."
+ },
+ "134":{
+  "Hex Signature":"746f7833",
+  "ISO 8859-1":"tox3",
+  "Offset":"0",
+  "Extension":"tox",
+  "Description":"Open source portable voxel file"
+ },
+ "135":{
+  "Hex Signature":"4d4c5649",
+  "ISO 8859-1":"MLVI",
+  "Offset":"0",
+  "Extension":"MLV",
+  "Description":"Magic Lantern Video file"
+ },
+ "136":{
+  "Hex Signature":[
+   "44434d0150413330",
+   "50413330"
+  ],
+  "ISO 8859-1":[
+   "DCM␁PA30",
+   "PA30"
+  ],
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Windows Update Binary Delta Compression file"
+ },
+ "137":{
+  "Hex Signature":"377abcaf271c",
+  "ISO 8859-1":"7z¼¯'␜",
+  "Offset":"0",
+  "Extension":"7z",
+  "Description":"7-Zip File Format"
+ },
+ "138":{
+  "Hex Signature":"1f8b",
+  "ISO 8859-1":"␟‹",
+  "Offset":"0",
+  "Extension":[
+   "gz",
+   "tar.gz"
+  ],
+  "Description":"GZIP compressed file"
+ },
+ "139":{
+  "Hex Signature":"fd377a585a00",
+  "ISO 8859-1":"ý7zXZ␀",
+  "Offset":"0",
+  "Extension":[
+   "xz",
+   "tar.xz"
+  ],
+  "Description":"XZ compression utility using LZMA2 compression"
+ },
+ "140":{
+  "Hex Signature":"04224d18",
+  "ISO 8859-1":"␄\"M␘",
+  "Offset":"0",
+  "Extension":"lz4",
+  "Description":"LZ4 Frame FormatRemark: LZ4 block format does not offer any magic bytes."
+ },
+ "141":{
+  "Hex Signature":"4d534346",
+  "ISO 8859-1":"MSCF",
+  "Offset":"0",
+  "Extension":"cab",
+  "Description":"Microsoft Cabinet file"
+ },
+ "142":{
+  "Hex Signature":"535a444488f02733",
+  "ISO 8859-1":"SZDDˆð'3",
+  "Offset":"0",
+  "Extension":[
+   "??",
+   "_"
+  ],
+  "Description":"Microsoft compressed file in Quantum format, used prior to Windows XP. File can be decompressed using Extract.exe or Expand.exe distributed with earlier versions of Windows. After compression, the last character of the original filename extension is replaced with an underscore, e.g. ‘Setup.exe’ becomes ‘Setup.ex_’."
+ },
+ "143":{
+  "Hex Signature":"464c4946",
+  "ISO 8859-1":"FLIF",
+  "Offset":"0",
+  "Extension":"flif",
+  "Description":"Free Lossless Image Format"
+ },
+ "144":{
+  "Hex Signature":"1a45dfa3",
+  "ISO 8859-1":"␚Eß£",
+  "Offset":"0",
+  "Extension":[
+   "mkv",
+   "mka",
+   "mks",
+   "mk3d",
+   "webm"
+  ],
+  "Description":"Matroska media container, including WebM"
+ },
+ "145":{
+  "Hex Signature":"4d494c20",
+  "ISO 8859-1":"MIL␠",
+  "Offset":"0",
+  "Extension":"stg",
+  "Description":"\"SEAN : Session Analysis\" Training file. Also used in compatible software \"Rpw : Rowperfect for Windows\" and \"RP3W : ROWPERFECT3 for Windows\"."
+ },
+ "146":{
+  "Hex Signature":"41542654464f524d????????444a56",
+  "ISO 8859-1":"AT&TFORM????DJV",
+  "Offset":"0",
+  "Extension":[
+   "djvu",
+   "djv"
+  ],
+  "Description":"DjVu documentThe following byte is either 55 (U) for single-page or 4D (M) for multi-page documents."
+ },
+ "147":{
+  "Hex Signature":"2d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN CERTIFICATE-----",
+  "Offset":"0",
+  "Extension":[
+   "crt",
+   "pem"
+  ],
+  "Description":"PEM encoded X.509 certificate"
+ },
+ "148":{
+  "Hex Signature":"2d2d2d2d2d424547494e20434552544946494341544520524551554553542d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN CERTIFICATE REQUEST-----",
+  "Offset":"0",
+  "Extension":[
+   "csr",
+   "pem"
+  ],
+  "Description":"PEM encoded X.509 Certificate Signing Request"
+ },
+ "149":{
+  "Hex Signature":"2d2d2d2d2d424547494e2050524956415445204b45592d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN PRIVATE KEY-----",
+  "Offset":"0",
+  "Extension":[
+   "key",
+   "pem"
+  ],
+  "Description":"PEM encoded X.509 PKCS#8 private key"
+ },
+ "150":{
+  "Hex Signature":"2d2d2d2d2d424547494e204453412050524956415445204b45592d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN DSA PRIVATE KEY-----",
+  "Offset":"0",
+  "Extension":[
+   "key",
+   "pem"
+  ],
+  "Description":"PEM encoded X.509 PKCS#1 DSA private key"
+ },
+ "151":{
+  "Hex Signature":"2d2d2d2d2d424547494e205253412050524956415445204b45592d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN RSA PRIVATE KEY-----",
+  "Offset":"0",
+  "Extension":[
+   "key",
+   "pem"
+  ],
+  "Description":"PEM encoded X.509 PKCS#1 RSA private key"
+ },
+ "152":{
+  "Hex Signature":"50755454592d557365722d4b65792d46696c652d323a",
+  "ISO 8859-1":"PuTTY-User-Key-File-2:",
+  "Offset":"0",
+  "Extension":"ppk",
+  "Description":"PuTTY private key file version 2"
+ },
+ "153":{
+  "Hex Signature":"50755454592d557365722d4b65792d46696c652d333a",
+  "ISO 8859-1":"PuTTY-User-Key-File-3:",
+  "Offset":"0",
+  "Extension":"ppk",
+  "Description":"PuTTY private key file version 3"
+ },
+ "154":{
+  "Hex Signature":"2d2d2d2d2d424547494e204f50454e5353482050524956415445204b45592d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN OPENSSH PRIVATE KEY-----",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"OpenSSH private key file"
+ },
+ "155":{
+  "Hex Signature":"2d2d2d2d2d424547494e2053534832204b45592d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN␠SSH2␠KEY-----",
+  "Offset":"0",
+  "Extension":"pub",
+  "Description":"OpenSSH public key file"
+ },
+ "156":{
+  "Hex Signature":"4449434d",
+  "ISO 8859-1":"DICM",
+  "Offset":"128",
+  "Extension":"dcm",
+  "Description":"DICOM Medical File Format"
+ },
+ "157":{
+  "Hex Signature":"774f4646",
+  "ISO 8859-1":"wOFF",
+  "Offset":"0",
+  "Extension":"woff",
+  "Description":"WOFF File Format 1.0"
+ },
+ "158":{
+  "Hex Signature":"774f4632",
+  "ISO 8859-1":"wOF2",
+  "Offset":"0",
+  "Extension":"woff2",
+  "Description":"WOFF File Format 2.0"
+ },
+ "159":{
+  "Hex Signature":[
+   "3c3f786d6c20",
+   "3c003f0078006d006c0020",
+   "003c003f0078006d006c0020",
+   "3c0000003f000000780000006d0000006c00000020000000",
+   "0000003c0000003f000000780000006d0000006c00000020",
+   "4c6fa7949340"
+  ],
+  "ISO 8859-1":[
+   "<?xml␠",
+   "<␀?␀x␀m␀l␀␠",
+   "␀<␀?␀x␀m␀l␀␠",
+   "<␀␀␀?␀␀␀x␀␀␀m␀␀␀l␀␀␀␠␀␀␀",
+   "␀␀␀<␀␀␀?␀␀␀x␀␀␀m␀␀␀l␀␀␀␠",
+   "Lo§”“@"
+  ],
+  "Offset":"0after BOM",
+  "Extension":[
+   "xml (",
+   "UTF-8",
+   " or other 8-bit encodings)",
+   "xml (",
+   "UTF-16LE",
+   ")",
+   "xml (",
+   "UTF-16BE",
+   ")",
+   "xml (",
+   "UTF-32LE",
+   ")",
+   "xml (",
+   "UTF-32BE",
+   ")",
+   "xml (",
+   "EBCDIC",
+   ")"
+  ],
+  "Description":"eXtensible Markup Language"
+ },
+ "160":{
+  "Hex Signature":"0061736d",
+  "ISO 8859-1":"␀asm",
+  "Offset":"0",
+  "Extension":"wasm",
+  "Description":"WebAssembly binary format"
+ },
+ "161":{
+  "Hex Signature":"cf8401",
+  "ISO 8859-1":"Ï„␁",
+  "Offset":"0",
+  "Extension":"lep",
+  "Description":"Lepton compressed JPEG image"
+ },
+ "162":{
+  "Hex Signature":[
+   "435753",
+   "465753"
+  ],
+  "ISO 8859-1":[
+   "CWS",
+   "FWS"
+  ],
+  "Offset":"0",
+  "Extension":"swf",
+  "Description":"Adobe Flash .swf"
+ },
+ "163":{
+  "Hex Signature":"213c617263683e0a",
+  "ISO 8859-1":"!<arch>␊",
+  "Offset":"0",
+  "Extension":"deb",
+  "Description":"linux deb file"
+ },
+ "164":{
+  "Hex Signature":"c03b3998",
+  "ISO 8859-1":"À;9˜",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Linux EXT3\/EXT4 jbd2 filesystem Journal"
+ },
+ "165":{
+  "Hex Signature":"52494646????????57454250",
+  "ISO 8859-1":"RIFF????WEBP",
+  "Offset":"0",
+  "Extension":"webp",
+  "Description":"Google WebP image file, where ?? ?? ?? ?? is the file size. More information on WebP File Header"
+ },
+ "166":{
+  "Hex Signature":"27051956",
+  "ISO 8859-1":"'␅␙V",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"U-Boot \/ uImage. Das U-Boot Universal Boot Loader."
+ },
+ "167":{
+  "Hex Signature":"7b5c72746631",
+  "ISO 8859-1":"{\\rtf1",
+  "Offset":"0",
+  "Extension":"rtf",
+  "Description":"Rich Text Format"
+ },
+ "168":{
+  "Hex Signature":"54415045",
+  "ISO 8859-1":"TAPE",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Microsoft Tape Format"
+ },
+ "169":{
+  "Hex Signature":"47",
+  "ISO 8859-1":"G",
+  "Offset":"00xBC0x178...(every 188th byte)",
+  "Extension":[
+   "ts",
+   "tsv",
+   "tsa",
+   "mpg",
+   "mpeg"
+  ],
+  "Description":"MPEG Transport Stream (MPEG-2 Part 1)"
+ },
+ "170":{
+  "Hex Signature":"000001ba",
+  "ISO 8859-1":"␀␀␁º",
+  "Offset":"0",
+  "Extension":[
+   "m2p",
+   "vob",
+   "mpg",
+   "mpeg"
+  ],
+  "Description":"MPEG Program Stream (MPEG-1 Part 1 (essentially identical) and MPEG-2 Part 1)"
+ },
+ "171":{
+  "Hex Signature":"000001b3",
+  "ISO 8859-1":"␀␀␁³",
+  "Offset":"0",
+  "Extension":[
+   "mpg",
+   "mpeg"
+  ],
+  "Description":"MPEG-1 video and MPEG-2 video (MPEG-1 Part 2 and MPEG-2 Part 2)"
+ },
+ "172":{
+  "Hex Signature":"6674797069736f6d",
+  "ISO 8859-1":"ftypisom",
+  "Offset":"4",
+  "Extension":"mp4",
+  "Description":"ISO Base Media file (MPEG-4)"
+ },
+ "173":{
+  "Hex Signature":"667479704d534e56",
+  "ISO 8859-1":"ftypMSNV",
+  "Offset":"4",
+  "Extension":"mp4",
+  "Description":"MPEG-4 video file"
+ },
+ "174":{
+  "Hex Signature":[
+   "7801",
+   "785e",
+   "789c",
+   "78da",
+   "7820",
+   "787d",
+   "78bb",
+   "78f9"
+  ],
+  "ISO 8859-1":[
+   "x␁",
+   "x^",
+   "xœ",
+   "xÚ",
+   "x␠",
+   "x}",
+   "x»",
+   "xù"
+  ],
+  "Offset":"0",
+  "Extension":"zlib",
+  "Description":"No Compression (no preset dictionary)Best speed (no preset dictionary)Default Compression (no preset dictionary)Best Compression (no preset dictionary)No Compression (with preset dictionary)Best speed (with preset dictionary)Default Compression (with preset dictionary)Best Compression (with preset dictionary)"
+ },
+ "175":{
+  "Hex Signature":"62767832",
+  "ISO 8859-1":"bvx2",
+  "Offset":"0",
+  "Extension":"lzfse",
+  "Description":"LZFSE - Lempel-Ziv style data compression algorithm using Finite State Entropy coding. OSS by Apple."
+ },
+ "176":{
+  "Hex Signature":"4f5243",
+  "ISO 8859-1":"ORC",
+  "Offset":"0",
+  "Extension":"orc",
+  "Description":"Apache ORC (Optimized Row Columnar) file format"
+ },
+ "177":{
+  "Hex Signature":"4f626a01",
+  "ISO 8859-1":"Obj␁",
+  "Offset":"0",
+  "Extension":"avro",
+  "Description":"Apache Avro binary file format"
+ },
+ "178":{
+  "Hex Signature":"53455136",
+  "ISO 8859-1":"SEQ6",
+  "Offset":"0",
+  "Extension":"rc",
+  "Description":"RCFile columnar file format"
+ },
+ "179":{
+  "Hex Signature":"3c726f626c6f7821\t",
+  "ISO 8859-1":"<roblox!",
+  "Offset":"0",
+  "Extension":"rbxl",
+  "Description":"Roblox place file "
+ },
+ "180":{
+  "Hex Signature":"65877856",
+  "ISO 8859-1":"e‡xV",
+  "Offset":"0",
+  "Extension":[
+   "p25",
+   "obt"
+  ],
+  "Description":"PhotoCap Object Templates"
+ },
+ "181":{
+  "Hex Signature":"5555aaaa",
+  "ISO 8859-1":"UUªª",
+  "Offset":"0",
+  "Extension":"pcv",
+  "Description":"PhotoCap Vector"
+ },
+ "182":{
+  "Hex Signature":"785634",
+  "ISO 8859-1":"xV4",
+  "Offset":"0",
+  "Extension":[
+   "pbt",
+   "pdt",
+   "pea",
+   "peb",
+   "pet",
+   "pgt",
+   "pict",
+   "pjt",
+   "pkt",
+   "pmt"
+  ],
+  "Description":"PhotoCap Template"
+ },
+ "183":{
+  "Hex Signature":"50415231",
+  "ISO 8859-1":"PAR1",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Apache Parquet columnar file format"
+ },
+ "184":{
+  "Hex Signature":"454d5832",
+  "ISO 8859-1":"EMX2",
+  "Offset":"0",
+  "Extension":"ez2",
+  "Description":"Emulator Emaxsynth samples"
+ },
+ "185":{
+  "Hex Signature":"454d5533",
+  "ISO 8859-1":"EMU3",
+  "Offset":"0",
+  "Extension":[
+   "ez3",
+   "iso"
+  ],
+  "Description":"Emulator III synth samples"
+ },
+ "186":{
+  "Hex Signature":"1b4c7561",
+  "ISO 8859-1":"␛Lua",
+  "Offset":"0",
+  "Extension":"luac",
+  "Description":"Lua bytecode"
+ },
+ "187":{
+  "Hex Signature":"626f6f6b000000006d61726b00000000",
+  "ISO 8859-1":"book␀␀␀␀mark␀␀␀␀",
+  "Offset":"0",
+  "Extension":"alias",
+  "Description":"macOS file Alias (Symbolic link)"
+ },
+ "188":{
+  "Hex Signature":"626f6f6b",
+  "ISO 8859-1":"book",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"macOS bookmark format"
+ },
+ "189":{
+  "Hex Signature":"5b5a6f6e655472616e736665725d",
+  "ISO 8859-1":"[ZoneTransfer]",
+  "Offset":"0",
+  "Extension":"Identifier",
+  "Description":"Microsoft Zone Identifier for URL Security Zones"
+ },
+ "190":{
+  "Hex Signature":"52656365697665643a",
+  "ISO 8859-1":"Received:",
+  "Offset":"0",
+  "Extension":"eml",
+  "Description":"Email Message var5"
+ },
+ "191":{
+  "Hex Signature":"20020162a01eab0702000000",
+  "ISO 8859-1":"␠␂␁b⍽␞«␇␂␀␀␀",
+  "Offset":"0",
+  "Extension":"tde",
+  "Description":"Tableau Datasource"
+ },
+ "192":{
+  "Hex Signature":"3748030200000000583530394b4559",
+  "ISO 8859-1":"7H␃␂␀␀␀␀X509KEY",
+  "Offset":"0",
+  "Extension":"kdb",
+  "Description":"KDB file"
+ },
+ "193":{
+  "Hex Signature":"85????03",
+  "ISO 8859-1":"…??␃",
+  "Offset":"0",
+  "Extension":"pgp",
+  "Description":"PGP file "
+ },
+ "194":{
+  "Hex Signature":"28b52ffd",
+  "ISO 8859-1":"(µ\/ý",
+  "Offset":"0",
+  "Extension":"zst",
+  "Description":"Zstandard compress"
+ },
+ "195":{
+  "Hex Signature":"5253564b44415441",
+  "ISO 8859-1":"RSVKDATA",
+  "Offset":"0",
+  "Extension":"rs",
+  "Description":"QuickZip rs compressed archive"
+ },
+ "196":{
+  "Hex Signature":"3a290a",
+  "ISO 8859-1":":)␊",
+  "Offset":"0",
+  "Extension":"sml",
+  "Description":"Smile file"
+ },
+ "197":{
+  "Hex Signature":"4a6f7921",
+  "ISO 8859-1":"Joy!",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Preferred Executable Format"
+ },
+ "198":{
+  "Hex Signature":"3412aa55",
+  "ISO 8859-1":"4␒ªU",
+  "Offset":"0",
+  "Extension":"vpk",
+  "Description":"VPK file, used to store game data for some Source Engine games"
+ },
+ "199":{
+  "Hex Signature":"2a2a4143452a2a",
+  "ISO 8859-1":"**ACE**",
+  "Offset":"7",
+  "Extension":"ace",
+  "Description":"ACE (compressed file format)"
+ },
+ "200":{
+  "Hex Signature":"60ea",
+  "ISO 8859-1":"`ê",
+  "Offset":"0",
+  "Extension":"arj",
+  "Description":"ARJ"
+ },
+ "201":{
+  "Hex Signature":"49536328",
+  "ISO 8859-1":"ISc(",
+  "Offset":"0",
+  "Extension":"cab",
+  "Description":"InstallShield CAB Archive File"
+ },
+ "202":{
+  "Hex Signature":"4b57414a",
+  "ISO 8859-1":"KWAJ",
+  "Offset":"0",
+  "Extension":"??_",
+  "Description":"Windows 3.1x Compressed File"
+ },
+ "203":{
+  "Hex Signature":"535a4444",
+  "ISO 8859-1":"SZDD",
+  "Offset":"0",
+  "Extension":"??_",
+  "Description":"Windows 9x Compressed File"
+ },
+ "204":{
+  "Hex Signature":"5a4f4f",
+  "ISO 8859-1":"ZOO",
+  "Offset":"0",
+  "Extension":"zoo",
+  "Description":"Zoo (file format)"
+ },
+ "205":{
+  "Hex Signature":"50310a",
+  "ISO 8859-1":"P1␊",
+  "Offset":"0",
+  "Extension":"pbm",
+  "Description":"Portable bitmap ASCII"
+ },
+ "206":{
+  "Hex Signature":"50340a",
+  "ISO 8859-1":"P4␊",
+  "Offset":"0",
+  "Extension":"pbm",
+  "Description":"Portable bitmap binary"
+ },
+ "207":{
+  "Hex Signature":"50320a",
+  "ISO 8859-1":"P2␊",
+  "Offset":"0",
+  "Extension":"pgm",
+  "Description":"Portable Gray Map ASCII"
+ },
+ "208":{
+  "Hex Signature":"50350a",
+  "ISO 8859-1":"P5␊",
+  "Offset":"0",
+  "Extension":"pgm",
+  "Description":"Portable Gray Map binary"
+ },
+ "209":{
+  "Hex Signature":"50330a",
+  "ISO 8859-1":"P3␊",
+  "Offset":"0",
+  "Extension":"ppm",
+  "Description":"Portable Pixmap ASCII"
+ },
+ "210":{
+  "Hex Signature":"50360a",
+  "ISO 8859-1":"P6␊",
+  "Offset":"0",
+  "Extension":"ppm",
+  "Description":"Portable Pixmap binary"
+ },
+ "211":{
+  "Hex Signature":"d7cdc69a",
+  "ISO 8859-1":"×ÍÆš",
+  "Offset":"0",
+  "Extension":"wmf",
+  "Description":"Windows Metafile"
+ },
+ "212":{
+  "Hex Signature":"67696d7020786366",
+  "ISO 8859-1":"gimp xcf",
+  "Offset":"0",
+  "Extension":"xcf",
+  "Description":"XCF (file format)"
+ },
+ "213":{
+  "Hex Signature":"2f2a2058504d202a2f",
+  "ISO 8859-1":"\/* XPM *\/",
+  "Offset":"0",
+  "Extension":"xpm",
+  "Description":"X PixMap"
+ },
+ "214":{
+  "Hex Signature":"414646",
+  "ISO 8859-1":"AFF",
+  "Offset":"0",
+  "Extension":"aff",
+  "Description":"Advanced Forensics Format"
+ },
+ "215":{
+  "Hex Signature":"45564632",
+  "ISO 8859-1":"EVF2",
+  "Offset":"0",
+  "Extension":"Ex01",
+  "Description":"EnCase EWF version 2 format"
+ },
+ "216":{
+  "Hex Signature":"455646",
+  "ISO 8859-1":"EVF",
+  "Offset":"0",
+  "Extension":"e01",
+  "Description":"EnCase EWF version 1 format"
+ },
+ "217":{
+  "Hex Signature":"514649",
+  "ISO 8859-1":"QFI",
+  "Offset":"0",
+  "Extension":"qcow",
+  "Description":"qcow file format"
+ },
+ "218":{
+  "Hex Signature":"52494646????????41434f4e",
+  "ISO 8859-1":"RIFF????ACON",
+  "Offset":"0",
+  "Extension":"ani",
+  "Description":"Animated cursor"
+ },
+ "219":{
+  "Hex Signature":"52494646????????43444441",
+  "ISO 8859-1":"RIFF????CDDA",
+  "Offset":"0",
+  "Extension":"cda",
+  "Description":".cda file"
+ },
+ "220":{
+  "Hex Signature":"52494646????????514c434d",
+  "ISO 8859-1":"RIFF????QLCM",
+  "Offset":"0",
+  "Extension":"qcp",
+  "Description":"Qualcomm PureVoice file format"
+ },
+ "221":{
+  "Hex Signature":[
+   "52494658????????4647444d",
+   "58464952????????4d444746"
+  ],
+  "ISO 8859-1":[
+   "RIFX????FGDM",
+   "XFIR????MDGF"
+  ],
+  "Offset":"0",
+  "Extension":"dcr",
+  "Description":"Adobe Shockwave"
+ },
+ "222":{
+  "Hex Signature":[
+   "52494658????????4d563933",
+   "58464952????????3339564d"
+  ],
+  "ISO 8859-1":[
+   "RIFX????MV93",
+   "XFIR????39VM"
+  ],
+  "Offset":"0",
+  "Extension":[
+   "dir",
+   "dxr",
+   "drx"
+  ],
+  "Description":"Macromedia Director file format"
+ },
+ "223":{
+  "Hex Signature":"464c56",
+  "ISO 8859-1":"FLV",
+  "Offset":"0",
+  "Extension":"flv",
+  "Description":"Flash Video file"
+ },
+ "224":{
+  "Hex Signature":"3c3c3c204f7261636c6520564d205669727475616c426f78204469736b20496d616765203e3e3e",
+  "ISO 8859-1":"<<< Oracle VM VirtualBox Disk Image >>>",
+  "Offset":"0",
+  "Extension":"vdi",
+  "Description":"VirtualBox Virtual Hard Disk file format"
+ },
+ "225":{
+  "Hex Signature":"636f6e6563746978",
+  "ISO 8859-1":"conectix",
+  "Offset":"0",
+  "Extension":"vhd",
+  "Description":"Windows Virtual PC Virtual Hard Disk file format"
+ },
+ "226":{
+  "Hex Signature":"7668647866696c65",
+  "ISO 8859-1":"vhdxfile",
+  "Offset":"0",
+  "Extension":"vhdx",
+  "Description":"Windows Virtual PC Windows 8 Virtual Hard Disk file format"
+ },
+ "227":{
+  "Hex Signature":"49735a21",
+  "ISO 8859-1":"IsZ!",
+  "Offset":"0",
+  "Extension":"isz",
+  "Description":"Compressed ISO image"
+ },
+ "228":{
+  "Hex Signature":"444141",
+  "ISO 8859-1":"DAA",
+  "Offset":"0",
+  "Extension":"daa",
+  "Description":"Direct Access Archive PowerISO"
+ },
+ "229":{
+  "Hex Signature":"4c664c65",
+  "ISO 8859-1":"LfLe",
+  "Offset":"0",
+  "Extension":"evt",
+  "Description":"Windows Event Viewer file format"
+ },
+ "230":{
+  "Hex Signature":"456c6646696c65",
+  "ISO 8859-1":"ElfFile",
+  "Offset":"0",
+  "Extension":"evtx",
+  "Description":"Windows Event Viewer XML file format"
+ },
+ "231":{
+  "Hex Signature":"73646266",
+  "ISO 8859-1":"sdbf",
+  "Offset":"8",
+  "Extension":"sdb",
+  "Description":"Windows customized database"
+ },
+ "232":{
+  "Hex Signature":"504d4343",
+  "ISO 8859-1":"PMCC",
+  "Offset":"0",
+  "Extension":"grp",
+  "Description":"Windows 3.x Program Manager Program Group file format"
+ },
+ "233":{
+  "Hex Signature":"4b434d53",
+  "ISO 8859-1":"KCMS",
+  "Offset":"0",
+  "Extension":"icm",
+  "Description":"ICC profile"
+ },
+ "234":{
+  "Hex Signature":"72656766",
+  "ISO 8859-1":"regf",
+  "Offset":"0",
+  "Extension":[
+   "dat",
+   "hiv"
+  ],
+  "Description":"Windows Registry file"
+ },
+ "235":{
+  "Hex Signature":"2142444e",
+  "ISO 8859-1":"!BDN",
+  "Offset":"0",
+  "Extension":"pst",
+  "Description":"Microsoft Outlook Personal Storage Table file"
+ },
+ "236":{
+  "Hex Signature":"445241434f",
+  "ISO 8859-1":"DRACO",
+  "Offset":"0",
+  "Extension":"drc",
+  "Description":"3D model compressed with Google Draco"
+ },
+ "237":{
+  "Hex Signature":"47524942",
+  "ISO 8859-1":"GRIB",
+  "Offset":"0",
+  "Extension":[
+   "grib",
+   "grib2"
+  ],
+  "Description":"Gridded data (commonly weather observations or forecasts) in the WMO GRIB or GRIB2 format"
+ },
+ "238":{
+  "Hex Signature":"424c454e444552",
+  "ISO 8859-1":"BLENDER",
+  "Offset":"0",
+  "Extension":"blend",
+  "Description":"Blender File Format"
+ },
+ "239":{
+  "Hex Signature":[
+   "0000000c4a584c200d0a870a",
+   "ff0a"
+  ],
+  "ISO 8859-1":[
+   "␀␀␀␌JXL␠␍␊‡␊",
+   "ÿ␊"
+  ],
+  "Offset":"0",
+  "Extension":"jxl",
+  "Description":"Image encoded in the JPEG XL format"
+ },
+ "240":{
+  "Hex Signature":"0001000000",
+  "ISO 8859-1":"␀␁␀␀␀",
+  "Offset":"0",
+  "Extension":[
+   "ttf",
+   "tte",
+   "dfont"
+  ],
+  "Description":"TrueType font"
+ },
+ "241":{
+  "Hex Signature":"4f54544f",
+  "ISO 8859-1":"OTTO",
+  "Offset":"0",
+  "Extension":"otf",
+  "Description":"OpenType font"
+ },
+ "242":{
+  "Hex Signature":"23254d6f64756c65",
+  "ISO 8859-1":"#%Module",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Modulefile for Environment Modules"
+ },
+ "243":{
+  "Hex Signature":"4d5357494d000000d000000000",
+  "ISO 8859-1":"MSWIM␀␀␀Ð␀␀␀␀",
+  "Offset":"0",
+  "Extension":[
+   "wim",
+   "swm",
+   "esd"
+  ],
+  "Description":"Windows Imaging Format file"
+ },
+ "244":{
+  "Hex Signature":"212d31534c4f421f",
+  "ISO 8859-1":"!-1SLOB␟",
+  "Offset":"0",
+  "Extension":"slob",
+  "Description":"Slob (sorted list of Object storages) is a read-only, compressed data store with dictionary-like interface"
+ },
+ "245":{
+  "Hex Signature":"aced",
+  "ISO 8859-1":"¬í",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Serialized Java Data"
+ },
+ "246":{
+  "Hex Signature":"437265617469766520566f6963652046696c651a1a00",
+  "ISO 8859-1":"Creative␠Voice␠File␚␚␀",
+  "Offset":"0",
+  "Extension":"voc",
+  "Description":"Creative Voice file"
+ },
+ "247":{
+  "Hex Signature":"2e736e64",
+  "ISO 8859-1":".snd",
+  "Offset":"0",
+  "Extension":[
+   "au",
+   "snd"
+  ],
+  "Description":"Au audio file format"
+ },
+ "248":{
+  "Hex Signature":"db0ace00",
+  "ISO 8859-1":"Û␊Î␀",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"OpenGL Iris Perfomer .PFB (Performer Fast Binary)"
+ },
+ "249":{
+  "Hex Signature":"485a4c5200000018",
+  "ISO 8859-1":"HZLR␀␀␀␘",
+  "Offset":"0",
+  "Extension":"hazelrules",
+  "Description":"Noodlesoft Hazel "
+ },
+ "250":{
+  "Hex Signature":"464c6864",
+  "ISO 8859-1":"FLhd",
+  "Offset":"0",
+  "Extension":"flp",
+  "Description":"FL Studio Project File"
+ },
+ "251":{
+  "Hex Signature":"31304c46",
+  "ISO 8859-1":"10LF",
+  "Offset":"0",
+  "Extension":"flm",
+  "Description":"FL Studio Mobile Project File"
+ },
+ "252":{
+  "Hex Signature":"524b4d43323130",
+  "ISO 8859-1":"RKMC210",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Vormetric Encryption DPM Version 2.1 Header"
+ },
+ "253":{
+  "Hex Signature":"000100004d534953414d204461746162617365",
+  "ISO 8859-1":"␀␁␀␀MSISAM Database",
+  "Offset":"0",
+  "Extension":"mny",
+  "Description":"Microsoft Money file"
+ },
+ "254":{
+  "Hex Signature":"000100005374616e6461726420414345204442",
+  "ISO 8859-1":"␀␁␀␀Standard ACE DB",
+  "Offset":"0",
+  "Extension":"accdb",
+  "Description":"Microsoft Access 2007 Database"
+ },
+ "255":{
+  "Hex Signature":"000100005374616e64617264204a6574204442",
+  "ISO 8859-1":"␀␁␀␀Standard Jet DB",
+  "Offset":"0",
+  "Extension":"mdb",
+  "Description":"Microsoft Access Database"
+ },
+ "256":{
+  "Hex Signature":"01ff02040302",
+  "ISO 8859-1":"␁ÿ␂␄␃␂",
+  "Offset":"0",
+  "Extension":"drw",
+  "Description":"Micrografx vector graphic file"
+ },
+ "257":{
+  "Hex Signature":"02647373",
+  "ISO 8859-1":"␂dss",
+  "Offset":"0",
+  "Extension":"dss",
+  "Description":"Digital Speech Standard (Olympus, Grundig, & Phillips) v2"
+ },
+ "258":{
+  "Hex Signature":"03647373",
+  "ISO 8859-1":"␃dss",
+  "Offset":"0",
+  "Extension":"dss",
+  "Description":"Digital Speech Standard (Olympus, Grundig, & Phillips) v3"
+ },
+ "259":{
+  "Hex Signature":"0300000041505052",
+  "ISO 8859-1":"␃␀␀␀APPR",
+  "Offset":"0",
+  "Extension":"adx",
+  "Description":"Approach index file"
+ },
+ "260":{
+  "Hex Signature":"0606edf5d81d46e5bd31efe7fe74b71d",
+  "ISO 8859-1":"␆␆íõØ␝Få½1ïçþt·␝",
+  "Offset":"0",
+  "Extension":"indd",
+  "Description":"Adobe InDesign document"
+ },
+ "261":{
+  "Hex Signature":"060e2b34020501010d0102010102",
+  "ISO 8859-1":"␆␎+4␂␅␁␁␍␁␂␁␁␂",
+  "Offset":"0-65535 (run-in)",
+  "Extension":"mxf",
+  "Description":"Material Exchange Format file"
+ },
+ "262":{
+  "Hex Signature":"07534b46",
+  "ISO 8859-1":"␇SKF",
+  "Offset":"0",
+  "Extension":"skf",
+  "Description":"SkinCrafter skin file"
+ },
+ "263":{
+  "Hex Signature":"0764743264647464",
+  "ISO 8859-1":"␇dt2ddtd",
+  "Offset":"0",
+  "Extension":"dtd",
+  "Description":"DesignTools 2D Design file"
+ },
+ "264":{
+  "Hex Signature":"0a166f72672e626974636f696e2e7072",
+  "ISO 8859-1":"␊␖org.bitcoin.pr",
+  "Offset":"0",
+  "Extension":"wallet",
+  "Description":"MultiBit Bitcoin wallet file"
+ },
+ "265":{
+  "Hex Signature":"0d444f43",
+  "ISO 8859-1":"␍DOC",
+  "Offset":"0",
+  "Extension":"doc",
+  "Description":"DeskMate Document file"
+ },
+ "266":{
+  "Hex Signature":"0e4e65726f49534f",
+  "ISO 8859-1":"␎NeroISO",
+  "Offset":"0",
+  "Extension":"nri",
+  "Description":"Nero CD Compilation"
+ },
+ "267":{
+  "Hex Signature":"0e574b53",
+  "ISO 8859-1":"␎WKS",
+  "Offset":"0",
+  "Extension":"wks",
+  "Description":"DeskMate Worksheet"
+ },
+ "268":{
+  "Hex Signature":"0f534942454c495553",
+  "ISO 8859-1":"␏SIBELIUS",
+  "Offset":"0",
+  "Extension":"sib",
+  "Description":"Sibelius Music - Score file"
+ },
+ "269":{
+  "Hex Signature":"23204d6963726f736f667420446576656c6f7065722053747564696f",
+  "ISO 8859-1":"# Microsoft Developer Studio",
+  "Offset":"0",
+  "Extension":"dsp",
+  "Description":"Microsoft Developer Studio project file"
+ },
+ "270":{
+  "Hex Signature":"2321414d52",
+  "ISO 8859-1":"#!AMR",
+  "Offset":"0",
+  "Extension":"amr",
+  "Description":"Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec, commonly audio format with GSM cell phones."
+ },
+ "271":{
+  "Hex Signature":"232153494c4b0a",
+  "ISO 8859-1":"#!SILK␊",
+  "Offset":"0",
+  "Extension":"sil",
+  "Description":"Audio compression format developed by Skype"
+ },
+ "272":{
+  "Hex Signature":"233f52414449414e43450a",
+  "ISO 8859-1":"#?RADIANCE␊",
+  "Offset":"0",
+  "Extension":"hdr",
+  "Description":"Radiance High Dynamic Range image file"
+ },
+ "273":{
+  "Hex Signature":"23407e5e",
+  "ISO 8859-1":"#@~^",
+  "Offset":"0",
+  "Extension":"vbe",
+  "Description":"VBScript Encoded script"
+ },
+ "274":{
+  "Hex Signature":"0df01dc0",
+  "ISO 8859-1":"␍ð�À",
+  "Offset":"0",
+  "Extension":"cdb",
+  "Description":"MikroTik WinBox Connection Database (Address Book)"
+ },
+ "275":{
+  "Hex Signature":"234558544d3355",
+  "ISO 8859-1":"#EXTM3U",
+  "Offset":"0",
+  "Extension":[
+   "m3u",
+   "m3u8"
+  ],
+  "Description":"Multimedia playlist"
+ },
+ "276":{
+  "Hex Signature":"6d646600",
+  "ISO 8859-1":"mdf␀",
+  "Offset":"0",
+  "Extension":"m",
+  "Description":"M2 Archive, used by game developer M2"
+ },
+ "277":{
+  "Hex Signature":"4b504b41",
+  "ISO 8859-1":"KPKA",
+  "Offset":"0",
+  "Extension":"pak",
+  "Description":"Capcom RE Engine game data archives"
+ },
+ "278":{
+  "Hex Signature":"415243",
+  "ISO 8859-1":"ARC",
+  "Offset":"0",
+  "Extension":"arc",
+  "Description":"Capcom MT Framework game data archives"
+ },
+ "279":{
+  "Hex Signature":"417243",
+  "ISO 8859-1":"ArC",
+  "Offset":"0",
+  "Extension":[
+   "arc",
+   "cdx"
+  ],
+  "Description":"FreeArc file"
+ },
+ "280":{
+  "Hex Signature":"d04f5053",
+  "ISO 8859-1":"ÐOPS",
+  "Offset":"0",
+  "Extension":"pl",
+  "Description":"Interleaf PrinterLeaf \/ WorldView document format (now Broadvision QuickSilver)"
+ },
+ "281":{
+  "Hex Signature":"6e2b3100",
+  "ISO 8859-1":"n+1␀",
+  "Offset":"344",
+  "Extension":"nii",
+  "Description":"Single file NIfTI format, used extensively in biomedical imaging."
+ },
+ "282":{
+  "Hex Signature":"6e693100",
+  "ISO 8859-1":"ni1␀",
+  "Offset":"344",
+  "Extension":"hdr",
+  "Description":"Header file of a .hdr\/.img pair in NIfTI format, used extensively in biomedical imaging."
+ },
+ "283":{
+  "Hex Signature":"5241463634",
+  "ISO 8859-1":"RAF64",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Report Builder file from Digital Metaphors"
+ },
+ "284":{
+  "Hex Signature":"56495333",
+  "ISO 8859-1":"VIS3",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Resource file Visionaire 3.x Engine"
+ },
+ "285":{
+  "Hex Signature":[
+   "4d53487c",
+   "4253487c"
+  ],
+  "ISO 8859-1":[
+   "MSH|",
+   "BSH|"
+  ],
+  "Offset":"0",
+  "Extension":"hl7",
+  "Description":"Health Level Seven (HL7) Standard for electronic data exchange [1]"
+ },
+ "286":{
+  "Hex Signature":"70777264617461",
+  "ISO 8859-1":"pwrdata",
+  "Offset":"0",
+  "Extension":"pwrdata",
+  "Description":"SAP Power Monitor (version 1.1.0 and higher) data file"
+ },
+ "287":{
+  "Hex Signature":"1a08",
+  "ISO 8859-1":"..",
+  "Offset":"0",
+  "Extension":"arc",
+  "Description":"ARC archive file"
+ },
+ "288":{
+  "Hex Signature":"2d2d2d2d2d424547494e20504750205055424c4943204b454920424c4f434b2d2d2d2d2d",
+  "ISO 8859-1":"-----BEGIN PGP PUBLIC KEY BLOCK-----",
+  "Offset":"0",
+  "Extension":"asc",
+  "Description":"Armored PGP public key"
+ },
+ "289":{
+  "Hex Signature":"3a4261736520",
+  "ISO 8859-1":":Base ",
+  "Offset":"0",
+  "Extension":"cnt",
+  "Description":"Windows 3.x - Windows 95 Help Contents"
+ },
+ "290":{
+  "Hex Signature":"52494646????????5644524d",
+  "ISO 8859-1":"RIFF????VDRM",
+  "Offset":"0",
+  "Extension":"vdr",
+  "Description":"VirtualDub"
+ },
+ "291":{
+  "Hex Signature":"52594646????????54524944",
+  "ISO 8859-1":"RIFF????TRID",
+  "Offset":"0",
+  "Extension":"trd",
+  "Description":"TrID"
+ },
+ "292":{
+  "Hex Signature":"52494646????????73687734",
+  "ISO 8859-1":"RIFF????shw4",
+  "Offset":"0",
+  "Extension":"shw",
+  "Description":"Corel SHOW! 4.0"
+ },
+ "293":{
+  "Hex Signature":"52494646????????73687735",
+  "ISO 8859-1":"RIFF????shw5",
+  "Offset":"0",
+  "Extension":"shw",
+  "Description":"Corel SHOW! 5.0"
+ },
+ "294":{
+  "Hex Signature":"52494646????????73687235",
+  "ISO 8859-1":"RIFF????shr5",
+  "Offset":"0",
+  "Extension":"shr",
+  "Description":"Corel SHOW! 5.0 player"
+ },
+ "295":{
+  "Hex Signature":"52494646????????73686235",
+  "ISO 8859-1":"RIFF????shb5",
+  "Offset":"0",
+  "Extension":"shb",
+  "Description":"Corel SHOW! 5.0 background"
+ },
+ "296":{
+  "Hex Signature":"52494646????????524d4d50",
+  "ISO 8859-1":"RIFF????RMMP",
+  "Offset":"0",
+  "Extension":"mmm",
+  "Description":"MacroMind Multimedia Movie or Microsoft Multimedia Movie"
+ },
+ "297":{
+  "Hex Signature":"4153544d2d453537",
+  "ISO 8859-1":"ASTM-E57",
+  "Offset":"0",
+  "Extension":"e57",
+  "Description":"ASTM E57 3D file format"
+ },
+ "298":{
+  "Hex Signature":"aaaaaaaa",
+  "ISO 8859-1":"ªªªª",
+  "Offset":"0",
+  "Extension":"sys",
+  "Description":"Crowdstrike Channel File"
+ },
+ "299":{
+  "Hex Signature":"8c0a00",
+  "ISO 8859-1":"Œ..",
+  "Offset":"0",
+  "Extension":"ucas",
+  "Description":"Unreal Engine Compressed Asset Storage file"
+ },
+ "300":{
+  "Hex Signature":"2d3d3d2d2d3d3d2d2d3d3d2d2d3d3d2d",
+  "ISO 8859-1":"-==--==--==--==-",
+  "Offset":"0",
+  "Extension":"utoc",
+  "Description":"Unreal Engine Table of Contents file"
+ },
+ "301":{
+  "Hex Signature":"43363446696c6500",
+  "ISO 8859-1":"C64File␀",
+  "Offset":"0",
+  "Extension":"P00 (P01, P02,...)",
+  "Description":"Commodore 64 binary file (source:*.P00 format for Power64 emulator)"
+ },
+ "302":{
+  "Hex Signature":"4455434b",
+  "ISO 8859-1":"DUCK",
+  "Offset":"8",
+  "Extension":"",
+  "Description":"DuckDB database file (source:Source code)"
+ },
+ "303":{
+  "Hex Signature":"4c504b5348485248",
+  "ISO 8859-1":"LPKSHHRH",
+  "Offset":"0",
+  "Extension":"journal",
+  "Description":"journald log file"
+ },
+ "304":{
+  "Hex Signature":"e00100ea",
+  "ISO 8859-1":"ê␀␁à",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"Ion (serialization format) binary encoding"
+ },
+ "305":{
+  "Hex Signature":"4253444946463430",
+  "ISO 8859-1":"BSDIFF40",
+  "Offset":"0",
+  "Extension":"",
+  "Description":"bsdiff binary patch"
+ },
+ "306":{
+  "Hex Signature":"7c618ab2",
+  "ISO 8859-1":"|aŠ²",
+  "Offset":"0",
+  "Extension":[
+   "hpapp",
+   "hpprgm",
+   "hpsettings"
+  ],
+  "Description":"HP Prime graphing calculator file"
+ },
+ "307":{
+  "Hex Signature":"435a5058",
+  "ISO 8859-1":"CZPX",
+  "Offset":"0",
+  "Extension":"czx",
+  "Description":"Czip X encrypted archive (v4.x)"
+ },
+ "308":{
+  "Hex Signature":"43504348",
+  "ISO 8859-1":"CPCH",
+  "Offset":"0",
+  "Extension":"pch",
+  "Description":"Clang pre-compiled header"
+ }
 }

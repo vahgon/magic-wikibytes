@@ -42,7 +42,7 @@ class Table(HTML):
 
     def _create_json(self) -> str | None:
         self.dataframe = DataFrame(self.raw_fsigs)
-        return self.dataframe.to_json(str(self.file_output+'.json'), orient='index', indent=True, force_ascii=False)
+        return self.dataframe.to_json(Path(str(self.file_output)), orient='index', indent=True, force_ascii=False)
 
     def _create_csv(self) -> str | None:
         self.dataframe = DataFrame(self.raw_fsigs)
