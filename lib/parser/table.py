@@ -26,7 +26,7 @@ class Table(HTML):
             case ('.md' | 'md'):
                 self._create_md()
             case None:
-                print(self._create_json())
+                self._cli_out()
 
             case _:
                 e = Exception()
