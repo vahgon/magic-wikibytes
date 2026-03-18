@@ -23,10 +23,6 @@ class Table(HTML):
         match USER_ARGS.format:
             case ('.json' | 'json'):
                 self._create_json()
-
-            case ('.csv' | 'csv'):
-                self._create_csv()
-
             case ('.md' | 'md'):
                 self._create_md()
             case None:
@@ -39,9 +35,8 @@ class Table(HTML):
     def _create_json(self) -> None:
         self.dataframe.to_json(Path(USER_ARGS.output).with_suffix('.json'), orient='index', indent=True, force_ascii=False)
 
-    def _create_csv(self) -> str | None:
-        self.dataframe = DataFrame(self.raw_fsigs)
-        return self.dataframe.to_csv(path_or_buf=self.file_output)
+    def _create_md(self) -> None:
+        self.dataframe.replace(r'\n', '<br>', regex=True).to_markdown(buf=Path(USER_ARGS.output).with_suffix('.md'), tablefmt='github')
 
     def _cli_out(self) -> None:
         print(self.dataframe.to_json(orient='index', indent=True, force_ascii=False))
