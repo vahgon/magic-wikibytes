@@ -6,8 +6,8 @@ from pathlib import Path
 @dataclass(frozen=True)
 class UserArguments:
     email:      (str | None)
-    output:     (str | None)
     format:     (str | None)
+    output:     str
     hexspacing: str
     wildcard:   str
 
@@ -43,7 +43,8 @@ def parse_args(u_args: list[str] = sys.argv[1:]) -> UserArguments:
                         help="""Specify the email address to be used in the user-agent header
                         in requests made to the wikipedia API. you can read why this should be set
                         at \"https://en.wikipedia.org/wiki/Special:RestSandbox/wmf-restbase\".""")
-    parser.add_argument('-o', '--output', required=False, type=Path, metavar='', default=None,
+
+    parser.add_argument('-o', '--output', required=False, type=str, metavar='', default='.',
                         help="""Specify the output file. if none specified, output will be printed
                         to console. default filetype is json if none is included.""")
     parser.add_argument('-f', '--format', required=False, type=str, metavar='', default=None, choices=['json', 'csv', 'md', 'all'],
