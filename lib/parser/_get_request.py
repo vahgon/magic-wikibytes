@@ -1,66 +1,84 @@
-from requests.adapters import ResponseError
+from enum import StrEnum
 from lib.exceptions import UnexpectedFormatError
-from lib.util import HtmlJson, ReqJson
+from lib.util.constants import API_URL
+from asyncio import Event
 
 try:
-    import requests
+    from requests import Request, Response, Session
+    from requests.adapters import ResponseError
+    from requests.sessions import PreparedRequest
 except (ImportError, ModuleNotFoundError) as e:
     e.add_note("requests module missing -> 'pip install requests'")
     raise
 
-wikimediaAPICall= 'https://en.wikipedia.org/w/api.php' 
+type JsonDict = dict[str, dict[str, str]]
+
 email = ''
 
 header = {
-    "User-Agent": email,
+    "User-Agent": "",
     "Accept-Language": "en"
 }
+
+class RequestData(StrEnum):
+    TEXT    = "text"
+    REVID   = "revid"
+
 params = {
     "action": "parse",
     "format": "json",
     "page": "List_of_file_signatures",
-    "prop": "revid|text",
+    "prop": "",
     "disablelimitreport": 1,
     "disableeditsection": 1,
     "disabletoc": 1,
     "contentformat": "application/json",
     "formatversion": "2"
 }
-reqInfo= {
-    "url": wikimediaAPICall,
+req_info= {
+    "url": API_URL,
     "method": "GET",
     "headers": header,
     "params": params
 }
 
-def _format_request(req: requests.Request) -> requests.Request:
-    req.url = reqInfo['url']
-    req.method = reqInfo['method']
-    req.headers = reqInfo['headers']
-    req.params = reqInfo['params']
-    return req
+class WikimediaRequest:
+    def __init__(self) -> None:
+        self._resp: Response        = self._make_request(RequestData.TEXT, "")
+        self.json:  JsonDict        = self._get_json(self._resp.json())
+        self.raw:   dict[str, str]  = self.json['parse']
+        self.email: str
 
-def _make_request() -> requests.Response:
-    req = _format_request(requests.Request())
-    request = req.prepare()
-    response = requests.Session()
-    return response.send(request=request, allow_redirects=True)
+    @staticmethod
+    def _check_revid():
+        ...
 
-def get_response(res: requests.Response | None = None) -> tuple[HtmlJson, str, int]:
-    res = _make_request()
-    if not res.status_code == 200:
-        e = ResponseError()
-        e.add_note(f"Did not receive status code ${res.status_code}")
-        raise e
+    @staticmethod
+    def _get_text() -> None:
+        params['prop'] = "text"
 
-    rawData = res.json()
-    resJson: ReqJson | None = rawData if isinstance(rawData, dict) is not False else None
-    if resJson is None:
-        e = UnexpectedFormatError()
-        e.add_note("When converting type of response data to json, result was not dict")
-        raise e
+    @staticmethod
+    def _make_request(dat_desire: str, email: str) -> Response:
+        header['User-Agent']    = email
+        params['prop']          = dat_desire
 
-    html: str = str(resJson['parse']['text'])
-    revisionId: int = int(resJson['parse']['revid'])
+        req: PreparedRequest = Request(
+            url     = req_info['url'],
+            method  = req_info['method'],
+            headers = req_info['headers'],
+            params  = req_info['params'],
+        ).prepare()
 
-    return (resJson['parse'], html, revisionId)
+        res = Session().send(request=req, allow_redirects=True)
+
+        if not res.status_code == 200:
+            raise ResponseError(f"Unexpected status code ${res.status_code} from call to ${req_info['url']}")
+
+        return res
+
+    @staticmethod
+    def _get_json(raw_json) -> dict[str, dict[str, str]]:
+        if not isinstance(raw_json, dict):
+            raise UnexpectedFormatError("Could not convert json to dictionary")
+
+        return raw_json
