@@ -27,15 +27,6 @@ class Table(HTML):
 
         await self.get_wikitable_req()
 
-        fmt_params = [
-                'newrow_cr',
-                'ext_paren',
-                'no_bigend',
-                'force_latin',
-                'hexsep_char',
-                'wildcard_char'
-            ]
-
         self._parser    = Parser(self.request.raw_data, self.USER_ARGS)
         self._dataframe = DataFrame(self._parser.todict())
         self._output    = Path(self.USER_ARGS.output)
