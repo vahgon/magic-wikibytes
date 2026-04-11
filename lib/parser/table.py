@@ -39,17 +39,18 @@ class Table(HTML):
         return self._init().__await__()
 
     def _create_output(self) -> None:
-        match self.USER_ARGS.format:
-            case ('.json' | 'json'):
-                self._create_json()
-            case ('.md' | 'md'):
-                self._create_md()
-            case None:
-                self._cli_out()
-
-            case _:
-                e = Exception()
-                raise e
+        if self.USER_ARGS.output:
+            match self.USER_ARGS.output.suffix:
+                case '.json':
+                    self._create_json()
+                case '.md':
+                    self._create_md()
+                case _:
+                    # log warn
+                    self.USER_ARGS.output = self.USER_ARGS.output.with_suffix('.json')
+                    self._create_json()
+        else:
+            self._cli_out()
 
     def _create_json(self) -> None:
         self._dataframe.to_json(

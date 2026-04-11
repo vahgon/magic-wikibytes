@@ -14,7 +14,7 @@ def parse_args(args: list[str]) -> Namespace:
                         in requests made to the wikipedia API. You can read why this should be set
                         at \"https://en.wikipedia.org/wiki/Special:RestSandbox/wmf-restbase\".""")
 
-    parser.add_argument('-o', '--output', type=Path, metavar='PATH', default='./out', dest='output',
+    parser.add_argument('-o', '--output', type=Path, metavar='PATH', dest='output',
                         help="""Specify the output file. if none specified, output will be printed
                         to console. default filetype is json if none is included.""")
 
@@ -28,9 +28,6 @@ def parse_args(args: list[str]) -> Namespace:
                          help="Specify a character to act as found wildcard bytes (default='?')")
 
     #  Table format options
-    table.add_argument('--format', type=str, metavar='EXT', choices=['json', 'md'], dest = 'format',
-                       help="Specifies the format the table should be written in (default = json)")
-
     table.add_argument('--rowspan-newrow', required=False, action='store_true', dest='newrow_cr',
                        help="""Succeeding rows affected by rowspan attributes in the current row's
                        columns will have their own instances when parsed instead of being appended to
