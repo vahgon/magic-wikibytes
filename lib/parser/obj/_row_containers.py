@@ -1,4 +1,4 @@
-from typing import Any, Self
+from typing import Self
 
 from bs4 import ResultSet, Tag
 
