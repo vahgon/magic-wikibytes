@@ -5,6 +5,7 @@ from bs4 import ResultSet, Tag
 from lib.parser.obj._format_obj import CheckBytes
 from lib.util.constants import HEADERNAMES, ColType
 
+
 class FileSignatureTag:
     def __init__(self, col: Tag, row: ResultSet[Tag]) -> None:
         self.__name: str

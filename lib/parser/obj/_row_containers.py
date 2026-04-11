@@ -4,6 +4,7 @@ from bs4 import ResultSet, Tag
 
 from lib.parser.obj._col_containers import ColumnFactory, FileSignatureTag
 
+
 class Row:
     def __init__(self, row: ResultSet[Tag], args) -> None:
         self._cols:         list[FileSignatureTag] = ColumnFactory().set_row(row, args)
