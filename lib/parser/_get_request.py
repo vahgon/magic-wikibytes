@@ -1,7 +1,9 @@
+import asyncio
 from enum import StrEnum
+from typing import Self, final
+
 from lib.exceptions import UnexpectedFormatError
 from lib.util.constants import API_URL
-from asyncio import Event
 
 try:
     from requests import Request, Response, Session
@@ -13,14 +15,12 @@ except (ImportError, ModuleNotFoundError) as e:
 
 type JsonDict = dict[str, dict[str, str]]
 
-email = ''
-
 header = {
     "User-Agent": "",
     "Accept-Language": "en"
 }
 
-class RequestData(StrEnum):
+class _ReqData(StrEnum):
     TEXT    = "text"
     REVID   = "revid"
 
@@ -42,25 +42,41 @@ req_info= {
     "params": params
 }
 
+@final
 class WikimediaRequest:
-    def __init__(self) -> None:
-        self._resp: Response        = self._make_request(RequestData.TEXT, "")
-        self.json:  JsonDict        = self._get_json(self._resp.json())
-        self.raw:   dict[str, str]  = self.json['parse']
-        self.email: str
+    def __new__(cls, email: str, prev_revid: str | None = None) -> Self:
+        if not hasattr(cls, 'revid_checked'):
+            cls._obj    = super().__new__(cls)
+            cls._email  = email
+            cls._orevid = prev_revid
+            cls._reqobj = asyncio.create_task(cls._make_request(_ReqData.REVID, cls._email))
+
+            return cls._obj
+
+        cls._reqobj = asyncio.create_task(cls._make_request(_ReqData.TEXT, cls._email))
+        return cls._obj
+
+    @classmethod
+    async def _async_init(cls) -> Self:
+        cls._req            = await cls._reqobj
+        cls._json: JsonDict = await cls._get_json(cls._req.json())
+
+        if not hasattr(cls, 'revid_checked'):
+            cls.raw_data = cls._json['parse']['revid']
+            setattr(cls, 'revid_checked', True)
+        else:
+            cls.raw_data = cls._json['parse']['text']
+
+        return cls._obj
+
+    @classmethod
+    def __await__(cls):
+        return cls._async_init().__await__()
 
     @staticmethod
-    def _check_revid():
-        ...
-
-    @staticmethod
-    def _get_text() -> None:
-        params['prop'] = "text"
-
-    @staticmethod
-    def _make_request(dat_desire: str, email: str) -> Response:
+    async def _make_request(dat_desired: str, email: str) -> Response:
         header['User-Agent']    = email
-        params['prop']          = dat_desire
+        params['prop']          = dat_desired
 
         req: PreparedRequest = Request(
             url     = req_info['url'],
@@ -72,13 +88,14 @@ class WikimediaRequest:
         res = Session().send(request=req, allow_redirects=True)
 
         if not res.status_code == 200:
-            raise ResponseError(f"Unexpected status code ${res.status_code} from call to ${req_info['url']}")
+            raise ResponseError(f"""Unexpected status code ${res.status_code}
+                                 from call to ${req_info['url']}""")
 
         return res
 
     @staticmethod
-    def _get_json(raw_json) -> dict[str, dict[str, str]]:
+    async def _get_json(raw_json) -> JsonDict:
         if not isinstance(raw_json, dict):
-            raise UnexpectedFormatError("Could not convert json to dictionary")
+            raise UnexpectedFormatError("Could not convert json to dictionary...")
 
         return raw_json

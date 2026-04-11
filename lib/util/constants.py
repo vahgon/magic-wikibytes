@@ -1,14 +1,9 @@
 from enum import IntEnum
 from pathlib import Path
 
-from lib.util._args import parse_args
-
-USER_ARGS = parse_args()
-
-type HtmlJson = dict[str, str | int]
-type ReqJson = dict[str, HtmlJson]
-type FileData = (list[str] | str | int)
-type ParsedTableDict = list[dict[str, FileData]]
+type HtmlJson           = dict[str, str | int]
+type ReqJson            = dict[str, HtmlJson]
+type ParsedTableDict    = list[dict[str, list[str] | str | int]]
 
 class ColType(IntEnum):
     HEX = 0
@@ -17,12 +12,24 @@ class ColType(IntEnum):
     EXT = 3
     DES = 4
 
-BADTAGS = ['cite', 'sup', 'br']
-FIXTAGS = ['a', 'p', 'span']
+ENV_VARS    = {
+    "EMAIL": True,
+    "REVID": False,
+}
 
-JNK_CHARS = ['\xa0', ' ']
+API_URL     = 'https://en.wikipedia.org/w/api.php' 
 
-HEADERNAMES = ['Hex Signature', 'ISO 8859-1', 'Offset', 'Extension', 'Description']
+BADTAGS     = ['cite', 'sup', 'br']
+FIXTAGS     = ['a', 'p', 'span']
+JNK_CHARS   = ['\xa0', ' ']
 
-ROOT: Path = Path(__file__).parent
-ENV_PATH: Path = Path(f'{ROOT}/.conf')
+HEADERNAMES = [
+    'Hex Signature',
+    'ISO 8859-1',
+    'Offset',
+    'Extension',
+    'Description',
+]
+
+ROOT:     Path  = Path(__file__).parent
+ENV_PATH: Path  = Path(f'{ROOT}/.conf')

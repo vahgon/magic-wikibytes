@@ -1,83 +1,55 @@
-import sys
-from argparse import ArgumentParser
-from dataclasses import dataclass
+from argparse import ArgumentParser, Namespace
 from pathlib import Path
 
-@dataclass(frozen=True)
-class UserArguments:
-    email:      (str | None)
-    format:     (str | None)
-    output:     str
-    hexspacing: str
-    wildcard:   str
 
-    no_bigend:   bool = False
-    span_newrow: bool = False
-    noparen:     bool = False
-    force_latin: bool = False
-    verbose:     bool = False
-    quiet:       bool = False
+def parse_args(args: list[str]) -> Namespace:
+    parser          = ArgumentParser(prog="wikibytes.py", color=False, suggest_on_error=True)
 
-    @classmethod
-    def usr_args(cls, args) -> "UserArguments":
-        return cls(
-            email       = args.email,
-            output      = args.output,
-            format      = args.format,
-            hexspacing  = args.hex_separator,
-            wildcard    = args.wildcard_char,
-            span_newrow = args.rowspan_newrow,
-            noparen     = args.ext_parens,
-            no_bigend   = args.no_bigend,
-            force_latin = args.force_latin1,
-            verbose     = args.verbose,
-            quiet       = args.quiet
-        )
+    table           = parser.add_argument_group("Table Format Options")
+    hex_fmt         = parser.add_argument_group("Hex Format Options")
+    terminal_vol    = parser.add_mutually_exclusive_group()
 
-def parse_args(u_args: list[str] = sys.argv[1:]) -> UserArguments:
-    parser = ArgumentParser(usage='python wikibytes.py [-v | -q] [-e email]', color=False, suggest_on_error=True,
-                            description="""Parses and formats the table of file signatures
-                            found at wikipedia's \"List_of_file_signatures\" page""")
-
-    parser.add_argument('-e', '--email', required=False, type=str, metavar='', default=None,
+    parser.add_argument('-e', '--email', type=str, metavar='STR', dest='email',
                         help="""Specify the email address to be used in the user-agent header
-                        in requests made to the wikipedia API. you can read why this should be set
+                        in requests made to the wikipedia API. You can read why this should be set
                         at \"https://en.wikipedia.org/wiki/Special:RestSandbox/wmf-restbase\".""")
 
-    parser.add_argument('-o', '--output', required=False, type=str, metavar='', default='.',
+    parser.add_argument('-o', '--output', type=Path, metavar='PATH', default='./out', dest='output',
                         help="""Specify the output file. if none specified, output will be printed
                         to console. default filetype is json if none is included.""")
 
-    parser.add_argument('-f', '--format', required=False, type=str, metavar='', default=None, choices=['json', 'md', 'all'],
-                        help="""Prints output to the terminal in the format specified by input given (e.g. -e json).""")
+    parser.add_argument('-f', '--force', required=False, action='store_true', dest='force',
+                        help="Force create the table by skipping revision id comparison.")
 
-    parser.add_argument('--hex-separator', required=False, type=str, metavar='', default='',
-                        help="""Specify character/string to use to separate hexadecimal bytes (default = '').""")
+    hex_fmt.add_argument('--hex-separator', type=str, metavar='STR', default='', dest='hexsep_char',
+                         help="Specify character/string to use to separate hexadecimal bytes")
 
-    parser.add_argument('--wildcard-char', required=False, type=str, metavar='', default='?',
-                        help="""Specify a character to act as found wildcard bytes (default='?')""")
+    hex_fmt.add_argument('--wildcard-char', type=str, metavar='CHAR', default='?', dest='wildcard_char',
+                         help="Specify a character to act as found wildcard bytes (default='?')")
 
-    parser.add_argument('--rowspan-newrow', required=False, action='store_true',
-                        help="""Succeeding rows affected by rowspan attributes in the current row's
-                        columns will have their own instances when parsed instead of being appended to
-                        the current row.""")
+    #  Table format options
+    table.add_argument('--format', type=str, metavar='EXT', choices=['json', 'md'], dest = 'format',
+                       help="Specifies the format the table should be written in (default = json)")
 
-    parser.add_argument('--ext-parens', required=False, action='store_true',
-                        help="""Remove parenthesis found in file signature extension(s).""")
+    table.add_argument('--rowspan-newrow', required=False, action='store_true', dest='newrow_cr',
+                       help="""Succeeding rows affected by rowspan attributes in the current row's
+                       columns will have their own instances when parsed instead of being appended to
+                       the current row.""")
 
-    parser.add_argument('--no-bigend', required=False, action='store_true',
-                        help="""Ignore all big-endian formatted rows from the wikitable.""")
+    table.add_argument('--ext-parens', required=False, action='store_true', dest='ext_paren',
+                       help="Remove parenthesis found in file signature extension(s).")
 
-    parser.add_argument('--force-latin1', required=False, action='store_true',
-                        help="""Force the decoding of all hexadecimal values to latin-1 instead of
-                        only unbalanced iso-8559 and hexadecimal columns.""")
+    table.add_argument('--no-big-end', required=False, action='store_true', dest='no_bigend',
+                       help="Ignore all big-endian formatted rows from the wikitable.")
 
-    terminal_vol = parser.add_mutually_exclusive_group()
+    table.add_argument('--force-latin1', required=False, action='store_true', dest='force_latin',
+                       help="""Force the decoding of all hexadecimal values to latin-1
+                       instead of only unbalanced iso-8559 and hexadecimal columns.""")
 
-    terminal_vol.add_argument('--verbose', required=False, action='store_true',
-                        help="""Print actions as they are taken during script execution.""")
+    terminal_vol.add_argument('--verbose', required=False, action='store_true', dest='verbose',
+                              help="""Print actions as they are taken during script execution.""")
 
-    terminal_vol.add_argument('--quiet', required=False, default=False, action='store_true',
-                        help="""Supress all messages that would usually appear during %(prog)s's execution.""")
+    terminal_vol.add_argument('--quiet', required=False, default=False, action='store_true', dest='quiet',
+                              help="Supress messages that would usually appear during %(prog)s's execution.")
 
-    return UserArguments.usr_args(parser.parse_args(u_args))
+    return parser.parse_args(args)

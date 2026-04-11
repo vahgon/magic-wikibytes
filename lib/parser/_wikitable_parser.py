@@ -38,7 +38,7 @@ class _WikiTable:
         Pretty prints the Wikimedia API's response wikitable. This is done by calling
         prettify() on the tbody `Tag`
 
-        :return: string
+        :return: `str` of formatted json
         '''
         return self._wikitable.prettify()
 
@@ -46,8 +46,9 @@ class Parser(_WikiTable):
     '''
     Converts wikimedia response's wikitable into a more accessible format. 
     '''
-    def __init__(self, html: str) -> None:
+    def __init__(self, html: str, args) -> None:
         super().__init__(html)
+        self._parsed_args = args
         self._table_rows:   list[ResultSet[Tag]]
         self._table_header: ResultSet[Tag]
         self._parsed_table: list[Row] = []
@@ -70,18 +71,18 @@ class Parser(_WikiTable):
     def _clean_tags(self) -> None:
         found_rows = [row.find_all(['td', 'th']) for row in self.tbody_tag.select('tr')]
         self._table_header = found_rows.pop(0)
-        self._table_rows = TagCleaner(found_rows).clean()
+        self._table_rows = TagCleaner(found_rows, self._parsed_args).clean()
 
     def _parse_rows(self) -> None:
         for row in self._table_rows:
             if len(row) == 5:
-                self._parsed_table.append(Row(row))
+                self._parsed_table.append(Row(row, self._parsed_args))
 
     def todict(self) -> ParsedTableDict:
         """
         Fills a list of the original row instances but in dictionary format. The default 
         number of keys in each dictonary item is 5 in {`column name`: `column data`} format.
 
-        :return: list[dict[str, ColData]] (`ParsedTableDict`)
+        :return: `list[dict[str, ColData]]` (ParsedTableDict)
         """
         return [{col.name: col.text for col in row} for row in self._parsed_table]

@@ -2,7 +2,7 @@ from typing import final, override
 
 from bs4 import ResultSet, Tag
 
-from lib.parser.obj._format_obj import checkbytes
+from lib.parser.obj._format_obj import CheckBytes
 from lib.util.constants import HEADERNAMES, ColType
 
 class FileSignatureTag:
@@ -53,7 +53,7 @@ class ISOData(FileSignatureTag):
 @final
 class Offset(FileSignatureTag):
     '''
-    todo - format offset & add to formatting done in checkbytes object
+    TODO - format offset & add to formatting done in checkbytes object
     '''
 
 @final
@@ -70,12 +70,13 @@ class ColumnFactory:
     Factory class used to populate `Row` objects.
     '''
     @staticmethod
-    def set_row(row: ResultSet[Tag]) -> list[FileSignatureTag]:
+    def set_row(row: ResultSet[Tag], args) -> list[FileSignatureTag]:
         '''
         Factory method used to populate `Row` objects with column information.
 
-        :param row: `ResultSet`[`Tag`] holding each columns value
-        :return: `list`[`FileSignatureTag`] - class holding each columns information.
+        :param row:     `ResultSet`[`Tag`] holding each columns value
+        :param args:    Argparse `Namespace`
+        :return:        `list`[`FileSignatureTag`] - class holding each columns information
          '''
         subclasses: list[type[FileSignatureTag]] = FileSignatureTag.__subclasses__()
         cols: list[FileSignatureTag]             = []
@@ -84,7 +85,10 @@ class ColumnFactory:
             cols.append(subclasses[idx](col, row))
             cols[idx].name = HEADERNAMES[idx]
 
-        bal_bytes = checkbytes(cols[ColType.HEX].text, cols[ColType.ISO].text)
+        bal_bytes = CheckBytes(
+                cols[ColType.HEX].text,
+                cols[ColType.ISO].text,
+                args)
 
         if isinstance(cols[ColType.HEX].text, str) and isinstance(cols[ColType.ISO].text, str):
             cols[ColType.HEX].text = bal_bytes.hex

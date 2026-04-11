@@ -1,8 +1,9 @@
+from argparse import Namespace
 from pathlib import Path
+from typing import Self
 
 from lib.parser._wikitable_parser import Parser
 from lib.parser.obj._html_obj import HTML
-from lib.util import USER_ARGS, FileData
 
 try:
     from pandas import DataFrame
@@ -11,16 +12,43 @@ except (ImportError, ModuleNotFoundError) as e:
     raise e
 
 class Table(HTML):
-    def __init__(self) -> None:
-        super().__init__()
-        self.parser:    Parser = Parser(self.html)
-        self.dataframe: DataFrame = DataFrame(self.parser.todict())
-        self.output:    Path = Path(USER_ARGS.output)
+    def __init__(self, args: Namespace) -> None:
+        super().__init__(args)
+        self._parser: Parser
+        self._dataframe: DataFrame
+        self._output: Path
+
+    async def _init(self) -> Self:
+        await self._async_init()
+
+        if not self.USER_ARGS.force and not await self.check_duplicate_revid():
+            print("duplicate ID detected")
+            return self
+
+        await self.get_wikitable_req()
+
+        fmt_params = [
+                'newrow_cr',
+                'ext_paren',
+                'no_bigend',
+                'force_latin',
+                'hexsep_char',
+                'wildcard_char'
+            ]
+
+        self._parser    = Parser(self.request.raw_data, self.USER_ARGS)
+        self._dataframe = DataFrame(self._parser.todict())
+        self._output    = Path(self.USER_ARGS.output)
 
         self._create_output()
 
+        return self
+
+    def __await__(self):
+        return self._init().__await__()
+
     def _create_output(self) -> None:
-        match USER_ARGS.format:
+        match self.USER_ARGS.format:
             case ('.json' | 'json'):
                 self._create_json()
             case ('.md' | 'md'):
@@ -33,13 +61,24 @@ class Table(HTML):
                 raise e
 
     def _create_json(self) -> None:
-        self.dataframe.to_json(Path(USER_ARGS.output).with_suffix('.json'), orient='index', indent=True, force_ascii=False)
+        self._dataframe.to_json(
+            Path(self.USER_ARGS.output).with_suffix('.json'),
+            orient='index',
+            indent=True,
+            force_ascii=False
+        )
 
     def _create_md(self) -> None:
-        self.dataframe.replace(r'\n', '<br>', regex=True).to_markdown(buf=Path(USER_ARGS.output).with_suffix('.md'), tablefmt='github')
+        self._dataframe.replace(r'\n', '<br>', regex=True).to_markdown(
+            buf=Path(self.USER_ARGS.output).with_suffix('.md'),
+            tablefmt='github'
+        )
 
     def _cli_out(self) -> None:
-        print(self.dataframe.to_json(orient='index', indent=True, force_ascii=False))
+        print(self._dataframe.to_json(
+            orient='index',
+            indent=True,
+            force_ascii=False))
 
     def make_table(self) -> None:
-        self.dataframe.fillna('', inplace=True)
+        self._dataframe.fillna('', inplace=True)

@@ -1,14 +1,20 @@
 #!/bin/env python
 
-from lib.parser import Table
-from lib.util import log
+import asyncio
+from sys import argv
 
-def main() -> None:
-    wiki_table: Table = Table()
-    wiki_table.make_table()
+from lib.parser import Table
+from lib.util import parse_args
+
+
+async def call_format_wikimedia(args: list[str]) -> None:
+    await Table(parse_args(args))
+
+def main(args: list[str]) -> None:
+    asyncio.run(call_format_wikimedia(args))
+
+def _main() -> None:
+    main(argv[1:])
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        log.exception(e)
+    _main()

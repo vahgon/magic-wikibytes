@@ -6,7 +6,7 @@ from typing import Self
 
 from bs4 import ResultSet, Tag
 
-from lib.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, USER_ARGS, ColType
+from lib.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, ColType
 
 repl_children = Tag.unwrap
 destroy       = Tag.decompose
@@ -22,6 +22,7 @@ class _TagContainer:
     _contains_rowspans: bool = False
     _rowspan_amount:    int  = 0
     _idx:               int  = 0
+
     row_list: ResultSet[Tag] = field(
         default_factory=lambda: ResultSet(source=None, result=[Tag(name='') for _ in range(5)]),
         repr=False
@@ -77,7 +78,10 @@ class TagCleaner:
     A TagCleaner will properly format every `PageElement` object found in a given `ResultSet`
     of `Tags`.
     '''
-    def __init__(self, rows: list[ResultSet[Tag]]) -> None:
+    def __init__(self, rows: list[ResultSet[Tag]], args) -> None:
+        self._span_newrow   = args.newrow_cr
+        self._ext_paren     = args.ext_paren
+
         self._colmap:    dict[int, partial[None]] = {
             ColType.HEX: partial(self._hex_col),
             ColType.ISO: partial(self._iso_col),
@@ -121,7 +125,7 @@ class TagCleaner:
         #   - Create an entire new _TagContainer instance
         while row.rowspan > 1:
             next_row = self._rows.popleft()
-            if USER_ARGS.span_newrow:
+            if self._span_newrow:
                 spanned_row = _TagContainer()
 
                 for span_col in row.rowspan_cols:
@@ -169,7 +173,7 @@ class TagCleaner:
     def _ext_col(self, col: Tag) -> None: 
         self._clean_children(col)
 
-        if USER_ARGS.noparen:
+        if self._ext_paren:
             if col.get_text().count('('):
                 cleaned = re.sub(pattern=r'\s?\(.*?\)',
                                  repl='',
