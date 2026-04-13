@@ -10,7 +10,6 @@ Because differing authors can contribute to the Wikitable, the format of each ce
 
 ## Getting Started
 
- _magic-wikibytes_,
 1. Clone the repo
 
    ```
