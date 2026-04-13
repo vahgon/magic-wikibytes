@@ -5,6 +5,7 @@ from functools import partial
 from typing import Self
 
 from bs4 import ResultSet, Tag
+from bs4.element import NavigableString
 
 from lib.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, ColType
 
@@ -184,6 +185,22 @@ class TagCleaner:
                 col.clear(decompose=True)
                 for idx, cleaned_col in enumerate(cleaned):
                     col.insert(idx, cleaned_col)
+
+        elif not self._ext_paren and col.get_text().count('('):
+        #  Parenthesis in the extension col will sometimes act as multiple NavigableStrings instead
+        #   of as one for a single extension. This combines them into one NavigableString
+            str_chunk:  list[str] = []
+            col_str:    str       = ""
+
+            for string in col.strings:
+                col_str+=string
+                if string.endswith(')'):
+                    str_chunk.append(col_str)
+                    col_str = ""
+            col.clear()
+
+            for chunk in str_chunk:
+                col.append(NavigableString(chunk))
 
     def _des_col(self, col: Tag) -> None:
         self._clean_children(col)
