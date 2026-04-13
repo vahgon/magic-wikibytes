@@ -12,6 +12,9 @@ except (ImportError, ModuleNotFoundError) as e:
     raise e
 
 class Table(HTML):
+    """
+    Initializes the creation of the parsed wikitable object sent from the Wikimedia API.
+    """
     def __init__(self, args: Namespace) -> None:
         super().__init__(args)
         self._parser: Parser
@@ -71,6 +74,3 @@ class Table(HTML):
             orient='index',
             indent=True,
             force_ascii=False))
-
-    def make_table(self) -> None:
-        self._dataframe.fillna('', inplace=True)

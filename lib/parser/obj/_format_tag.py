@@ -74,10 +74,10 @@ class _TagContainer:
         self.rowspan_cols.append(_RowspanTag(tag, idx))
 
 class TagCleaner:
-    '''
+    """
     A TagCleaner will properly format every `PageElement` object found in a given `ResultSet`
     of `Tags`.
-    '''
+    """
     def __init__(self, rows: list[ResultSet[Tag]], args) -> None:
         self._span_newrow   = args.newrow_cr
         self._ext_paren     = args.ext_paren
@@ -94,12 +94,12 @@ class TagCleaner:
         self.tags:  list[_TagContainer] = []
 
     def clean(self) -> list[ResultSet[Tag]]:
-        '''
+        """
         Cleans all `Tag` objects found in the `BeautifulSoup` wikitable received from the 
         wikimedia API
 
         :return: list of row[columns]
-        '''
+        """
         while self._rows:
             self._fill_tag_container(self._rows.popleft(), _TagContainer())
 
@@ -170,15 +170,16 @@ class TagCleaner:
     def _off_col(self, col: Tag) -> None:
         self._clean_children(col)
 
-    def _ext_col(self, col: Tag) -> None: 
+    def _ext_col(self, col: Tag) -> None:
         self._clean_children(col)
 
         if self._ext_paren:
             if col.get_text().count('('):
                 cleaned = re.sub(pattern=r'\s?\(.*?\)',
-                                 repl='',
-                                 string=col.get_text(separator='\n'),
-                                 flags=re.DOTALL).splitlines()
+                    repl='',
+                    string=col.get_text(separator='\n'),
+                    flags=re.DOTALL
+                ).splitlines()
 
                 col.clear(decompose=True)
                 for idx, cleaned_col in enumerate(cleaned):
@@ -201,12 +202,12 @@ class TagCleaner:
 
     @staticmethod
     def _clean_children(col: Tag) -> None:
-        '''
+        """
         Removes/formats all found `PageElement` objects from a given `Tag` based on their 
         `.name` property.
 
         :param col: The `Tag` object to format
-        '''
+        """
         for tag in col.find_all(TAGS):
             if tag.name in FIXTAGS:
                 repl_children(tag)

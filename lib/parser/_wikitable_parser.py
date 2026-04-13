@@ -34,18 +34,18 @@ class _WikiTable:
         self.tbody_tag = tbody
 
     def prettify(self) -> str:
-        '''
+        """
         Pretty prints the Wikimedia API's response wikitable. This is done by calling
         prettify() on the tbody `Tag`
 
         :return: `str` of formatted json
-        '''
+        """
         return self._wikitable.prettify()
 
 class Parser(_WikiTable):
-    '''
+    """
     Converts wikimedia response's wikitable into a more accessible format. 
-    '''
+    """
     def __init__(self, html: str, args) -> None:
         super().__init__(html)
         self._parsed_args = args

@@ -39,14 +39,14 @@ class _BytePairing:
 
 @dataclass
 class CheckBytes:
-    '''
+    """
     A checkbytes object checks the equality of the bytes in the provided hex and iso values.
     It will first check to see if they are balanced - len(bytes in hex) == len(bytes in iso), 
     then will make adjustments accordingly. 
 
     :param hex: `str`
     :param iso: `str`
-    '''
+    """
     hex:            (str | list[str])
     iso:            (str | list[str])
     args:           Namespace

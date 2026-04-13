@@ -1,5 +1,5 @@
 from argparse import Namespace
-from typing import Any, Self
+from typing import Self
 
 from lib.parser._get_request import WikimediaRequest
 from lib.util._set_env import EnvVars
@@ -33,10 +33,10 @@ class HTML:
         return self
 
     async def check_duplicate_revid(self) -> bool:
-        '''
+        """
         Checks whether the last execution of this script was given a response with a differing revision
         id than the current execution.
-        '''
+        """
         if self.revid != self.request.raw_data:
             self.revid = await self._env_vars.change_val('REVID', self.request.raw_data)
 

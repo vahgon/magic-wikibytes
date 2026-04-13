@@ -53,9 +53,9 @@ class ISOData(FileSignatureTag):
 
 @final
 class Offset(FileSignatureTag):
-    '''
+    """
     TODO - format offset & add to formatting done in checkbytes object
-    '''
+    """
 
 @final
 class FileSignatureExtension(FileSignatureTag):
@@ -67,18 +67,18 @@ class FileSignatureExtension(FileSignatureTag):
 class Description(FileSignatureTag): ...
 
 class ColumnFactory:
-    '''
+    """
     Factory class used to populate `Row` objects.
-    '''
+    """
     @staticmethod
     def set_row(row: ResultSet[Tag], args) -> list[FileSignatureTag]:
-        '''
+        """
         Factory method used to populate `Row` objects with column information.
 
         :param row:     `ResultSet`[`Tag`] holding each columns value
         :param args:    Argparse `Namespace`
         :return:        `list`[`FileSignatureTag`] - class holding each columns information
-         '''
+         """
         subclasses: list[type[FileSignatureTag]] = FileSignatureTag.__subclasses__()
         cols: list[FileSignatureTag]             = []
 
