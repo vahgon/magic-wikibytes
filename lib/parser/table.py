@@ -66,10 +66,16 @@ class Table(HTML):
         )
 
     def _create_md(self) -> None:
-        self._dataframe.replace(r'\n', '<br>', regex=True).to_markdown(
+        self._dataframe.map(self._md_convert).to_markdown(
             buf=self._output.with_suffix('.md'),
             tablefmt='github'
         )
+
+    @staticmethod
+    def _md_convert(val):
+        if isinstance(val, list):
+            val = '<br>'.join(val)
+        return val
 
     def _cli_out(self) -> None:
         print(self._dataframe.to_json(
