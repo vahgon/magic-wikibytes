@@ -32,9 +32,13 @@ class Table(HTML):
 
         self._parser    = Parser(self.request.raw_data, self.USER_ARGS)
         self._dataframe = DataFrame(self._parser.todict())
-        self._output    = Path(self.USER_ARGS.output)
 
-        self._create_output()
+        if self.USER_ARGS.output:
+            self._output = self.USER_ARGS.output
+
+            self._create_output()
+        else:
+            self._cli_out()
 
         return self
 
@@ -42,22 +46,20 @@ class Table(HTML):
         return self._init().__await__()
 
     def _create_output(self) -> None:
-        if self.USER_ARGS.output:
-            match self.USER_ARGS.output.suffix:
+        if self._output:
+            match self._output.suffix:
                 case '.json':
                     self._create_json()
                 case '.md':
                     self._create_md()
                 case _:
                     # log warn
-                    self.USER_ARGS.output = self.USER_ARGS.output.with_suffix('.json')
+                    self._output = self._output.with_suffix('.json')
                     self._create_json()
-        else:
-            self._cli_out()
 
     def _create_json(self) -> None:
         self._dataframe.to_json(
-            Path(self.USER_ARGS.output).with_suffix('.json'),
+            self._output.with_suffix('.json'),
             orient='index',
             indent=True,
             force_ascii=False
@@ -65,7 +67,7 @@ class Table(HTML):
 
     def _create_md(self) -> None:
         self._dataframe.replace(r'\n', '<br>', regex=True).to_markdown(
-            buf=Path(self.USER_ARGS.output).with_suffix('.md'),
+            buf=self._output.with_suffix('.md'),
             tablefmt='github'
         )
 
