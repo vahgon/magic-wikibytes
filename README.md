@@ -21,7 +21,7 @@ Example outputs of this application can be seen at this project's [docs director
 2. Install required packages
 
    ```
-   pip3 install -r requirements.txt
+   $ pip3 install -r requirements.txt
    ```
 
 After cloning the repo and installing the required packages, run the app
