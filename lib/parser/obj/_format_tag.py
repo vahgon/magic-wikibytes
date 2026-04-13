@@ -181,8 +181,8 @@ class TagCleaner:
                                  flags=re.DOTALL).splitlines()
 
                 col.clear(decompose=True)
-                for idx in range(len(cleaned)):
-                    col.insert(idx, cleaned[idx])
+                for idx, cleaned_col in enumerate(cleaned):
+                    col.insert(idx, cleaned_col)
 
     def _des_col(self, col: Tag) -> None:
         self._clean_children(col)
