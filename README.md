@@ -8,6 +8,8 @@ _magic-wikibytes_ makes two requests to the Wikimedia API. The first request spe
 
 Because differing authors can contribute to the Wikitable, the format of each cell can differ compared to another. As such, many checks are performed during the parsing process. During this process, the user can provide command-line arguments to alter the final format of the parsed table.
 
+Example outputs of this application can be seen at this project's [docs directory](https://github.com/vahgon/magic-wikibytes/tree/main/docs).
+
 ## Getting Started
 
 1. Clone the repo
