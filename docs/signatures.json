@@ -1460,24 +1460,12 @@
   ],
   "Offset":"0after BOM",
   "Extension":[
-   "xml (",
-   "UTF-8",
-   " or other 8-bit encodings)",
-   "xml (",
-   "UTF-16LE",
-   ")",
-   "xml (",
-   "UTF-16BE",
-   ")",
-   "xml (",
-   "UTF-32LE",
-   ")",
-   "xml (",
-   "UTF-32BE",
-   ")",
-   "xml (",
-   "EBCDIC",
-   ")"
+   "xml (UTF-8 or other 8-bit encodings)",
+   "xml (UTF-16LE)",
+   "xml (UTF-16BE)",
+   "xml (UTF-32LE)",
+   "xml (UTF-32BE)",
+   "xml (EBCDIC)"
   ],
   "Description":"eXtensible Markup Language"
  },
@@ -2633,5 +2621,12 @@
   "Offset":"0",
   "Extension":"pch",
   "Description":"Clang pre-compiled header"
+ },
+ "309":{
+  "Hex Signature":"676c5446",
+  "ISO 8859-1":"glTF",
+  "Offset":"0",
+  "Extension":"glb",
+  "Description":"Binary glTF file"
  }
 }
