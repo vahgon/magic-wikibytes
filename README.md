@@ -4,7 +4,7 @@ An application that parses the wikitable located at Wikipedia's [List of file si
 
 ## How it Works
 
-_magic-wikibytes_ makes two requests to the Wikimedia API. The first request specifies for only the revision id of the page '[List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)' to be sent in the response. This is compared to the revision ID of the app's last execution so as to limit the amount of data sent by the Wikimedia API. If the revision id is not the same as the revision id of the last execution (or if `--force` is specified), a subsequent request is made specifying the page content be in the API response body
+_magic-wikibytes_ will make at most two GET requests to the Wikimedia API. The first request calls for the revision id of the Wikipedia page [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures). The second request asks for the page content. This request is conditional—If the revision id is not identical to the revision id of the application's last execution (or if `--force` is specified), the request is made.
 
 Because differing authors can contribute to the Wikitable, the format of each cell can differ compared to another. As such, many checks are performed during the parsing process. During this process, the user can provide command-line arguments to alter the final format of the parsed table.
 
