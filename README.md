@@ -29,4 +29,4 @@ After cloning the repo and installing the required packages, run the app
    $ python3 wikibytes.py
    ```
 
-When ran for the first time, the application will ask for your email and save it in _./lib/util/.conf_. This is done to adhere to the Wikimedia API's [access policy](https://www.mediawiki.org/wiki/Wikimedia_APIs/Access_policy); the provided email address is set as the value for the User-Agent header.
+When ran for the first time, the application will ask for you to input your email address. This is to adhere to the Wikimedia API's [access policy](https://www.mediawiki.org/wiki/Wikimedia_APIs/Access_policy#Client_identification); the given email address is set as the value of all future requests' User-Agent header. This email address is then saved in _./lib/util/.conf_ and can be changed manually by directly editing the value of `EMAIL` in the file, or by specifying a different email before executing the application by use of the `--email` argument.
