@@ -2,7 +2,7 @@ from typing import Self
 
 from bs4 import ResultSet, Tag
 
-from lib.parser.obj._col_containers import ColumnFactory, FileSignatureTag
+from wikibytes.parser.obj._col_containers import ColumnFactory, FileSignatureTag
 
 
 class Row:

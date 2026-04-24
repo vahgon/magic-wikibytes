@@ -2,8 +2,8 @@ import asyncio
 from enum import StrEnum
 from typing import Self, final
 
-from lib.exceptions import UnexpectedFormatError
-from lib.util.constants import API_URL
+from wikibytes.exceptions import UnexpectedFormatError
+from wikibytes.util.constants import API_URL
 
 try:
     from requests import Request, Response, Session

@@ -1,4 +1,4 @@
-from lib.exceptions.wikibytes_error import WikibytesError
+from wikibytes.exceptions.wikibytes_error import WikibytesError
 
 
 class UnexpectedFormatError(WikibytesError):

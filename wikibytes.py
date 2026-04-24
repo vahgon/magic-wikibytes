@@ -3,8 +3,8 @@
 import asyncio
 from sys import argv
 
-from lib.parser import Table
-from lib.util import parse_args
+from wikibytes.parser import Table
+from wikibytes.util import parse_args
 
 
 async def call_format_wikimedia(args: list[str]) -> None:

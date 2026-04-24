@@ -2,8 +2,8 @@ from argparse import Namespace
 from pathlib import Path
 from typing import Self
 
-from lib.parser._wikitable_parser import Parser
-from lib.parser.obj._html_obj import HTML
+from wikibytes.parser._wikitable_parser import Parser
+from wikibytes.parser.obj._html_obj import HTML
 
 try:
     from pandas import DataFrame

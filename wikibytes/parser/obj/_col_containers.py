@@ -2,8 +2,8 @@ from typing import final, override
 
 from bs4 import ResultSet, Tag
 
-from lib.parser.obj._format_obj import CheckBytes
-from lib.util.constants import HEADERNAMES, ColType
+from wikibytes.parser.obj._format_obj import CheckBytes
+from wikibytes.util.constants import HEADERNAMES, ColType
 
 
 class FileSignatureTag:

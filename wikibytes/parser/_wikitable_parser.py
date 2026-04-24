@@ -1,10 +1,10 @@
 import re
 from typing import Self
 
-from lib.exceptions.no_tag_error import NoTagFoundError
-from lib.parser.obj._format_tag import TagCleaner
-from lib.parser.obj._row_containers import Row
-from lib.util.constants import ParsedTableDict
+from wikibytes.exceptions.no_tag_error import NoTagFoundError
+from wikibytes.parser.obj._format_tag import TagCleaner
+from wikibytes.parser.obj._row_containers import Row
+from wikibytes.util.constants import ParsedTableDict
 
 try:
     from bs4 import BeautifulSoup, ResultSet, Tag

@@ -7,7 +7,7 @@ from typing import Self
 from bs4 import ResultSet, Tag
 from bs4.element import NavigableString
 
-from lib.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, ColType
+from wikibytes.util.constants import BADTAGS, FIXTAGS, JNK_CHARS, ColType
 
 repl_children = Tag.unwrap
 destroy       = Tag.decompose
@@ -124,6 +124,9 @@ class TagCleaner:
         # If we have rowspan cols we can do one of two things:
         #   - Add the next _ cols to the current instance with rowspans
         #   - Create an entire new _TagContainer instance
+        #
+        # TODO - This is only done for rowspan tags, but also could be done
+        #           for tags with multiple values in a single cell
         while row.rowspan > 1:
             next_row = self._rows.popleft()
             if self._span_newrow:

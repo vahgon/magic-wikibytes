@@ -2,7 +2,7 @@ from argparse import Namespace
 from dataclasses import dataclass, field
 from typing import Any
 
-from lib.exceptions.unexpected_format_error import UnexpectedFormatError
+from wikibytes.exceptions.unexpected_format_error import UnexpectedFormatError
 
 ucode = str.maketrans({i: chr(0x2400 + i) for i in range(0x21)} | {0x7f: '\u2421'})
 

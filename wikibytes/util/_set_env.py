@@ -1,8 +1,8 @@
 from multiprocessing import Pool
 from typing import Self, final
 
-from lib.exceptions import MissingEnvValError
-from lib.util.constants import ENV_PATH, ENV_VARS
+from wikibytes.exceptions import MissingEnvValError
+from wikibytes.util.constants import ENV_PATH, ENV_VARS
 
 try:
     from dotenv import get_key, set_key

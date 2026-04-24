@@ -1,8 +1,8 @@
 from argparse import Namespace
 from typing import Self
 
-from lib.parser._get_request import WikimediaRequest
-from lib.util._set_env import EnvVars
+from wikibytes.parser._get_request import WikimediaRequest
+from wikibytes.util._set_env import EnvVars
 
 
 class HTML:
