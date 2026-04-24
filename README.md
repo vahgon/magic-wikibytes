@@ -1,6 +1,6 @@
 # magic-wikibytes
 
-An application that parses the wikitable located at Wikipedia's [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures) into json and markdown
+Parses and converts the file signature wikitable at _[List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)_ into json and markdown.
 
 ## How it Works
 
